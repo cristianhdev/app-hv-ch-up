@@ -1,12 +1,22 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <menu-principal/>
+    <!-- <transition  name="animate__animated animate__fadeInDown"
+    enter-active-class="animate__animated animate__fadeIn"
+    leave-active-class="animate__animated animate__fadeOut"> -->
     <router-view/>
+ <!--    </transition> -->
   </div>
 </template>
+
+<script>
+import MenuPrincipal from './components/menuPrincipalComponent'
+export default {
+  components:{
+    MenuPrincipal
+  }
+}
+</script>
 
 <style lang="less">
 #app {
@@ -15,6 +25,18 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+
+
+
+ .fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+  
+}
+/* .fade-leave-active below version 2.1.8 */
+.fade-enter, .fade-leave-to  {
+  opacity: 0.5;
+  background-color: #2c3e50;
 }
 
 #nav {

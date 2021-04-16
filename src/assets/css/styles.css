@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+
+html {
+	scroll-behavior: smooth;
+}
+
+.overlay{
+  position: absolute;
+  top: 20em; 
+  left: -8px;
+  align-items: center;
+  text-align: center;
+  justify-items: center;
+  flex-direction: column; 
+  width: 100%;
+}
+
+/* CRISTIAN HERNANDEZ */
+.title-ligth {
+  bottom: 87px;
+  width: 400px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 39px;
+  color: rgba(255, 255, 255, 0.93);
+}
+
+.title-dark{
+  bottom: 87px;
+  width: 400px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 39px;
+  color: rgba(0, 0, 0, 0.93);
+}
+
+/* BACKEND DEVELOPER */
+.sub-title {
+  width: 263px;
+  height: 17px;
+  font-family: Lora;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 31px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: rgba(53, 236, 137, 0.93);
+}
+
+.btn-about {
+  border-color: white;
+  color: white;
+ 
+}
+
+
+@media (max-width: 768px) {
+  .title {
+    width: fit-content;
+  }
+  .overlay {
+    width: 100%;
+  }
+
+  
+}
+
+
