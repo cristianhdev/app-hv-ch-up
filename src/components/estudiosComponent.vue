@@ -7,9 +7,9 @@
             <b-row class="justify-content-center justify-content-md-start">
               <div class="mx-auto overlay">
                 <h2
-                  class="title mx-auto title-ligth animate__animated animate__bounceInUp"
+                  class="title mx-auto title-ligth animate__animated animate__fadeInUp"
                 >
-                  Estudios
+                  ESTUDIOS
                 </h2>
               </div>
             </b-row>
