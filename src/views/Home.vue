@@ -16,12 +16,13 @@
                 >
                   CRISTIAN HERNANDEZ
                 </h2>
-                <b-button
+                <count-down class="title-ligth mx-auto" :endDate="'04/19/2021 06:00 PM'"/>
+                <!-- <b-button
                   href="#about-my"
                   class="btn-about mx-auto animate__animated animate__delay-delay-3s animate__fadeInDown"
                   variant="outline-secondary"
                   >Acerca de mi</b-button
-                >
+                > -->
               </div>
             </b-row>
           </b-col>
@@ -37,14 +38,16 @@
 /*import About from '../components/aboutComponent'
  import Estudios from '../components/estudiosComponent'
 import Experiencia from '../components/experienciaComponent' */
+import countDown from '../components/countDown'
 export default {
     components:{
+      countDown
         /*About ,
         Estudios,
         Experiencia */
     }
-    
 }
+
 </script>
 
 <style scoped>
