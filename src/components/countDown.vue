@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p>{{ getCountView }}</p>
+    <p class="text-red">{{ getCountView }}</p>
   </div>
 </template>
 
@@ -64,3 +64,9 @@ export default {
   },
 };
 </script>
+
+<style>
+  .text-red{
+    color:rgb(143, 231, 224)
+  }
+</style>

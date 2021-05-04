@@ -16,7 +16,7 @@
                 >
                   CRISTIAN HERNANDEZ
                 </h2>
-                <count-down class="title-ligth mx-auto" :endDate="'04/19/2021 06:00 PM'"/>
+                <count-down class="title-ligth mx-auto" :endDate="'05/19/2021 06:00 PM'"/>
                 <!-- <b-button
                   href="#about-my"
                   class="btn-about mx-auto animate__animated animate__delay-delay-3s animate__fadeInDown"

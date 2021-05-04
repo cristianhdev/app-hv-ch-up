@@ -13,6 +13,7 @@
         <b-nav-item to="/sobre_mi">Sobre mi</b-nav-item>
         <b-nav-item to="/estudios">Estudios</b-nav-item>
         <b-nav-item to="/experiencia">Experiencia</b-nav-item>
+        <b-nav-item to="/portafolio">Portafolio</b-nav-item>
         <b-nav-item href="#">Contactame</b-nav-item>
         <b-nav-form>
           <b-form-input size="sm" class="mr-sm-2" placeholder="Buscar..."></b-form-input>

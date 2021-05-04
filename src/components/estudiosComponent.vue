@@ -55,30 +55,6 @@
             </b-row>
           </b-col>
         </b-row>
-        <!-- <b-carousel
-          id="carousel-1"
-          v-model="slide"
-          :fade="true"
-          :interval="4000"
-          controls
-          indicators
-          background="#ababab"
-          img-width="400"
-          img-height="400"
-          style="text-shadow: 1px 1px 2px #333"
-        >
-       
-          <b-carousel-slide
-            v-for="(certificado, key) in certificados"
-            :key="key"
-            :caption="certificado.title"
-            :text="certificado.descripcion"
-            :img-src="certificado.imagenCertificado"
-            :img-height="200"
-            :img-width="200"
-            :background="black"
-          ></b-carousel-slide>
-        </b-carousel> -->
       </b-container>
     </transition>
   </div>
