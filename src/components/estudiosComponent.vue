@@ -20,11 +20,7 @@
     <transition>
       <b-container>
         <b-row class="mt-5">
-          <!--      <b-col sm="4"
-            md="6"
-            lg="4">
-          
-          </b-col -->>
+        >
           <b-col sm="8" md="8" lg="12">
             <b-row class="mt-5">
               <b-col
@@ -41,7 +37,7 @@
                   img-alt="Image"
                   img-top
                   tag="article"
-                  style="max-width: 20rem"
+                  style="max-width: 16rem"
                   class="mb-2"
                   data-aos="fade-in"
                 >

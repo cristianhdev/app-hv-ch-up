@@ -10,7 +10,7 @@
 
       <!-- Right aligned nav items -->
       <b-navbar-nav class="ml-auto">
-        <b-nav-item to="/sobre_mi">Sobre mi</b-nav-item>
+        <b-nav-item to="/sobre_mi" exact>Sobre mi</b-nav-item>
         <b-nav-item to="/estudios">Estudios</b-nav-item>
         <b-nav-item to="/experiencia">Experiencia</b-nav-item>
         <b-nav-item to="/portafolio">Portafolio</b-nav-item>
