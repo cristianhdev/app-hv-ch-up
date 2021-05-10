@@ -6,7 +6,11 @@ import store from './store'
 import AOS from 'aos';
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 import '../node_modules/timeline-vuejs/dist/timeline-vuejs.css'
-
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faUserSecret} from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { faJs, faVuejs } from '@fortawesome/free-brands-svg-icons'
+import VueSplide from '@splidejs/vue-splide';
 // ..
 AOS.init();
 
@@ -17,10 +21,18 @@ import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 
+//splide
+import '@splidejs/splide/dist/css/themes/splide-skyblue.min.css';
+
+library.add(faUserSecret,faJs, faVuejs)
+
+Vue.component('font-awesome-icon', FontAwesomeIcon)
 // Make BootstrapVue available throughout your project
 Vue.use(BootstrapVue)
 // Optionally install the BootstrapVue icon components plugin
 Vue.use(IconsPlugin)
+
+Vue.use(VueSplide)
 
 Vue.config.productionTip = false
 

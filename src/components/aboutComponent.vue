@@ -3,7 +3,10 @@
     <b-container fluid="md">
       <b-row>
         <b-col sm="12" md="6" lg="6">
-          <div id="about-my" class="animate__animated animate__delay-slower  animate__backInLeft">
+          <div
+            id="about-my"
+            class="animate__animated animate__delay-slower animate__backInLeft"
+          >
             <div class="mark-photo d-none d-sm-block">
               <img src="../assets/HV_cv.jpeg" class="img-fluid" />
             </div>
@@ -12,8 +15,10 @@
             </div>
           </div>
         </b-col>
+        
         <b-col sm="12" md="6" lg="6">
-          <article id="about">
+         <!--  <button @click="mostrar=!mostrar">Mostrar</button> -->
+          <article id="about" v-if="!mostrar">
             <p
               class="title-dark mx-auto animate__animated animate__delay-slower animate__fadeInDown"
             >
@@ -45,6 +50,7 @@
               voluptates at.
             </p>
           </article>
+          
         </b-col>
       </b-row>
     </b-container>
@@ -53,9 +59,12 @@
 
 <script>
 
+
+
 export default {
   data() {
     return {
+      mostrar:false,
       homePageData: [],
     };
   },

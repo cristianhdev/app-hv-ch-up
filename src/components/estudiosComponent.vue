@@ -19,17 +19,60 @@
     </div>
     <transition>
       <b-container>
+        <br />
+        <b-row class="mt-3 mb-5">
+          <b-col sm="8" md="8" lg="4">
+            <h2 style="text-align: left" class="animate__animated animate__delay-slower animate__flipInX">Skills</h2>
+          </b-col>
+        </b-row>
         <b-row class="mt-5">
-        >
-          <b-col sm="8" md="8" lg="12">
-            <b-row class="mt-5">
-              <b-col
+          <b-col sm="8" md="8" lg="6">
+            <article
+              id="skills"
+              class="mx-auto"
+              data-aos="fade-right"
+            >
+              <div v-for="(skill, index, key) in skills" :key="key">
+                <p style="text-aling: left; text-align: left; font-size: 14px">
+                  {{ skill.text }}
+                </p>
+                <b-progress
+                  :max="100"
+                  show-progress
+                  class="mx-auto animate__animated animate__delay-slower animate__flipInX"
+                >
+                  <b-progress-bar variant="secondary" :value="skill.value">
+                    <span style="font-size: 14px">
+                      {{ skill.value + "%" }}
+                    </span>
+                  </b-progress-bar>
+                </b-progress>
+                <br />
+              </div>
+            </article>
+          </b-col>
+          <b-col sm="8" md="8" lg="6">
+            <div class="mx-auto" data-aos="fade-left">
+              <splide>
+                <splide-slide
+                  v-for="(certificado, key) in certificados"
+                  :key="key"
+                >
+                  <img :src="certificado.imagenCertificado" />
+                </splide-slide>
+                <template v-slot:controls>
+                  <div class="splide__progress">
+                    <div class="splide__progress__bar"></div>
+                  </div>
+                </template>
+              </splide>
+            </div>
+            <!-- <b-col
                 v-for="(certificado, key) in certificados"
                 :key="key"
                 sm="2"
                 md="2"
-                lg="4"
-                
+                lg="6"
               >
                 <b-card
                   :title="certificado.title"
@@ -43,20 +86,23 @@
                 >
                   <b-card-text>
                     {{ certificado.descripcion }}
+                    <font-awesome-icon icon="user-secret" />
+                 
                   </b-card-text>
-                  <!-- 
-            <b-button href="#" variant="primary">Go somewhere</b-button> -->
+           
                 </b-card>
-              </b-col>
-            </b-row>
+              </b-col> -->
           </b-col>
         </b-row>
       </b-container>
     </transition>
+    <br>
+    <br>
   </div>
 </template>
 
 <script>
+import background from "../assets/background.png";
 import imagen1 from "../assets/TecnicoSena.png";
 import imagen2 from "../assets/TecnicoEAM.png";
 /* import imagen3 from '../assets/learnig.jpg' */
@@ -64,15 +110,35 @@ import imagen4 from "../assets/less.png";
 import imagen5 from "../assets/Vue2.png";
 import imagen6 from "../assets/React.png";
 import imagen7 from "../assets/typescript.png";
-import imagen8 from "../assets/photoshop.png";
+/* import imagen8 from "../assets/photoshop.png"; */
 import imagen9 from "../assets/htmlyjavascript.png";
 import imagen10 from "../assets/certificado-git.jpg";
+import { Splide, SplideSlide } from "@splidejs/vue-splide";
+
 export default {
+  components: {
+    Splide,
+    SplideSlide,
+  },
   data() {
     return {
+      skills: [
+        { text: "HTML", value: 90 },
+        { text: "CSS", value: 90 },
+        { text: "Javascript", value: 90 },
+        { text: "Node.js", value: 70 },
+        { text: "Express.js", value: 70 },
+        { text: "Vue(2-3).js", value: 90 },
+        { text: "React", value: 60 },
+        { text: "Typeorm", value: 70 },
+        { text: "Bootstrap", value: 70 },
+        { text: "Laravel", value: 50 },
+      ],
+
       imagenesCertificado: {
         imagen1: imagen1,
       },
+      backgroundEstudio: background,
       certificados: [
         {
           title: "Tecnico Profesional",
@@ -104,11 +170,11 @@ export default {
           descripcion: "Less de 0 a experto",
           imagenCertificado: imagen4,
         },
-        {
+        /* {
           title: "Photoshop",
           descripcion: "Photoshop Domestika",
           imagenCertificado: imagen8,
-        },
+        }, */
         {
           title: "Html y JavaScript",
           descripcion: "Html y JavaScript SENA",
@@ -118,7 +184,7 @@ export default {
           title: "Git y GitHub",
           descripcion: "Git y GitHub 100% practico",
           imagenCertificado: imagen10,
-        }
+        },
       ],
     };
   },
@@ -126,6 +192,14 @@ export default {
 </script>
 
 <style>
+.container-flex {
+  margin: -23px 0px 0px 0px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
 .img-background {
   min-height: 100%;
   min-width: 1024px;
@@ -141,12 +215,43 @@ export default {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
 }
 
 @media screen {
   .img-background {
     min-width: 100%;
   }
+
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+  
+  /* CSS */
+    #skills {
+  column-count: 1;
+}
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  
+  /* CSS */
+    #skills {
+  column-count: 1;
+}
+}
+
+
+#skills {
+  column-count: 2;
 }
 </style>

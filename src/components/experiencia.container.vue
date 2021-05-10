@@ -1,8 +1,7 @@
 <template>
   <div>
       <transition name="animate__animated animate__fadeInUp">
-    <div id="view">
-       
+    <div id="view">  
       <b-carousel
         id="carousel-1"
         v-model="slide"
@@ -17,12 +16,110 @@
         <b-carousel-slide
           img-src="https://picsum.photos/1024/480/?image=366&grayscale&blur=4"
         >
-          <Timeline
+         
+          <b-container fluid="lg">
+             <Timeline
             class="marckclassTime animate__animated animate__delay-slower  animate__flipInX animate__delay-1s"
             data-aos="fade-left"
             :timeline-items="timelineItems1"
             :message-when-no-items="messageWhenNoItems"
           />
+      <div class="animate__animated animate__delay-slower animate__flipInX animate__delay-2s" >
+        <b-tabs style="background-color:RGBA(73,87,98,0.8);padding:12px; box-shadow:5px 5px 0px white;" content-class="mt-3">
+          <b-tab  title="Desafios" active
+            ><p class="animate__animated animate__fadeIn text-justify">
+              {{descriptions[slide].text}}
+            </p></b-tab
+          >
+          <b-tab title="¿Que realice?">
+            <b-row>
+              <b-col sm="4" md="6" lg="6" pt-5>
+                <img
+                    :src="gits[1]"
+                    class="pt-5 ml-5 img-responsive"
+                    width="350px"
+                  />
+              </b-col>
+              <b-col sm="4" md="6" lg="6" pt-5>
+<img
+                    :src="gits[0]"
+                    data-aos="zoom-out-up"
+                    class="pt-5 mr-5 img-responsive"
+                    width="350px"
+                  />
+              </b-col>
+              <b-col sm="4" md="6" lg="6" pt-5>
+                   <img
+                    :src="gits[2]"
+                    data-aos="zoom-out-up"
+                    class="pt-5 ml-5 img-responsive"
+                    width="350px"
+                  />
+              </b-col>
+               <b-col sm="4" md="6" lg="6" pt-5>
+                  <img
+                    :src="gits[3]"
+                    data-aos="zoom-out-up"
+                    class="pt-5 mr-5 img-responsive"
+                    width="350px"
+                  />
+                <!-- <div
+                  data-aos="fade-right"
+                  data-aos-offset="300"
+                  data-aos-easing="ease-in-sine"
+                  data-aos-delay="100"
+                >
+                  
+                </div>
+                <br />
+                <div
+                  data-aos="fade-left"
+                  data-aos-offset="300"
+                  data-aos-easing="ease-in-sine"
+                  data-aos-delay="200"
+                >
+                  
+                </div>
+                <br />
+                <div
+                  data-aos="fade-right"
+                  data-aos-offset="300"
+                  data-aos-easing="ease-in-sine"
+                  data-aos-delay="300"
+                >
+                 
+                </div>
+                <br />
+                <div
+                  data-aos="fade-left"
+                  data-aos-offset="300"
+                  data-aos-easing="ease-in-sine"
+                  data-aos-delay="400"
+                >
+                  
+                </div> -->
+              </b-col>
+            </b-row>
+          </b-tab>
+          <b-tab title="¿Que aprendi?">
+            <b-row>
+              <b-col sm="4" md="6" lg="6" pt-5>
+                   <ul>
+                     <li>Item1</li>
+                     <li>Item1</li>
+                     <li>Item1</li>
+                     <li>Item1</li>
+                     <li>Item1</li>
+                     <li>Item1</li>
+                     
+                   </ul>
+              </b-col>
+             
+            </b-row>
+          </b-tab>
+        </b-tabs>
+      </div>
+    </b-container>
         </b-carousel-slide>
 
         <b-carousel-slide
@@ -31,7 +128,7 @@
           <Timeline
             class="marckclassTime animate__animated animate__delay-slower  animate__flipInX animate__delay-1s"
             data-aos="fade-left"
-            :timeline-items="timelineItems3"
+            :timeline-items="timelineItems2"
             :message-when-no-items="messageWhenNoItems"
           />
         </b-carousel-slide>
@@ -41,7 +138,7 @@
           <Timeline
             class="marckclassTime animate__animated animate__delay-slower  animate__flipInX animate__delay-1s"
             data-aos="fade-left"
-            :timeline-items="timelineItems4"
+            :timeline-items="timelineItems3"
             :message-when-no-items="messageWhenNoItems"
           />
         </b-carousel-slide>
@@ -51,7 +148,7 @@
           <Timeline
             class="marckclassTime animate__animated animate__delay-slower  animate__flipInX animate__delay-1s"
             data-aos="fade-left"
-            :timeline-items="timelineItems5"
+            :timeline-items="timelineItems4"
             :message-when-no-items="messageWhenNoItems"
           />
         </b-carousel-slide>
@@ -61,7 +158,7 @@
           <Timeline
             class="marckclassTime animate__animated animate__delay-slower  animate__flipInX animate__delay-1s"
             data-aos="fade-left"
-            :timeline-items="timelineItems6"
+            :timeline-items="timelineItems5"
             :message-when-no-items="messageWhenNoItems"
           />
         </b-carousel-slide>
@@ -71,7 +168,7 @@
           <Timeline
             class="marckclassTime animate__animated animate__delay-slower  animate__flipInX animate__delay-1s"
             data-aos="fade-left"
-            :timeline-items="timelineItems7"
+            :timeline-items="timelineItems6"
             :message-when-no-items="messageWhenNoItems"
           />
         </b-carousel-slide>
@@ -81,169 +178,23 @@
           <Timeline
             class="marckclassTime animate__animated animate__delay-slower  animate__flipInX animate__delay-1s"
             data-aos="fade-left"
+            :timeline-items="timelineItems7"
+            :message-when-no-items="messageWhenNoItems"
+          />
+        </b-carousel-slide>
+         <b-carousel-slide
+          img-src="https://picsum.photos/1024/480/?image=504&grayscale"
+        >
+          <Timeline
+            class="marckclassTime animate__animated animate__delay-slower  animate__flipInX animate__delay-1s"
+            data-aos="fade-left"
             :timeline-items="timelineItems8"
             :message-when-no-items="messageWhenNoItems"
           />
         </b-carousel-slide>
-      </b-carousel>
+      </b-carousel>    
     </div>
     <br />
-    <!-- <h1 class="title-dark" data-aos="fade-left">Asi comienza mi aventura</h1> -->
-    <b-container fluid="lg">
-      <div>
-        <b-tabs content-class="mt-3">
-          <b-tab title="Desafios" active
-            ><p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni
-              impedit placeat esse beatae consequuntur, odit dolore facere sit
-              quisquam porro vero libero, facilis deserunt cumque exercitationem
-              laboriosam reiciendis dolores modi. log Lorem ipsum, dolor sit
-              amet consectetur adipisicing elit. Maxime dolorum et similique
-              esse nobis libero assumenda ipsa, quod blanditiis at laboriosam!
-              Cupiditate officia fugit corporis repellendus voluptatibus ipsa,
-              consectetur beatae.
-            </p></b-tab
-          >
-          <b-tab title="¿Que aprendi?">
-            <b-row>
-              <b-col sm="4" md="6" lg="6" pt-5>
-                   {{getIdParam}}
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Accusamus totam hic repudiandae aperiam corrupti ex ad in nulla
-                molestiae ipsa, quas similique, autem earum quae exercitationem
-                architecto? Earum, dolores ratione! Lorem ipsum dolor sit amet
-                consectetur adipisicing elit. Accusamus totam hic repudiandae
-                aperiam corrupti ex ad in nulla molestiae ipsa, quas similique,
-                autem earum quae exercitationem architecto? Earum, dolores
-                ratione! Lorem ipsum dolor sit amet consectetur adipisicing
-                elit. Accusamus totam hic repudiandae aperiam corrupti ex ad in
-                nulla molestiae ipsa, quas similique, autem earum quae
-                exercitationem architecto? Earum, dolores ratione! Lorem ipsum
-                dolor sit amet consectetur adipisicing elit. Accusamus totam hic
-                repudiandae aperiam corrupti ex ad in nulla molestiae ipsa, quas
-                similique, autem earum quae exercitationem architecto? Earum,
-                dolores ratione! Lorem ipsum dolor sit amet consectetur
-                adipisicing elit. Accusamus totam hic repudiandae aperiam
-                corrupti ex ad in nulla molestiae ipsa, quas similique, autem
-                earum quae exercitationem architecto? Earum, dolores ratione!
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Accusamus totam hic repudiandae aperiam corrupti ex ad in nulla
-                molestiae ipsa, quas similique, autem earum quae exercitationem
-                architecto? Earum, dolores ratione! Lorem ipsum dolor sit amet
-                consectetur adipisicing elit. Accusamus totam hic repudiandae
-                aperiam corrupti ex ad in nulla molestiae ipsa, quas similique,
-                autem earum quae exercitationem architecto? Earum, dolores
-                ratione!
-              </b-col>
-              <b-col sm="4" md="6" lg="6" pt-5>
-                <div
-                  data-aos="fade-right"
-                  data-aos-offset="300"
-                  data-aos-easing="ease-in-sine"
-                  data-aos-delay="100"
-                >
-                  <img
-                    :src="gits[1]"
-                    class="pt-5 ml-5 img-responsive"
-                    width="350px"
-                  />
-                </div>
-                <br />
-                <div
-                  data-aos="fade-left"
-                  data-aos-offset="300"
-                  data-aos-easing="ease-in-sine"
-                  data-aos-delay="200"
-                >
-                  <img
-                    :src="gits[0]"
-                    data-aos="zoom-out-up"
-                    class="pt-5 mr-5 img-responsive"
-                    width="350px"
-                  />
-                </div>
-                <br />
-                <div
-                  data-aos="fade-right"
-                  data-aos-offset="300"
-                  data-aos-easing="ease-in-sine"
-                  data-aos-delay="300"
-                >
-                  <img
-                    :src="gits[2]"
-                    data-aos="zoom-out-up"
-                    class="pt-5 ml-5 img-responsive"
-                    width="350px"
-                  />
-                </div>
-                <br />
-                <div
-                  data-aos="fade-left"
-                  data-aos-offset="300"
-                  data-aos-easing="ease-in-sine"
-                  data-aos-delay="400"
-                >
-                  <img
-                    :src="gits[3]"
-                    data-aos="zoom-out-up"
-                    class="pt-5 mr-5 img-responsive"
-                    width="350px"
-                  />
-                </div>
-              </b-col>
-            </b-row>
-          </b-tab>
-        </b-tabs>
-      </div>
-
-      <!--   <b-row>
-        <b-col sm="4" md="6" lg="12"> </b-col>
-
-        <b-col sm="4" md="6" lg="6">
-          <Timeline
-            data-aos="fade-left"
-            :timeline-items="timelineItems1"
-            :message-when-no-items="messageWhenNoItems"
-          />
-          <Timeline
-            data-aos="fade-left"
-            :timeline-items="timelineItems2"
-            :message-when-no-items="messageWhenNoItems"
-          />
-          <Timeline
-            data-aos="fade-left"
-            :timeline-items="timelineItems3"
-            :message-when-no-items="messageWhenNoItems"
-          />
-          <Timeline
-            data-aos="fade-left"
-            :timeline-items="timelineItems4"
-            :message-when-no-items="messageWhenNoItems"
-          />
-          <Timeline
-            data-aos="fade-left"
-            :timeline-items="timelineItems5"
-            :message-when-no-items="messageWhenNoItems"
-          />
-          <Timeline
-            data-aos="fade-left"
-            :timeline-items="timelineItems6"
-            :message-when-no-items="messageWhenNoItems"
-          />
-          <Timeline
-            data-aos="fade-left"
-            :timeline-items="timelineItems7"
-            :message-when-no-items="messageWhenNoItems"
-          />
-          <Timeline
-            data-aos="fade-left"
-            :timeline-items="timelineItems8"
-            :message-when-no-items="messageWhenNoItems"
-          />
-        </b-col>
-        
-      </b-row> -->
-    </b-container>
       </transition>
   </div>
 </template>
@@ -330,25 +281,80 @@ export default {
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius earum architecto dolor, vitae magnam voluptate accusantium assumenda numquam error mollitia, officia facere consequuntur reprehenderit cum voluptates, ea tempore beatae unde.",
         },
       ],
-      /* {
-        from: new Date(2016, 1),
-        title: 'Name',
-        description:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius earum architecto dolor, vitae magnam voluptate accusantium assumenda numquam error mollitia, officia facere consequuntur reprehenderit cum voluptates, ea tempore beatae unde.'
-      },
-      {
-        from: new Date(2016, 6),
-        title: 'Name',
-        description:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius earum architecto dolor, vitae magnam voluptate accusantium assumenda numquam error mollitia, officia facere consequuntur reprehenderit cum voluptates, ea tempore beatae unde.'
-      },
-      {
-        from: new Date(2012, 1),
-        title: 'Name',
-        description:
-          'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius earum architecto dolor, vitae magnam voluptate accusantium assumenda numquam error mollitia, officia facere consequuntur reprehenderit cum voluptates, ea tempore beatae unde.'
-      } */
-      //]
+      descriptions:[
+        {text:` Text1: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni
+              impedit placeat esse beatae consequuntur, odit dolore facere sit
+              quisquam porro vero libero, facilis deserunt cumque exercitationem
+              laboriosam reiciendis dolores modi. log Lorem ipsum, dolor sit
+              amet consectetur adipisicing elit. Maxime dolorum et similique
+              esse nobis libero assumenda ipsa, quod blanditiis at laboriosam!
+              Cupiditate officia fugit corporis repellendus voluptatibus ipsa,
+              consectetur beatae.\n
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni
+              impedit placeat esse beatae consequuntur, odit dolore facere sit
+              quisquam porro vero libero, facilis deserunt cumque exercitationem
+              laboriosam reiciendis dolores modi. log Lorem ipsum, dolor sit
+              amet consectetur adipisicing elit. Maxime dolorum et similique
+              esse nobis libero assumenda ipsa, quod blanditiis at laboriosam!
+              Cupiditate officia fugit corporis repellendus voluptatibus ipsa,
+              consectetur beatae.`},
+         {text:` Text2: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni
+              impedit placeat esse beatae consequuntur, odit dolore facere sit
+              quisquam porro vero libero, facilis deserunt cumque exercitationem
+              laboriosam reiciendis dolores modi. log Lorem ipsum, dolor sit
+              amet consectetur adipisicing elit. Maxime dolorum et similique
+              esse nobis libero assumenda ipsa, quod blanditiis at laboriosam!
+              Cupiditate officia fugit corporis repellendus voluptatibus ipsa,
+              consectetur beatae.`},
+          {text:` Text3: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni
+              impedit placeat esse beatae consequuntur, odit dolore facere sit
+              quisquam porro vero libero, facilis deserunt cumque exercitationem
+              laboriosam reiciendis dolores modi. log Lorem ipsum, dolor sit
+              amet consectetur adipisicing elit. Maxime dolorum et similique
+              esse nobis libero assumenda ipsa, quod blanditiis at laboriosam!
+              Cupiditate officia fugit corporis repellendus voluptatibus ipsa,
+              consectetur beatae.`},
+          {text:` Text4: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni
+              impedit placeat esse beatae consequuntur, odit dolore facere sit
+              quisquam porro vero libero, facilis deserunt cumque exercitationem
+              laboriosam reiciendis dolores modi. log Lorem ipsum, dolor sit
+              amet consectetur adipisicing elit. Maxime dolorum et similique
+              esse nobis libero assumenda ipsa, quod blanditiis at laboriosam!
+              Cupiditate officia fugit corporis repellendus voluptatibus ipsa,
+              consectetur beatae.`},
+          {text:` Text5: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni
+              impedit placeat esse beatae consequuntur, odit dolore facere sit
+              quisquam porro vero libero, facilis deserunt cumque exercitationem
+              laboriosam reiciendis dolores modi. log Lorem ipsum, dolor sit
+              amet consectetur adipisicing elit. Maxime dolorum et similique
+              esse nobis libero assumenda ipsa, quod blanditiis at laboriosam!
+              Cupiditate officia fugit corporis repellendus voluptatibus ipsa,
+              consectetur beatae.`},
+          {text:` Text6: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni
+              impedit placeat esse beatae consequuntur, odit dolore facere sit
+              quisquam porro vero libero, facilis deserunt cumque exercitationem
+              laboriosam reiciendis dolores modi. log Lorem ipsum, dolor sit
+              amet consectetur adipisicing elit. Maxime dolorum et similique
+              esse nobis libero assumenda ipsa, quod blanditiis at laboriosam!
+              Cupiditate officia fugit corporis repellendus voluptatibus ipsa,
+              consectetur beatae.`},
+            {text:` Text7: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni
+              impedit placeat esse beatae consequuntur, odit dolore facere sit
+              quisquam porro vero libero, facilis deserunt cumque exercitationem
+              laboriosam reiciendis dolores modi. log Lorem ipsum, dolor sit
+              amet consectetur adipisicing elit. Maxime dolorum et similique
+              esse nobis libero assumenda ipsa, quod blanditiis at laboriosam!
+              Cupiditate officia fugit corporis repellendus voluptatibus ipsa,
+              consectetur beatae.`},
+            {text:` Text8: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni
+              impedit placeat esse beatae consequuntur, odit dolore facere sit
+              quisquam porro vero libero, facilis deserunt cumque exercitationem
+              laboriosam reiciendis dolores modi. log Lorem ipsum, dolor sit
+              amet consectetur adipisicing elit. Maxime dolorum et similique
+              esse nobis libero assumenda ipsa, quod blanditiis at laboriosam!
+              Cupiditate officia fugit corporis repellendus voluptatibus ipsa,
+              consectetur beatae.`}
+      ]
     };
   },
   computed: {
@@ -375,9 +381,11 @@ export default {
 </script>
 
 <style scoped>
+
 .marckclassTime {
-    background-color: rgba(0, 0, 0, 0.7);
+  
+    background-color: RGBA(73,87,98,0.7);
     
-    box-shadow:5px 5px 0px white;
+    box-shadow:-5px 5px 0px white;
 }
 </style>
