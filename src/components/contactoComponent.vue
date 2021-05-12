@@ -4,7 +4,7 @@
     <b-container fluid="md">
       <b-row>
         <b-col sm="12" md="6" lg="12">
-          <h3 class="text-left">Contáctame</h3>
+          <h2 class="text-left animate__animated animate__delay-slower animate__flipInX">Contáctame</h2>
         </b-col>
       </b-row>
       <b-row>

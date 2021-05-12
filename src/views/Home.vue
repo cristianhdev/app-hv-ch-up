@@ -9,7 +9,7 @@
                 <h5
                   class="sub-title mx-auto animate__animated animate__fast animate__fadeInDown"
                 >
-                  BACKEND DEVELOPER
+                  FULLSTACK - DEVELOPER
                 </h5>
                 <h2
                   class="title-ligth mx-auto animate__animated animate__delay-slower animate__fadeInDown"
@@ -40,14 +40,13 @@
 import Experiencia from '../components/experienciaComponent' */
 /* import countDown from '../components/countDown' */
 export default {
-    components:{
-      //countDown
-        /*About ,
+  components: {
+    //countDown
+    /*About ,
         Estudios,
         Experiencia */
-    }
-}
-
+  },
+};
 </script>
 
 <style scoped>
