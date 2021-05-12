@@ -14,7 +14,7 @@
          <b-nav-item to="/portafolio">Portafolio</b-nav-item>
          <b-nav-item to="/experiencia">Experiencia</b-nav-item>
         <b-nav-item to="/estudios">Estudios</b-nav-item>
-        <b-nav-item href="/contacto">Contactame</b-nav-item>
+        <b-nav-item to="/contacto">Contactame</b-nav-item>
         <!-- <b-nav-form>
           <b-form-input size="sm" class="mr-sm-2" placeholder="Buscar..."></b-form-input>
           <b-button size="sm" class="my-2 my-sm-0" type="submit">Buscar</b-button>
