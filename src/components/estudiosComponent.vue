@@ -24,35 +24,34 @@
               <article id="skills" class="mx-auto">
                 <div v-if="loading"></div>
                 <div v-else>
-                  <div v-for="(skill, index, key) in skills" :key="key">
-                    <div
-                      @mouseenter="onAnimatedProgress(index)"
-                      @mouseleave="offAnimatedProgress(index)"
+                  <div v-for="(skill, index, key) in skills" :key="key" >
+                    <div @mouseenter="onAnimatedProgress(index)"
+                      @mouseleave="offAnimatedProgress(index)">
+                    <p
+                      style="
+                        text-aling: left;
+                        text-align: left;
+                        font-size: 14px;
+                      "
                     >
-                      <p
-                        style="
-                          text-aling: left;
-                          text-align: left;
-                          font-size: 14px;
-                        "
+                      {{ skill.nombre }}
+                    </p>
+                    <b-progress
+                      :max="100"
+                      show-progress
+                      class="mx-auto"
+                      :animated="skill.animated"
+                      
+                    >
+                      <b-progress-bar
+                        variant="secondary"
+                        :value="Number(skill.porcentaje)"
                       >
-                        {{ skill.nombre }}
-                      </p>
-                      <b-progress
-                        :max="100"
-                        show-progress
-                        class="mx-auto"
-                        :animated="skill.animated"
-                      >
-                        <b-progress-bar
-                          variant="secondary"
-                          :value="Number(skill.porcentaje)"
-                        >
-                          <span style="font-size: 14px">
-                            {{ skill.porcentaje + "%" }}
-                          </span>
-                        </b-progress-bar>
-                      </b-progress>
+                        <span style="font-size: 14px">
+                          {{ skill.porcentaje + "%" }}
+                        </span>
+                      </b-progress-bar>
+                    </b-progress>
                     </div>
                     <br />
                   </div>
@@ -158,16 +157,16 @@ export default {
   data() {
     return {
       skills: [
-        { nombre: "HTML", porcentaje: 90, animated: false },
-        { nombre: "CSS", porcentaje: 90, animated: false },
-        { nombre: "Javascript", porcentaje: 90, animated: false },
-        { nombre: "Node.js", porcentaje: 70, animated: false },
-        { nombre: "Express.js", porcentaje: 70, animated: false },
-        { nombre: "Vue(2-3).js", porcentaje: 90, animated: false },
-        { nombre: "React", porcentaje: 60, animated: false },
-        { nombre: "Typeorm", porcentaje: 70, animated: false },
-        { nombre: "Bootstrap", porcentaje: 70, animated: false },
-        { nombre: "Laravel", porcentaje: 50, animated: false },
+        { nombre: "HTML", porcentaje: 90 ,animated:false},
+        { nombre: "CSS", porcentaje: 90, animated:false },
+        { nombre: "Javascript", porcentaje: 90, animated:false },
+        { nombre: "Node.js", porcentaje: 70, animated:false },
+        { nombre: "Express.js", porcentaje: 70, animated:false },
+        { nombre: "Vue(2-3).js", porcentaje: 90, animated:false },
+        { nombre: "React", porcentaje: 60, animated:false },
+        { nombre: "Typeorm", porcentaje: 70, animated:false },
+        { nombre: "Bootstrap", porcentaje: 70, animated:false },
+        { nombre: "Laravel", porcentaje: 50, animated:false },
       ],
       loading: false,
       skillService: null,
@@ -225,12 +224,12 @@ export default {
     };
   },
   methods: {
-    onAnimatedProgress(index) {
-      this.skills[index].animated = true;
+    onAnimatedProgress(index){
+      this.skills[index].animated=true
     },
-    offAnimatedProgress(index) {
-      this.skills[index].animated = !this.skills[index].animated;
-    },
+    offAnimatedProgress(index){
+      this.skills[index].animated=!this.skills[index].animated
+    }
   },
   computed: {},
   created() {
