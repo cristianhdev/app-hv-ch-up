@@ -1,120 +1,90 @@
 <template>
   <div id="studing">
     <div class="img-background">
-      <b-container fluid="lg">
-        <b-row>
-          <b-col cols="*">
-            <b-row class="justify-content-center justify-content-md-start">
-              <div class="mx-auto overlay">
+      <transition>
+        <b-container>
+          <br />
+          <b-row class="mt-5 mb-5">
+            <b-col sm="8" md="8" lg="4">
+              <div v-if="loading">
+                <estudio-skeleton></estudio-skeleton>
+              </div>
+              <div v-else>
                 <h2
-                  class="title mx-auto title-ligth animate__animated animate__fadeInUp"
+                  style="text-align: left"
+                  class="animate__animated animate__delay-slower animate__flipInX"
                 >
-                  ESTUDIOS
+                  Estudios
                 </h2>
               </div>
-            </b-row>
-          </b-col>
-        </b-row>
-      </b-container>
-    </div>
-    <transition>
-      <b-container>
-        <br />
-        <b-row class="mt-3 mb-5">
-          <b-col sm="8" md="8" lg="4">
-            <div v-if="loading">
-              <b-skeleton animation="fade" width="50%"></b-skeleton>
-            </div>
-            <div v-else>
-               <h2
-              style="text-align: left"
-              class="animate__animated animate__delay-slower animate__flipInX"
-            >
-              Skills
-            </h2>
-            </div>
-          </b-col>
-        </b-row>
-        <b-row class="mt-5">
-          <b-col sm="8" md="8" lg="6">
-            <article id="skills" class="mx-auto">
-              <div v-if="loading">
-                <p><b-skeleton animation="fade" width="50%"></b-skeleton></p>
-                <b-skeleton animation="fade" width="100%"></b-skeleton>
-                <br />
-                <p><b-skeleton animation="fade" width="50%"></b-skeleton></p>
-                <b-skeleton animation="fade" width="100%"></b-skeleton>
-                <br />
-                <p><b-skeleton animation="fade" width="50%"></b-skeleton></p>
-                <b-skeleton animation="fade" width="100%"></b-skeleton>
-                <br />
-                <p><b-skeleton animation="fade" width="50%"></b-skeleton></p>
-                <b-skeleton animation="fade" width="100%"></b-skeleton>
-                <br />
-                <p><b-skeleton animation="fade" width="50%"></b-skeleton></p>
-                <b-skeleton animation="fade" width="100%"></b-skeleton>
-                <br />
-                <p><b-skeleton animation="fade" width="50%"></b-skeleton></p>
-                <b-skeleton animation="fade" width="100%"></b-skeleton>
-                <br />
-                <p><b-skeleton animation="fade" width="50%"></b-skeleton></p>
-                <b-skeleton animation="fade" width="100%"></b-skeleton>
-                <br />
-                <p><b-skeleton animation="fade" width="50%"></b-skeleton></p>
-                <b-skeleton animation="fade" width="100%"></b-skeleton>
-                <br />
-                <p><b-skeleton animation="fade" width="50%"></b-skeleton></p>
-                <b-skeleton animation="fade" width="100%"></b-skeleton>
-                <br />
-                <p><b-skeleton animation="fade" width="50%"></b-skeleton></p>
-                <b-skeleton animation="fade" width="100%"></b-skeleton>
-              </div>
-              <div v-else>
-                <div v-for="(skill, index, key) in skills" :key="key">
-                  <p
-                    style="text-aling: left; text-align: left; font-size: 14px"
-                  >
-                    {{ skill.nombre }}
-                  </p>
-                  <b-progress :max="100" show-progress class="mx-auto">
-                    <b-progress-bar
-                      variant="secondary"
-                      :value="Number(skill.porcentaje)"
+            </b-col>
+          </b-row>
+          <b-row class="mt-5">
+            <b-col sm="8" md="8" lg="6">
+              <article id="skills" class="mx-auto">
+                <div v-if="loading"></div>
+                <div v-else>
+                  <div v-for="(skill, index, key) in skills" :key="key">
+                    <div
+                      @mouseenter="onAnimatedProgress(index)"
+                      @mouseleave="offAnimatedProgress(index)"
                     >
-                      <span style="font-size: 14px">
-                        {{ skill.porcentaje + "%" }}
-                      </span>
-                    </b-progress-bar>
-                  </b-progress>
-                  <br />
+                      <p
+                        style="
+                          text-aling: left;
+                          text-align: left;
+                          font-size: 14px;
+                        "
+                      >
+                        {{ skill.nombre }}
+                      </p>
+                      <b-progress
+                        :max="100"
+                        show-progress
+                        class="mx-auto"
+                        :animated="skill.animated"
+                      >
+                        <b-progress-bar
+                          variant="secondary"
+                          :value="Number(skill.porcentaje)"
+                        >
+                          <span style="font-size: 14px">
+                            {{ skill.porcentaje + "%" }}
+                          </span>
+                        </b-progress-bar>
+                      </b-progress>
+                    </div>
+                    <br />
+                  </div>
+                </div>
+              </article>
+            </b-col>
+            <b-col sm="8" md="8" lg="6">
+              <div class="mx-auto" data-aos="fade-left">
+                <div v-if="loading">
+                  <b-skeleton-img
+                    animation="fade"
+                    no-aspect
+                    height="350px"
+                  ></b-skeleton-img>
+                </div>
+                <div v-else>
+                  <splide>
+                    <splide-slide
+                      v-for="(certificado, key) in certificados"
+                      :key="key"
+                    >
+                      <img :src="certificado.imagenCertificado" />
+                    </splide-slide>
+                    <template v-slot:controls>
+                      <div class="splide__progress">
+                        <div class="splide__progress__bar"></div>
+                      </div>
+                    </template>
+                  </splide>
                 </div>
               </div>
-            </article>
-          </b-col>
-          <b-col sm="8" md="8" lg="6">
-            <div class="mx-auto" data-aos="fade-left">
-              <div v-if="loading"> 
-                <b-skeleton-img animation="fade" no-aspect height="350px"></b-skeleton-img>
-              </div>
-              <div v-else>
-                 <splide>
-                <splide-slide
-                  v-for="(certificado, key) in certificados"
-                  :key="key"
-                >
-                  <img :src="certificado.imagenCertificado" />
-                </splide-slide>
-                <template v-slot:controls>
-                  <div class="splide__progress">
-                    <div class="splide__progress__bar"></div>
-                  </div>
-                </template>
-              </splide>
-              </div>
-              
-             
-            </div>
-            <!-- <b-col
+              <!-- <b-col
                 v-for="(certificado, key) in certificados"
                 :key="key"
                 sm="2"
@@ -139,12 +109,28 @@
            
                 </b-card>
               </b-col> -->
+            </b-col>
+          </b-row>
+        </b-container>
+      </transition>
+      <br />
+      <br />
+      <!-- <b-container fluid="lg">
+        <b-row>
+          <b-col cols="*">
+            <b-row class="justify-content-center justify-content-md-start">
+              <div class="mx-auto overlay">
+                <h2
+                  class="title mx-auto title-ligth animate__animated animate__fadeInUp"
+                >
+                  ESTUDIOS
+                </h2>
+              </div>
+            </b-row>
           </b-col>
         </b-row>
-      </b-container>
-    </transition>
-    <br />
-    <br />
+      </b-container> -->
+    </div>
   </div>
 </template>
 
@@ -161,16 +147,29 @@ import imagen7 from "../assets/typescript.png";
 import imagen9 from "../assets/htmlyjavascript.png";
 import imagen10 from "../assets/certificado-git.jpg";
 import { Splide, SplideSlide } from "@splidejs/vue-splide";
-import SkillService from "../services/skillsservice";
+import estudioSkeleton from "@/components/estudioSkeletonComponent";
+/* import SkillService from "../services/skillsservice"; */
 export default {
   components: {
     Splide,
     SplideSlide,
+    estudioSkeleton,
   },
   data() {
     return {
-      skills: [],
-      loading: true,
+      skills: [
+        { nombre: "HTML", porcentaje: 90, animated: false },
+        { nombre: "CSS", porcentaje: 90, animated: false },
+        { nombre: "Javascript", porcentaje: 90, animated: false },
+        { nombre: "Node.js", porcentaje: 70, animated: false },
+        { nombre: "Express.js", porcentaje: 70, animated: false },
+        { nombre: "Vue(2-3).js", porcentaje: 90, animated: false },
+        { nombre: "React", porcentaje: 60, animated: false },
+        { nombre: "Typeorm", porcentaje: 70, animated: false },
+        { nombre: "Bootstrap", porcentaje: 70, animated: false },
+        { nombre: "Laravel", porcentaje: 50, animated: false },
+      ],
+      loading: false,
       skillService: null,
       imagenesCertificado: {
         imagen1: imagen1,
@@ -225,12 +224,23 @@ export default {
       ],
     };
   },
+  methods: {
+    onAnimatedProgress(index) {
+      this.skills[index].animated = true;
+    },
+    offAnimatedProgress(index) {
+      this.skills[index].animated = !this.skills[index].animated;
+    },
+  },
   computed: {},
   created() {
-    this.skillService = new SkillService();
+    //this.skillService = new SkillService();
+    setTimeout(() => {
+      this.loading = false;
+    }, 3200);
   },
   mounted() {
-    console.log(this.skillService);
+    /* console.log(this.skillService);
     this.skillService.getAllSkills().then((res) => {
       res.map((skill) => {
         this.skills.push(skill);
@@ -238,7 +248,7 @@ export default {
       setTimeout(() => {
         this.loading = false;
       }, 3200);
-    });
+    }); */
   },
 };
 </script>
@@ -250,23 +260,6 @@ export default {
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-}
-
-.img-background {
-  min-height: 100%;
-  min-width: 1024px;
-  width: 100%;
-  height: fit-content;
-  background-image: linear-gradient(
-      0deg,
-      rgba(73, 87, 98, 0.86) -13.97%,
-      rgba(13, 13, 13, 0.28) 97.41%
-    ),
-    url("../assets/learnig.jpg");
-  height: 100vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 @media screen {
@@ -297,9 +290,5 @@ export default {
   #skills {
     column-count: 1;
   }
-}
-
-#skills {
-  column-count: 2;
 }
 </style>
