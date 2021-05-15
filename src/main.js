@@ -11,7 +11,10 @@ import { faUserSecret} from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faJs, faVuejs } from '@fortawesome/free-brands-svg-icons'
 import VueSplide from '@splidejs/vue-splide';
-// ..
+
+
+
+// ..Scroll Magic
 AOS.init();
 
 import './assets/css/styles.css'
