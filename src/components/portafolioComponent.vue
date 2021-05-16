@@ -1,9 +1,12 @@
 <template>
   <div id="portafolio">
-    <div class="img-background-portafolio">
+    <div class="img-background">
       <b-container fluid="lg">
         <b-row>
-          <b-col cols="*">
+         <b-col lg="6">
+            <b-img src="../assets/pagina/Rivera.png" fluid alt="Responsive image"></b-img>
+         </b-col>
+          <b-col lg="6">
             <b-row class="justify-content-center justify-content-md-start">
               <div class="mx-auto overlay">
                 <h2

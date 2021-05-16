@@ -7,20 +7,21 @@
             id="about-my"
             class="animate__animated animate__delay-slower animate__backInLeft"
           >
-            <div class="mark-photo d-none d-sm-block">
-              <img src="../assets/HV_cv.jpeg" class="img-fluid" />
+            <div class="mark-photo 	d-none d-sm-block">
+              <img src="../assets/HV_cv.jpeg" class=" img-fluid" />
             </div>
-            <div class="mark-photo d-lg-none d-none d-lg-block d-xl-none">
-              <img src="../assets/HV_cv.jpeg" class="img-fluid" />
+            <div class="mark-photo d-xl-none">
+              <img src="../assets/HV_cv-perfil-rep.png" class=" img-fluid" />
             </div>
+           
           </div>
         </b-col>
-        
-        <b-col sm="12" md="6" lg="6">
-         <!--  <button @click="mostrar=!mostrar">Mostrar</button> -->
-          <article id="about" v-if="!mostrar">
+
+        <b-col sm="12" md="6" lg="6" >
+          <!--  <button @click="mostrar=!mostrar">Mostrar</button> -->
+          <article id="about"  class="pb-5" v-if="!mostrar">
             <p
-              class="title-dark mx-auto animate__animated animate__delay-slower animate__fadeInDown"
+              class="title-dark text-center mx-auto animate__animated animate__delay-slower animate__fadeInDown"
             >
               SOBRE MI
             </p>
@@ -50,7 +51,6 @@
               voluptates at.
             </p>
           </article>
-          
         </b-col>
       </b-row>
     </b-container>
@@ -58,13 +58,10 @@
 </template>
 
 <script>
-
-
-
 export default {
   data() {
     return {
-      mostrar:false,
+      mostrar: false,
       homePageData: [],
     };
   },
@@ -73,7 +70,6 @@ export default {
 
 <style scoped >
 .about {
-  box-sizing: content-box;
   background: linear-gradient(
       270deg,
       rgba(255, 255, 255, 0) 0%,
@@ -82,9 +78,9 @@ export default {
     #ffffff;
   width: 100%;
   height: 100vh;
-  overflow: hidden;
+  overflow-y: scroll;
   display: flex;
-  padding: 7em 0px !important;
+  padding: 9em 0px !important;
   flex-direction: row-reverse;
   justify-content: flex-end;
 }
@@ -98,11 +94,6 @@ export default {
   border-radius: 0px 200px 0px 198px;
 }
 
-#about-my,
-#about {
-  /* padding: 6em 0px; */
-  vertical-align: middle;
-}
 
 #about-my img {
   position: relative;
@@ -120,16 +111,35 @@ export default {
   border-radius: 0px 200px 0px 198px;
 }
 
-@media only screen {
+@media (min-width: 320px) and (max-width: 480px) {
+    
+
   .about {
+    
     box-sizing: content-box;
     padding: 9em 0px;
-    height: 70vh;
-    overflow: hidden;
+    height: 100vh;
+    overflow-y: scroll;
     display: flex;
     flex-direction: row-reverse;
     justify-content: flex-end;
   }
+  .mark-photo {
+    margin: 29px 12px 29px 12px;
+    width: 87%;
+    height: 34%;
+    background:none
+  }
+
+  #about-my img {
+  top: -2px;
+  width: 90%;
+  height: 100%;
+  border-radius: 100%;
+  
+  background: linear-gradient(180deg, #2ecfa8 0%, rgba(255, 255, 255, 0) 100%),
+    rgba(147, 245, 192, 0.93);
+}
 }
 </style>
 

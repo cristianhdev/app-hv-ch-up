@@ -1,6 +1,6 @@
 <template>
   <transition name="bounce">
-    <div class="contacto mx-auto">
+    <div class="img-background mx-auto">
       <b-container fluid="md">
         <b-row>
           <b-col sm="12" md="6" lg="12">
@@ -71,7 +71,7 @@
                     icon="arrow-clockwise"
                     animation="spin"
                   ></b-icon
-                  >{{mensajeBoton}}</b-button
+                  >{{ mensajeBoton }}</b-button
                 >
               </div>
             </b-form>
@@ -97,7 +97,7 @@ export default {
       img: imagenemail,
       mensajeCorreo: false,
       iconMensaje: false,
-      mensajeBoton:'Enviar',
+      mensajeBoton: "Enviar",
       formContacto: {
         from_name: "",
         to_name: "",
@@ -107,8 +107,8 @@ export default {
   },
   methods: {
     onSendEmail() {
-      this.mensajeBoton="Enviando..."
-      this.iconMensaje=true
+      this.mensajeBoton = "Enviando...";
+      this.iconMensaje = true;
       emailjs
         .send(
           process.env.VUE_APP_SERVICE_ID,
@@ -126,8 +126,8 @@ export default {
                 message: "",
               };
             }
-            this.mensajeBoton="Enviar"
-            this.iconMensaje=false
+            this.mensajeBoton = "Enviar";
+            this.iconMensaje = false;
           },
           (err) => {
             console.log("FAILED...", err);
@@ -147,22 +147,7 @@ export default {
   text-align: left;
 }
 
-.contacto {
-  box-sizing: content-box;
-  background: linear-gradient(
-      270deg,
-      rgba(255, 255, 255, 0) 0%,
-      rgba(167, 179, 203, 0.63) 86.76%
-    ),
-    #ffffff;
-  width: 100%;
-  height: auto;
-  overflow: hidden;
-  display: flex;
-  padding: 7em 0px !important;
-  flex-direction: row-reverse;
-  justify-content: flex-end;
-}
+
 
 .imag-center {
   display: flex;

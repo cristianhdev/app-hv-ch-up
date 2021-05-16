@@ -1,6 +1,6 @@
 <template lang="html">
   <section class="menu-principal-component">
-    <b-navbar toggleable="lg" class="fixed-top" type="dark" :style="{'background-color':colorMenu}">
+    <b-navbar toggleable="lg" type="dark" fixed="top" :style="{'background-color':colorMenu}">
     <b-navbar-brand to="/">CrisitianDev</b-navbar-brand>
 
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>

@@ -1,89 +1,55 @@
 <template>
-  <div id="studing">
-    <div class="img-background">
-      <transition>
-        <b-container>
-          <br />
-          <b-row class="mt-5 mb-5">
-            <b-col sm="8" md="8" lg="4">
+  <transition>
+    <div class="img-background mx-auto">
+      <b-container class="estudios">
+        <b-row>
+          <b-col sm="8" md="8" lg="4">
+            <div v-if="loading">
+              <estudio-skeleton></estudio-skeleton>
+            </div>
+            <div v-else>
+              <h2
+                class="text-left animate__animated animate__delay-slower animate__flipInX"
+              >
+                Estudios
+              </h2>
+            </div>
+          </b-col>
+        </b-row>
+        <b-row class="mt-5">
+          <b-col sm="8" md="8" lg="6">
+            <div class="mx-auto" >
               <div v-if="loading">
-                <estudio-skeleton></estudio-skeleton>
+                <b-skeleton-img
+                  animation="fade"
+                  no-aspect
+                  height="350px"
+                ></b-skeleton-img>
               </div>
-              <div v-else>
-                <h2
-                  style="text-align: left"
-                  class="animate__animated animate__delay-slower animate__flipInX"
-                >
-                  Estudios
-                </h2>
-              </div>
-            </b-col>
-          </b-row>
-          <b-row class="mt-5">
-            <b-col sm="8" md="8" lg="6">
-              <article id="skills" class="mx-auto">
-                <div v-if="loading"></div>
-                <div v-else>
-                  <div v-for="(skill, index, key) in skills" :key="key" >
-                    <div @mouseenter="onAnimatedProgress(index)"
-                      @mouseleave="offAnimatedProgress(index)">
-                    <p
-                      style="
-                        text-aling: left;
-                        text-align: left;
-                        font-size: 14px;
-                      "
-                    >
-                      {{ skill.nombre }}
-                    </p>
-                    <b-progress
-                      :max="100"
-                      show-progress
-                      class="mx-auto"
-                      :animated="skill.animated"
-                      
-                    >
-                      <b-progress-bar
-                        variant="secondary"
-                        :value="Number(skill.porcentaje)"
-                      >
-                        <span style="font-size: 14px">
-                          {{ skill.porcentaje + "%" }}
-                        </span>
-                      </b-progress-bar>
-                    </b-progress>
+              <div v-else class="animate__animated  animate__fadeInLeft">
+                <splide>
+                  <splide-slide
+                    :options="options"
+                    v-for="(certificado, key) in certificados"
+                    :key="key"
+                  >
+                    <div>
+                      <b-img
+                        :src="certificado.imagenCertificado"
+                        thumbnail fluid
+                        :alt="certificado.descripcion"
+                      ></b-img>
                     </div>
-                    <br />
-                  </div>
-                </div>
-              </article>
-            </b-col>
-            <b-col sm="8" md="8" lg="6">
-              <div class="mx-auto" data-aos="fade-left">
-                <div v-if="loading">
-                  <b-skeleton-img
-                    animation="fade"
-                    no-aspect
-                    height="350px"
-                  ></b-skeleton-img>
-                </div>
-                <div v-else>
-                  <splide>
-                    <splide-slide
-                      v-for="(certificado, key) in certificados"
-                      :key="key"
-                    >
-                      <img :src="certificado.imagenCertificado" />
-                    </splide-slide>
-                    <template v-slot:controls>
-                      <div class="splide__progress">
-                        <div class="splide__progress__bar"></div>
-                      </div>
-                    </template>
-                  </splide>
-                </div>
+                  </splide-slide>
+                  <template v-slot:controls>
+                    <div class="splide__progress">
+                      <div class="splide__progress__bar"></div>
+                    </div>
+                  </template>
+                </splide>
               </div>
-              <!-- <b-col
+            </div>
+            <!-- <b-col
                 v-for="(certificado, key) in certificados"
                 :key="key"
                 sm="2"
@@ -108,29 +74,50 @@
            
                 </b-card>
               </b-col> -->
-            </b-col>
-          </b-row>
-        </b-container>
-      </transition>
-      <br />
-      <br />
-      <!-- <b-container fluid="lg">
-        <b-row>
-          <b-col cols="*">
-            <b-row class="justify-content-center justify-content-md-start">
-              <div class="mx-auto overlay">
-                <h2
-                  class="title mx-auto title-ligth animate__animated animate__fadeInUp"
-                >
-                  ESTUDIOS
-                </h2>
+          </b-col>
+          <b-col sm="8" md="8" lg="6">
+            <article id="skills" class="mx-auto animate__animated  animate__fadeInRight" >
+              <div v-if="loading"></div>
+              <div v-else>
+                <div v-for="(skill, index, key) in skills" :key="key">
+                  <div
+                    @mouseenter="onAnimatedProgress(index)"
+                    @mouseleave="offAnimatedProgress(index)"
+                  >
+                    <p
+                      style="
+                        text-aling: left;
+                        text-align: left;
+                        font-size: 14px;
+                      "
+                    >
+                      {{ skill.nombre }}
+                    </p>
+                    <b-progress
+                      :max="100"
+                      show-progress
+                      class="mx-auto"
+                      :animated="skill.animated"
+                    >
+                      <b-progress-bar
+                        variant="secondary"
+                        :value="Number(skill.porcentaje)"
+                      >
+                        <span style="font-size: 14px">
+                          {{ skill.porcentaje + "%" }}
+                        </span>
+                      </b-progress-bar>
+                    </b-progress>
+                  </div>
+                  <br />
+                </div>
               </div>
-            </b-row>
+            </article>
           </b-col>
         </b-row>
-      </b-container> -->
+      </b-container>
     </div>
-  </div>
+  </transition>
 </template>
 
 <script>
@@ -157,21 +144,27 @@ export default {
   data() {
     return {
       skills: [
-        { nombre: "HTML", porcentaje: 90 ,animated:false},
-        { nombre: "CSS", porcentaje: 90, animated:false },
-        { nombre: "Javascript", porcentaje: 90, animated:false },
-        { nombre: "Node.js", porcentaje: 70, animated:false },
-        { nombre: "Express.js", porcentaje: 70, animated:false },
-        { nombre: "Vue(2-3).js", porcentaje: 90, animated:false },
-        { nombre: "React", porcentaje: 60, animated:false },
-        { nombre: "Typeorm", porcentaje: 70, animated:false },
-        { nombre: "Bootstrap", porcentaje: 70, animated:false },
-        { nombre: "Laravel", porcentaje: 50, animated:false },
+        { nombre: "HTML", porcentaje: 90, animated: false },
+        { nombre: "CSS", porcentaje: 90, animated: false },
+        { nombre: "Javascript", porcentaje: 90, animated: false },
+        { nombre: "Node.js", porcentaje: 70, animated: false },
+        { nombre: "Express.js", porcentaje: 70, animated: false },
+        { nombre: "Vue(2-3).js", porcentaje: 90, animated: false },
+        { nombre: "React", porcentaje: 60, animated: false },
+        { nombre: "Typeorm", porcentaje: 70, animated: false },
+        { nombre: "Bootstrap", porcentaje: 70, animated: false },
+        { nombre: "Laravel", porcentaje: 50, animated: false },
       ],
       loading: false,
       skillService: null,
       imagenesCertificado: {
         imagen1: imagen1,
+      },
+      options: {
+        rewind: true,
+        width: "10%",
+        perPage: 1,
+        gap: "4rem",
       },
       backgroundEstudio: background,
       certificados: [
@@ -224,12 +217,12 @@ export default {
     };
   },
   methods: {
-    onAnimatedProgress(index){
-      this.skills[index].animated=true
+    onAnimatedProgress(index) {
+      this.skills[index].animated = true;
     },
-    offAnimatedProgress(index){
-      this.skills[index].animated=!this.skills[index].animated
-    }
+    offAnimatedProgress(index) {
+      this.skills[index].animated = !this.skills[index].animated;
+    },
   },
   computed: {},
   created() {
@@ -253,14 +246,6 @@ export default {
 </script>
 
 <style>
-.container-flex {
-  margin: -23px 0px 0px 0px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-}
-
 @media screen {
   .img-background {
     min-width: 100%;
