@@ -22,7 +22,7 @@
               <div v-if="loading">
                 <b-skeleton-img
                   animation="fade"
-                  no-aspect
+                  no-aspectE
                   height="350px"
                 ></b-skeleton-img>
               </div>

@@ -22,11 +22,19 @@
               >
                 <b-form-input
                   id="input-1"
-                  v-model="formContacto.to_name"
+                  v-model.trim="$v.formContacto.to_name.$model"
                   type="text"
                   placeholder="Nombre"
-                  required
+                  :class="{
+                    'form-group--error': $v.formContacto.to_name.$error,
+                  }"
                 ></b-form-input>
+                <div class="error" v-if="!$v.formContacto.to_name.required && $v.formContacto.to_name.$dirty ">
+                  Este campo es requerido.
+                </div>
+                <div class="error" v-if="!$v.formContacto.to_name.$invalid && $v.formContacto.to_name.$alpha">
+                  Solo se permiten caracteres.
+                </div>
               </b-form-group>
               <b-form-group
                 id="input-group-2"
@@ -36,11 +44,20 @@
               >
                 <b-form-input
                   id="input-1"
-                  v-model="formContacto.from_name"
+                  v-model="$v.formContacto.from_name.$model"
                   type="email"
                   placeholder="Correo"
-                  required
+                  :class="{
+                    'form-group--error': $v.formContacto.from_name.$error,
+                  }"
                 ></b-form-input>
+                <div class="error" v-if=" !$v.formContacto.from_name.required && $v.formContacto.from_name.$dirty">
+                  Este campo es requerido.
+                </div>
+                <div class="error" v-if="$v.formContacto.from_name.$invalid && $v.formContacto.from_name.$dirty">
+                 No es un correo valido.
+                </div>
+                
               </b-form-group>
               <b-form-group
                 id="input-group-3"
@@ -50,11 +67,24 @@
               >
                 <b-form-textarea
                   id="textarea"
-                  v-model="formContacto.message"
+                  v-model="$v.formContacto.message.$model"
                   placeholder="Descripcion"
                   rows="3"
+                
                   max-rows="6"
+                  :class="{
+                    'form-group--error': $v.formContacto.message.$error,
+                  }"
                 ></b-form-textarea>
+                <div class="error" v-if=" !$v.formContacto.message.required && $v.formContacto.message.$dirty">
+                  Este campo es requerido.
+                </div>
+                <div class="error" v-if="(!$v.formContacto.message.$minLength && $v.formContacto.message.$invalid) && $v.formContacto.message.$dirty">
+                Se necesitan minimo 4 caracteres.
+                </div>
+                <div class="error" v-if="(!$v.formContacto.message.$maxLength && $v.formContacto.message.$invalid) && $v.formContacto.message.$dirty">
+                Se solo se permiten 100 caracteres.
+                </div>
               </b-form-group>
               <div class="tl">
                 <b-alert
@@ -65,7 +95,10 @@
                   show
                   >Mensaje enviado</b-alert
                 >
-                <b-button type="submit" variant="primary"
+                <b-button
+                  type="submit"
+                  variant="primary"
+                  :disabled="$v.$invalid"
                   ><b-icon
                     v-if="iconMensaje"
                     icon="arrow-clockwise"
@@ -90,7 +123,7 @@
 <script>
 import imagenemail from "../assets/email.png";
 import emailjs from "emailjs-com";
-
+import { required, email, maxLength, minLength, alpha } from "vuelidate/lib/validators";
 export default {
   data() {
     return {
@@ -104,6 +137,24 @@ export default {
         message: "",
       },
     };
+  },
+  validations: {
+    formContacto: {
+      from_name: {
+        required,
+        email
+        
+      },
+      to_name: {
+        required,
+        alpha
+      },
+      message: {
+        required,
+         minLength: minLength(4),
+         maxLength: maxLength(100)
+      },
+    },
   },
   methods: {
     onSendEmail() {
@@ -120,6 +171,7 @@ export default {
           (response) => {
             if (response.status == 200) {
               this.mensajeCorreo = true;
+              this.$v.$reset();
               this.formContacto = {
                 from_name: "",
                 to_name: "",
@@ -147,8 +199,6 @@ export default {
   text-align: left;
 }
 
-
-
 .imag-center {
   display: flex;
   flex-direction: row;
@@ -173,5 +223,14 @@ export default {
   100% {
     transform: scale(1);
   }
+}
+
+.form-group--error {
+  border-left: 3px solid red;
+}
+
+.error{
+  font-size: 14px;
+  color:red
 }
 </style>
