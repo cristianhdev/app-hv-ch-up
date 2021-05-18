@@ -3,8 +3,8 @@
     <div class="img-background mx-auto">
       <b-container class="estudios">
         <b-row>
-          <b-col sm="8" md="8" lg="4">
-            <div v-if="loading">
+          <b-col sm="12" md="6" lg="12">
+              <div v-if="loading">
               <estudio-skeleton></estudio-skeleton>
             </div>
             <div v-else>
@@ -12,9 +12,12 @@
                 class="text-left animate__animated animate__delay-slower animate__flipInX"
               >
                 Estudios
+                <hr style="text-left;width:100%">
               </h2>
             </div>
           </b-col>
+        </b-row>
+        <b-row>
         </b-row>
         <b-row class="mt-5">
           <b-col sm="8" md="8" lg="6">
@@ -167,16 +170,16 @@ export default {
         gap: "4rem",
       },
       backgroundEstudio: background,
-      certificados: [
-        {
-          title: "Tecnico Profesional",
-          descripcion: "Programación de Software SENA",
-          imagenCertificado: imagen1,
-        },
+      certificados: [ 
         {
           title: "Tecnico Profesional",
           descripcion: "Desarrollo de Software EAM",
           imagenCertificado: imagen2,
+        },
+         {
+          title: "Tecnico Profesional",
+          descripcion: "Programación de Software SENA",
+          imagenCertificado: imagen1,
         },
         {
           title: "Vue2.js",

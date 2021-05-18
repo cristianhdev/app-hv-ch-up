@@ -9,6 +9,7 @@
             >
               Contáctame
             </h2>
+              <hr style="text-left;width:100%">
           </b-col>
         </b-row>
         <b-row>

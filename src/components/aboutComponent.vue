@@ -25,6 +25,7 @@
             >
               SOBRE MI
             </p>
+             <hr style="text-left;width:100%">
             <p
               class="text-justify animate__animated animate__delay-1s animate__flipInX"
             >
