@@ -3,7 +3,7 @@
     <div class="img-background mx-auto">
       <b-container class="estudios">
         <b-row>
-          <b-col sm="12" md="6" lg="12">
+          <b-col sm="12" md="12" lg="12">
               <div v-if="loading">
               <estudio-skeleton></estudio-skeleton>
             </div>
@@ -20,7 +20,7 @@
         <b-row>
         </b-row>
         <b-row class="mt-5">
-          <b-col sm="8" md="8" lg="6">
+          <b-col sm="8" md="12" lg="6">
             <div class="mx-auto" >
               <div v-if="loading">
                 <b-skeleton-img
@@ -29,7 +29,7 @@
                   height="350px"
                 ></b-skeleton-img>
               </div>
-              <div v-else class="animate__animated  animate__fadeInLeft">
+              <div v-else id="slider" class="animate__animated  animate__fadeInLeft">
                 <splide>
                   <splide-slide
                     :options="options"
@@ -78,7 +78,7 @@
                 </b-card>
               </b-col> -->
           </b-col>
-          <b-col sm="8" md="8" lg="6">
+          <b-col sm="8" md="12" lg="6">
             <article id="skills" class="mx-auto animate__animated  animate__fadeInRight" >
               <div v-if="loading"></div>
               <div v-else>
@@ -165,7 +165,7 @@ export default {
       },
       options: {
         rewind: true,
-        width: "10%",
+        width: "auto",
         perPage: 1,
         gap: "4rem",
       },
@@ -277,5 +277,11 @@ export default {
   #skills {
     column-count: 1;
   }
+
+  #slider{
+    margin-bottom:35px;
+  }
 }
+
+
 </style>

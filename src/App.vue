@@ -14,7 +14,7 @@ import MenuPrincipal from './components/menuPrincipalComponent'
 export default {
   components:{
     MenuPrincipal
-  }
+  } 
 }
 </script>
 

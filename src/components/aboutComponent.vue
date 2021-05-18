@@ -2,30 +2,32 @@
   <div class="about mx-auto">
     <b-container fluid="md">
       <b-row>
-        <b-col sm="12" md="6" lg="6">
+        <b-col sm="12" md="12" lg="6">
           <div
             id="about-my"
             class="animate__animated animate__delay-slower animate__backInLeft"
           >
-            <div class="mark-photo 	d-none d-sm-block">
-              <img src="../assets/HV_cv.jpeg" class=" img-fluid" />
+            <div id="imagen1" class="mark-photo">
+              <img src="../assets/HV_cv.jpeg" class="img-fluid" />
             </div>
-            <div class="mark-photo d-xl-none">
-              <img src="../assets/HV_cv-perfil-rep.png" class=" img-fluid" />
+            <div id="imagen2" class="mark-photo d-xl-none">
+              <img src="../assets/HV_cv-perfil-rep.png" class="img-fluid" />
             </div>
-           
           </div>
         </b-col>
 
-        <b-col sm="12" md="6" lg="6" >
+        <b-col sm="12" md="12" lg="6">
           <!--  <button @click="mostrar=!mostrar">Mostrar</button> -->
-          <article id="about"  class="pb-5" v-if="!mostrar">
+          <article id="about" class="pb-5" v-if="!mostrar">
             <p
               class="title-dark text-center mx-auto animate__animated animate__delay-slower animate__fadeInDown"
             >
               SOBRE MI
             </p>
-             <hr class="animate__animated animate__delay-1s animate__fadeIn" style="text-left;width:100%">
+            <hr
+              class="animate__animated animate__delay-1s animate__fadeIn"
+              style="text-left;width:100%"
+            />
             <p
               class="text-justify animate__animated animate__delay-1s animate__flipInX"
             >
@@ -81,7 +83,7 @@ export default {
   height: 100vh;
   overflow-y: scroll;
   display: flex;
-  padding: 9em 0px !important;
+  padding: 5em 0px !important;
   flex-direction: row-reverse;
   justify-content: flex-end;
 }
@@ -95,7 +97,6 @@ export default {
   border-radius: 0px 200px 0px 198px;
 }
 
-
 #about-my img {
   position: relative;
   width: 270.99px;
@@ -104,21 +105,33 @@ export default {
   border-radius: 0px 144px;
 }
 
-#about-my img {
-  border-radius: 0px 144px;
-}
-
 .mark-photo {
   border-radius: 0px 200px 0px 198px;
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
-    
+@media (min-width: 1281px) {
+ /*  .about {
+    border: 45px solid red;
+  } */
+}
 
+@media (min-width: 1025px) and (max-width: 1280px) {
+  /* .about {
+    border: 45px solid blue;
+  } */
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+ /*  .about {
+    border: 45px solid silver;
+  } */
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+ 
   .about {
-    
     box-sizing: content-box;
-    padding: 9em 0px;
+    padding: 5em 0px;
     height: 100vh;
     overflow-y: scroll;
     display: flex;
@@ -126,25 +139,67 @@ export default {
     justify-content: flex-end;
   }
   .mark-photo {
-    margin: 29px 12px 29px 12px;
+    margin: 0px auto;
     width: 87%;
     height: 34%;
-    background:none
+    background: none;
+  }
+
+  #imagen1 {
+    display: none;
+  }
+
+   #imagen2{
+    margin-bottom: 12px;
   }
 
   #about-my img {
-  top: -2px;
-  width: 90%;
-  height: 100%;
-  border-radius: 100%;
-  
-  background: linear-gradient(180deg, #2ecfa8 0%, rgba(255, 255, 255, 0) 100%),
-    rgba(147, 245, 192, 0.93);
+    top: -2px;
+    width: 90%;
+    height: 100%;
+    border-radius: 100%;
+
+    background: linear-gradient(180deg, #2ecfa8 0%, rgba(255, 255, 255, 0) 100%),
+      rgba(147, 245, 192, 0.93);
+  }
 }
+
+@media (min-width: 481px) and (max-width: 767px) {
+  /* .about {
+    border: 45px solid green;
+  } */
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .about {
+    box-sizing: content-box;
+    padding: 5em 0px;
+    height: 100vh;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+  }
+
+   #imagen1{
+    display:none
+  }
+
+  .mark-photo {
+    margin: 0px auto;
+    width: 87%;
+    height: 34%;
+    background: none;
+  }
+
+  #about-my img {
+    top: -2px;
+    width: 90%;
+    height: 100%;
+    border-radius: 100%;
+
+    background: linear-gradient(180deg, #2ecfa8 0%, rgba(255, 255, 255, 0) 100%),
+      rgba(147, 245, 192, 0.93);
+  }
 }
 </style>
-
-
-
-
-

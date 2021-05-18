@@ -8,7 +8,7 @@
               <div class="mx-auto overlay">
                 <h2
                   class="title mx-auto title-ligth animate__animated animate__jackInTheBox animate__delay-1s">
-                  <span>404</span><br>
+                  <span class="title-404">404</span><br>
                    <h3 class="subtitle-404">Lo sentimos pagina no encontrada</h3><br>
                   <b-button variant="primary" to="/">Volver al inicio</b-button>
                 </h2>
@@ -23,7 +23,7 @@
 
 <style scope>
 
-span {
+span .title-404{
     font-size:78px;
     text-shadow: 2px 1px 3px black;
 }
