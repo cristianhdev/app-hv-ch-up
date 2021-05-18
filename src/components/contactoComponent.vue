@@ -106,6 +106,12 @@
                   ></b-icon
                   >{{ mensajeBoton }}</b-button
                 >
+                <vue-recaptcha
+                  ref="recaptcha"
+                  @verify="onVerify"
+                  :sitekey="siteEnvKey"
+                >
+                </vue-recaptcha>
               </div>
             </b-form>
           </b-col>
@@ -124,13 +130,18 @@
 import imagenemail from "../assets/email.png";
 import emailjs from "emailjs-com";
 import { required, email, maxLength, minLength, alpha } from "vuelidate/lib/validators";
+import VueRecaptcha from 'vue-recaptcha';
 export default {
+  components: {
+   VueRecaptcha
+  },
   data() {
     return {
       img: imagenemail,
       mensajeCorreo: false,
       iconMensaje: false,
       mensajeBoton: "Enviar",
+      siteEnvKey: "",
       formContacto: {
         from_name: "",
         to_name: "",
@@ -142,8 +153,7 @@ export default {
     formContacto: {
       from_name: {
         required,
-        email
-        
+        email 
       },
       to_name: {
         required,
@@ -157,6 +167,9 @@ export default {
     },
   },
   methods: {
+    onVerify(response) {
+      console.log(response);
+    },
     onSendEmail() {
       this.mensajeBoton = "Enviando...";
       this.iconMensaje = true;
