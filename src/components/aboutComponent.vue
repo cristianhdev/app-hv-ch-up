@@ -11,7 +11,12 @@
               <img src="../assets/HV_cv.jpeg" class="img-fluid" />
             </div>
             <div id="imagen2" class="mark-photo d-xl-none">
-              <img src="../assets/HV_cv-perfil-rep.png" class="img-fluid" />
+              <div v-if="loadingImage">
+                <b-skeleton type="avatar" class="avatar-size"></b-skeleton>
+              </div>
+              <div v-else>
+                <img src="../assets/HV_cv-perfil-rep.png" class="img-fluid" />
+              </div>
             </div>
           </div>
         </b-col>
@@ -19,40 +24,78 @@
         <b-col sm="12" md="12" lg="6">
           <!--  <button @click="mostrar=!mostrar">Mostrar</button> -->
           <article id="about" class="pb-5" v-if="!mostrar">
-            <p
-              class="title-dark text-center mx-auto animate__animated animate__delay-slower animate__fadeInDown"
-            >
-              SOBRE MI
-            </p>
-            <hr
+            <div v-if="loadingImage">
+              <p
+                class="title-dark text-center mx-auto animate__animated animate__delay-slower animate__fadeInDown"
+              >
+                <b-skeleton
+                  animation="Fade"
+                  width="50%"
+                >
+                </b-skeleton>
+              </p>
+           
+            </div>
+            <div v-else>
+              <p
+                class="title-dark text-center mx-auto animate__animated animate__delay-slower animate__fadeInDown"
+              >
+                SOBRE MI
+              </p>
+            </div>
+               <hr
               class="animate__animated animate__delay-1s animate__fadeIn"
               style="text-left;width:100%"
             />
-            <p
-              class="text-justify animate__animated animate__delay-1s animate__flipInX"
-            >
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla,
-              quasi maiores dicta ut, perferendis officia sapiente repudiandae
-              illo totam dignissimos tempora minima. Commodi porro architecto
-              quisquam provident sunt, voluptates at. Lorem ipsum dolor, sit
-              amet consectetur adipisicing elit. Nulla, quasi maiores dicta ut,
-              perferendis officia sapiente repudiandae illo totam dignissimos
-              tempora minima. Commodi porro architecto quisquam provident sunt,
-              voluptates at.
-            </p>
+            <div v-if="loadingImage">
+              <p>
+                <b-skeleton
+                  animation="Fade"
+                  v-for="(i, n, key) in 9"
+                  :key="key"
+                  width="100%"
+                   class="animate__animated animate__delay-1s animate__flipInX"
+                >
+                </b-skeleton>
+              </p>
+              <p>
+                <b-skeleton
+                  animation="Fade"
+                  v-for="(i, n, key) in 9"
+                  :key="key"
+                  width="100%"
+                  class="animate__animated animate__delay-1s animate__flipInX"
+                >
+                </b-skeleton>
+              </p>
+            </div>
+            <div v-else>
+              <p
+                class="text-justify animate__animated animate__delay-1s animate__flipInX"
+              >
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla,
+                quasi maiores dicta ut, perferendis officia sapiente repudiandae
+                illo totam dignissimos tempora minima. Commodi porro architecto
+                quisquam provident sunt, voluptates at. Lorem ipsum dolor, sit
+                amet consectetur adipisicing elit. Nulla, quasi maiores dicta
+                ut, perferendis officia sapiente repudiandae illo totam
+                dignissimos tempora minima. Commodi porro architecto quisquam
+                provident sunt, voluptates at.
+              </p>
 
-            <p
-              class="text-justify animate__animated animate__delay-2s animate__flipInX"
-            >
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla,
-              quasi maiores dicta ut, perferendis officia sapiente repudiandae
-              illo totam dignissimos tempora minima. Commodi porro architecto
-              quisquam provident sunt, voluptates at. Lorem ipsum dolor, sit
-              amet consectetur adipisicing elit. Nulla, quasi maiores dicta ut,
-              perferendis officia sapiente repudiandae illo totam dignissimos
-              tempora minima. Commodi porro architecto quisquam provident sunt,
-              voluptates at.
-            </p>
+              <p
+                class="text-justify animate__animated animate__delay-2s animate__flipInX"
+              >
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla,
+                quasi maiores dicta ut, perferendis officia sapiente repudiandae
+                illo totam dignissimos tempora minima. Commodi porro architecto
+                quisquam provident sunt, voluptates at. Lorem ipsum dolor, sit
+                amet consectetur adipisicing elit. Nulla, quasi maiores dicta
+                ut, perferendis officia sapiente repudiandae illo totam
+                dignissimos tempora minima. Commodi porro architecto quisquam
+                provident sunt, voluptates at.
+              </p>
+            </div>
           </article>
         </b-col>
       </b-row>
@@ -66,12 +109,22 @@ export default {
     return {
       mostrar: false,
       homePageData: [],
+      loadingImage: true,
     };
+  },
+  beforeMount() {
+    setTimeout(() => {
+      this.loadingImage = false;
+    }, 1500);
   },
 };
 </script>
 
 <style scoped >
+.avatar-size {
+  width: 244.047px !important;
+  height: 227.062px !important;
+}
 .about {
   background: linear-gradient(
       270deg,
@@ -110,7 +163,7 @@ export default {
 }
 
 @media (min-width: 1281px) {
- /*  .about {
+  /*  .about {
     border: 45px solid red;
   } */
 }
@@ -122,13 +175,12 @@ export default {
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
- /*  .about {
+  /*  .about {
     border: 45px solid silver;
   } */
 }
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
- 
   .about {
     box-sizing: content-box;
     padding: 5em 0px;
@@ -149,7 +201,7 @@ export default {
     display: none;
   }
 
-   #imagen2{
+  #imagen2 {
     margin-bottom: 12px;
   }
 
@@ -181,8 +233,8 @@ export default {
     justify-content: flex-end;
   }
 
-   #imagen1{
-    display:none
+  #imagen1 {
+    display: none;
   }
 
   .mark-photo {

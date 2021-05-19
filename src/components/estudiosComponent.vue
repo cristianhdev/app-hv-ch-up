@@ -30,9 +30,9 @@
                 ></b-skeleton-img>
               </div>
               <div v-else id="slider" class="animate__animated  animate__fadeInLeft">
-                <splide>
+                <splide  :options="options">
                   <splide-slide
-                    :options="options"
+                   
                     v-for="(certificado, key) in certificados"
                     :key="key"
                   >
