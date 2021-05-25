@@ -165,6 +165,7 @@ export default {
       },
       options: {
         rewind: true,
+        lazyLoad: 'nearby',
         width: "auto",
         perPage: 1,
         gap: "4rem",

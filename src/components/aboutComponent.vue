@@ -11,10 +11,10 @@
               <img src="../assets/HV_cv.jpeg" class="img-fluid" />
             </div>
             <div id="imagen2" class="mark-photo d-xl-none">
-              <div v-if="loadingImage">
+              <!-- <div v-if="loadingImage">
                 <b-skeleton type="avatar" class="avatar-size"></b-skeleton>
-              </div>
-              <div v-else>
+              </div> -->
+              <div>
                 <img src="../assets/HV_cv-perfil-rep.png" class="img-fluid" />
               </div>
             </div>
@@ -24,7 +24,7 @@
         <b-col sm="12" md="12" lg="6">
           <!--  <button @click="mostrar=!mostrar">Mostrar</button> -->
           <article id="about" class="pb-5" v-if="!mostrar">
-            <div v-if="loadingImage">
+            <!-- <div v-if="loadingImage">
               <p
                 class="title-dark text-center mx-auto animate__animated animate__delay-slower animate__fadeInDown"
               >
@@ -35,8 +35,8 @@
                 </b-skeleton>
               </p>
            
-            </div>
-            <div v-else>
+            </div> -->
+            <div>
               <p
                 class="title-dark text-center mx-auto animate__animated animate__delay-slower animate__fadeInDown"
               >
@@ -47,7 +47,7 @@
               class="animate__animated animate__delay-1s animate__fadeIn"
               style="text-left;width:100%"
             />
-            <div v-if="loadingImage">
+            <!-- <div v-if="loadingImage">
               <p>
                 <b-skeleton
                   animation="Fade"
@@ -68,8 +68,8 @@
                 >
                 </b-skeleton>
               </p>
-            </div>
-            <div v-else>
+            </div> -->
+            <div>
               <p
                 class="text-justify animate__animated animate__delay-1s animate__flipInX"
               >
@@ -121,6 +121,10 @@ export default {
 </script>
 
 <style scoped >
+
+
+
+
 .avatar-size {
   width: 244.047px !important;
   height: 227.062px !important;
@@ -223,6 +227,12 @@ export default {
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
+
+  .sub-title {
+  width: 100px;
+  height: 17px;
+  }
+
   .about {
     box-sizing: content-box;
     padding: 5em 0px;

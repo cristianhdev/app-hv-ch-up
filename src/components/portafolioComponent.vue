@@ -14,12 +14,9 @@
             </div>
           </b-col>
         </b-row>
-        <b-row class="mt-5">
-          <b-col sm="12" md="12" lg="6">
-            <div
-              id="slider"
-              class="mx-auto mt-3 animate__animated animate__fadeInLeft"
-            >
+        <b-row>
+          <b-col id="slider" sm="12" md="12" lg="6">
+            <div class="mx-auto mt-3 animate__animated animate__fadeInLeft">
               <!-- <FsLightbox
                       :toggler="toggler"
                       :sources="[
@@ -39,7 +36,6 @@
                   :key="key"
                 >
                   <div>
-                  
                     <b-img
                       :src="imagPortafolio.img"
                       thumbnail
@@ -54,9 +50,18 @@
                   </div>
                 </template>
               </splide>
+                  <b-button
+                    @click="(stateShowFrame = true), (position = 0)"
+                    style="background-color: #495762"
+                    class="mr-3 mt-3 mb-3"
+                    :href="imagPortafolios[onPosicionSlider].url"
+                    target="_blank"
+                    size="sm"
+                    >IR A LA PAGINA</b-button
+                  > 
             </div>
           </b-col>
-          <b-col sm="12" md="12" lg="6">
+          <b-col id="slider" sm="12" md="12" lg="6">
             <div
               class="mx-auto text-justify animate__animated animate__fadeInRight"
             >
@@ -65,15 +70,31 @@
                   <portafolio-texto :posicion="onPosicionSlider" />
                 </b-col>
                 <b-col lg="12" class="text-center">
-                  <b-button
-                    @click="(stateShowFrame = true), (position = 0)"
-                    variant="primary"
-                    class="mr-3"
-                    :href="imagPortafolios[onPosicionSlider].url"
-                    target="_blank"
-                    size="sm"
-                    >IR A LA PAGINA</b-button
-                  >
+                  <div class="icons">
+                    <template>
+                      <div id="tooltip-target-1">
+                        <img
+                          placement="bottom"
+                          src="../assets/ico/html5-brands.svg"
+                        />
+                        <b-tooltip target="tooltip-target-1" triggers="hover">
+                          HTML5
+                        </b-tooltip>
+                      </div>
+                    </template>
+                    <template>
+                      <div id="tooltip-target-2">
+                        <img src="../assets/ico/css3-brands.svg" />
+                        <b-tooltip target="tooltip-target-2" triggers="hover">
+                          CSS3
+                        </b-tooltip>
+                      </div>
+                    </template>
+
+                    <img src="../assets/ico/js-square-brands.svg" />
+                  </div>
+                  <br />
+                  <br />
                   <!-- <b-button
                     variant="primary"
                     @click="(stateShowFrame = true), (position = 1)"
@@ -120,9 +141,9 @@ import portafolioTexto from "../components/portafolioTextoComponent";
 /* import FsLightbox from "fslightbox-vue"; */
 export default {
   components: {
-    portafolioTexto
+    portafolioTexto,
     /* FsLightbox,*/
-  }, 
+  },
   data() {
     return {
       toggler: false,
@@ -176,5 +197,24 @@ export default {
 <style scope>
 .btn-portafolio {
   background-color: rgba(147, 245, 192, 0.93);
+}
+
+#slider {
+  margin-top: 2%;
+}
+
+.icons {
+  display: flex;
+  width: 100%;
+  margin-top: 2%;
+  align-items: center;
+  text-align: center;
+  justify-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+.icons img {
+  width: 30px;
 }
 </style>

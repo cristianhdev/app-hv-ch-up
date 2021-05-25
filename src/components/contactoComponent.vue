@@ -89,7 +89,7 @@
               </b-form-group>
               <div class="tl">
                 <b-alert
-                  variant="success"
+                   style="background-color:#495762"
                   @dismissed="mensajeCorreo = false"
                   dismissible
                   v-if="mensajeCorreo"
@@ -98,7 +98,7 @@
                 >
                 <b-button
                   type="submit"
-                  variant="primary"
+                   style="background-color:#495762"
                   :disabled="$v.$invalid"
                   ><b-icon
                     v-if="iconMensaje"

@@ -9,7 +9,7 @@
                 <h5
                   class="sub-title mx-auto animate__animated animate__fast animate__fadeInDown"
                 >
-                  FULLSTACK - DEVELOPER
+                  FULL-STACK DEVELOPER
                 </h5>
                 <h2
                   class="title-ligth mx-auto animate__animated animate__delay-slower animate__fadeInDown"
@@ -86,4 +86,7 @@ export default {
     height: 385px;
   }
 }
+
+
+
 </style>
