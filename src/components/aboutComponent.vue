@@ -5,7 +5,7 @@
         <b-col sm="12" md="12" lg="6">
           <div
             id="about-my"
-            class="animate__animated animate__delay-slower animate__backInLeft"
+            class="animate__animated animate__delay-slower mt-4 animate__backInLeft"
           >
             <div id="imagen1" class="mark-photo">
               <img src="../assets/HV_cv.jpeg" class="img-fluid" />
@@ -23,7 +23,7 @@
 
         <b-col sm="12" md="12" lg="6">
           <!--  <button @click="mostrar=!mostrar">Mostrar</button> -->
-          <article id="about" class="pb-5" v-if="!mostrar">
+          <article id="about" class="pb-5 mt-4" v-if="!mostrar">
             <!-- <div v-if="loadingImage">
               <p
                 class="title-dark text-center mx-auto animate__animated animate__delay-slower animate__fadeInDown"
@@ -38,13 +38,13 @@
             </div> -->
             <div>
               <p
-                class="title-dark text-center mx-auto animate__animated animate__delay-slower animate__fadeInDown"
+                class="title-dark text-center mx-auto animate__animated animate__delay-1s animate__fadeInDown"
               >
                 SOBRE MI
               </p>
             </div>
                <hr
-              class="animate__animated animate__delay-1s animate__fadeIn"
+              class="animate__animated animate__delay-2s animate__fadeIn"
               style="text-left;width:100%"
             />
             <!-- <div v-if="loadingImage">
@@ -71,7 +71,7 @@
             </div> -->
             <div>
               <p
-                class="text-justify animate__animated animate__delay-1s animate__flipInX"
+                class="text-justify animate__animated animate__delay-2s animate__flipInX"
               >
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla,
                 quasi maiores dicta ut, perferendis officia sapiente repudiandae
@@ -138,7 +138,7 @@ export default {
     #ffffff;
   width: 100%;
   height: 100vh;
-  overflow-y: scroll;
+  overflow-y: auto;
   display: flex;
   padding: 5em 0px !important;
   flex-direction: row-reverse;
