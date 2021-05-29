@@ -9,7 +9,7 @@
             >
               Contáctame
             </h2>
-              <hr style="text-left;width:100%">
+            <hr style="text-left;width:100%" />
           </b-col>
         </b-row>
         <b-row>
@@ -30,10 +30,22 @@
                     'form-group--error': $v.formContacto.to_name.$error,
                   }"
                 ></b-form-input>
-                <div class="error" v-if="!$v.formContacto.to_name.required && $v.formContacto.to_name.$dirty ">
+                <div
+                  class="error"
+                  v-if="
+                    !$v.formContacto.to_name.required &&
+                    $v.formContacto.to_name.$dirty
+                  "
+                >
                   Este campo es requerido.
                 </div>
-                <div class="error" v-if="!$v.formContacto.to_name.$invalid && $v.formContacto.to_name.$alpha">
+                <div
+                  class="error"
+                  v-if="
+                    !$v.formContacto.to_name.$invalid &&
+                    $v.formContacto.to_name.$alpha
+                  "
+                >
                   Solo se permiten caracteres.
                 </div>
               </b-form-group>
@@ -52,13 +64,24 @@
                     'form-group--error': $v.formContacto.from_name.$error,
                   }"
                 ></b-form-input>
-                <div class="error" v-if=" !$v.formContacto.from_name.required && $v.formContacto.from_name.$dirty">
+                <div
+                  class="error"
+                  v-if="
+                    !$v.formContacto.from_name.required &&
+                    $v.formContacto.from_name.$dirty
+                  "
+                >
                   Este campo es requerido.
                 </div>
-                <div class="error" v-if="$v.formContacto.from_name.$invalid && $v.formContacto.from_name.$dirty">
-                 No es un correo valido.
+                <div
+                  class="error"
+                  v-if="
+                    $v.formContacto.from_name.$invalid &&
+                    $v.formContacto.from_name.$dirty
+                  "
+                >
+                  No es un correo valido.
                 </div>
-                
               </b-form-group>
               <b-form-group
                 id="input-group-3"
@@ -71,25 +94,44 @@
                   v-model="$v.formContacto.message.$model"
                   placeholder="Descripcion"
                   rows="3"
-                
                   max-rows="6"
                   :class="{
                     'form-group--error': $v.formContacto.message.$error,
                   }"
                 ></b-form-textarea>
-                <div class="error" v-if=" !$v.formContacto.message.required && $v.formContacto.message.$dirty">
+                <div
+                  class="error"
+                  v-if="
+                    !$v.formContacto.message.required &&
+                    $v.formContacto.message.$dirty
+                  "
+                >
                   Este campo es requerido.
                 </div>
-                <div class="error" v-if="(!$v.formContacto.message.$minLength && $v.formContacto.message.$invalid) && $v.formContacto.message.$dirty">
-                Se necesitan minimo 4 caracteres.
+                <div
+                  class="error"
+                  v-if="
+                    !$v.formContacto.message.$minLength &&
+                    $v.formContacto.message.$invalid &&
+                    $v.formContacto.message.$dirty
+                  "
+                >
+                  Se necesitan minimo 4 caracteres.
                 </div>
-                <div class="error" v-if="(!$v.formContacto.message.$maxLength && $v.formContacto.message.$invalid) && $v.formContacto.message.$dirty">
-                Se solo se permiten 100 caracteres.
+                <div
+                  class="error"
+                  v-if="
+                    !$v.formContacto.message.$maxLength &&
+                    $v.formContacto.message.$invalid &&
+                    $v.formContacto.message.$dirty
+                  "
+                >
+                  Se solo se permiten 100 caracteres.
                 </div>
               </b-form-group>
               <div class="tl">
                 <b-alert
-                   style="background-color:#495762"
+                  style="background-color: #495762"
                   @dismissed="mensajeCorreo = false"
                   dismissible
                   v-if="mensajeCorreo"
@@ -98,7 +140,7 @@
                 >
                 <b-button
                   type="submit"
-                   style="background-color:#495762"
+                  style="background-color: #495762"
                   :disabled="$v.$invalid"
                   ><b-icon
                     v-if="iconMensaje"
@@ -119,6 +161,11 @@
           <b-col sm="8" md="8" lg="6">
             <div class="imag-center mx-auto">
               <b-img :src="img" fluid alt="Responsive image"></b-img>
+              <b-row>
+                <b-col sm="8" md="8" lg="6">
+                  
+                </b-col>
+              </b-row>
             </div>
           </b-col>
         </b-row>
@@ -130,11 +177,17 @@
 <script>
 import imagenemail from "../assets/email.png";
 import emailjs from "emailjs-com";
-import { required, email, maxLength, minLength, alpha } from "vuelidate/lib/validators";
-import VueRecaptcha from 'vue-recaptcha';
+import {
+  required,
+  email,
+  maxLength,
+  minLength,
+  alpha,
+} from "vuelidate/lib/validators";
+import VueRecaptcha from "vue-recaptcha";
 export default {
   components: {
-   VueRecaptcha
+    VueRecaptcha,
   },
   data() {
     return {
@@ -154,16 +207,16 @@ export default {
     formContacto: {
       from_name: {
         required,
-        email 
+        email,
       },
       to_name: {
         required,
-        alpha
+        alpha,
       },
       message: {
         required,
-         minLength: minLength(4),
-         maxLength: maxLength(100)
+        minLength: minLength(4),
+        maxLength: maxLength(100),
       },
     },
   },
@@ -243,8 +296,8 @@ export default {
   border-left: 3px solid red;
 }
 
-.error{
+.error {
   font-size: 14px;
-  color:red
+  color: red;
 }
 </style>

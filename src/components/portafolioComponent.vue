@@ -57,8 +57,15 @@
                     :href="imagPortafolios[onPosicionSlider].url"
                     target="_blank"
                     size="sm"
-                    >IR A LA PAGINA</b-button
-                  > 
+                    >IR A LA PAGINA</b-button>
+                    <b-button
+                    @click="(stateShowFrame = true), (position = 0)"
+                    style="background-color: #495762"
+                    class="mr-3 mt-3 mb-3"
+                    :href="imagPortafolios[onPosicionSlider].url"
+                    target="_blank"
+                    size="sm"
+                    >GITHUB</b-button>
             </div>
           </b-col>
           <b-col id="slider" sm="12" md="12" lg="6">
