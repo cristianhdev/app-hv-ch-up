@@ -16,7 +16,18 @@
         </b-row>
         <b-row>
           <b-col id="slider" sm="12" md="12" lg="6">
-            <div class="mx-auto mt-3 animate__animated animate__fadeInLeft">
+            <div
+              class="mx-auto text-justify animate__animated animate__fadeInLeft"
+            >
+              <b-row>
+                <b-col lg="12">
+                  <portafolio-texto :posicion="onPosicionSlider" />
+                </b-col>
+              </b-row>
+            </div>
+          </b-col>
+          <b-col id="slider" sm="12" md="12" lg="6">
+            <div class="mx-auto mt-3 animate__animated animate__fadeInRight">
               <!-- <FsLightbox
                       :toggler="toggler"
                       :sources="[
@@ -50,76 +61,51 @@
                   </div>
                 </template>
               </splide>
-                  <b-button
-                    @click="(stateShowFrame = true), (position = 0)"
-                    style="background-color: #495762"
-                    class="mr-3 mt-3 mb-3"
-                    :href="imagPortafolios[onPosicionSlider].url"
-                    target="_blank"
-                    size="sm"
-                    >IR A LA PAGINA</b-button>
-                    <b-button
-                    @click="(stateShowFrame = true), (position = 0)"
-                    style="background-color: #495762"
-                    class="mr-3 mt-3 mb-3"
-                    :href="imagPortafolios[onPosicionSlider].url"
-                    target="_blank"
-                    size="sm"
-                    >GITHUB</b-button>
-            </div>
-          </b-col>
-          <b-col id="slider" sm="12" md="12" lg="6">
-            <div
-              class="mx-auto text-justify animate__animated animate__fadeInRight"
-            >
               <b-row>
-                <b-col lg="12">
-                  <portafolio-texto :posicion="onPosicionSlider" />
-                </b-col>
                 <b-col lg="12" class="text-center">
                   <div class="icons">
-                    <template>
-                      <div id="tooltip-target-1">
+                    <div v-for="(icon,index,key) in imagPortafolios[onPosicionSlider].icons" :key="key">
+                      <div :id="`tooltip-target-${index}`">
                         <img
                           placement="bottom"
-                          src="../assets/ico/html5-brands.svg"
+                          :src="icon.url"
                         />
-                        <b-tooltip target="tooltip-target-1" triggers="hover">
-                          HTML5
+                        <b-tooltip :target="`tooltip-target-${index}`" triggers="hover">
+                          {{icon.text}}
                         </b-tooltip>
                       </div>
-                    </template>
-                    <template>
-                      <div id="tooltip-target-2">
-                        <img src="../assets/ico/css3-brands.svg" />
-                        <b-tooltip target="tooltip-target-2" triggers="hover">
-                          CSS3
-                        </b-tooltip>
-                      </div>
-                    </template>
-
-                    <img src="../assets/ico/js-square-brands.svg" />
+                    </div>
                   </div>
-                  <br />
-                  <br />
-                  <!-- <b-button
-                    variant="primary"
-                    @click="(stateShowFrame = true), (position = 1)"
-                    class="mr-3"
-                    href="#view"
-                    size="sm"
-                    >RIVERA ROOFING</b-button
-                  > -->
-                  <!-- <b-button
-                    variant="primary"
-                    @click="(stateShowFrame = true), (position = 2)"
-                    class="mr-3"
-                    href="#view"
-                    size="sm"
-                    >PLASTERING</b-button
-                  > -->
                 </b-col>
               </b-row>
+              <b-button
+                @click="(stateShowFrame = true), (position = 0)"
+                style="background-color: #495762"
+                class="mr-3 mt-3 mb-3"
+                :href="imagPortafolios[onPosicionSlider].url"
+                target="_blank"
+                size="sm"
+              >
+                <img
+                  class="btnIconS"
+                  placement="bottom"
+                  src="../assets/ico/globe-solid.svg"
+                />IR A LA PAGINA</b-button
+              >
+              <b-button
+                @click="(stateShowFrame = true), (position = 0)"
+                style="background-color: #495762"
+                class="mr-3 mt-3 mb-3"
+                :href="imagPortafolios[onPosicionSlider].guihuburl"
+                target="_blank"
+                size="sm"
+              >
+                <img
+                  class="btnIconS"
+                  placement="bottom"
+                  src="../assets/ico/github-brands.svg"
+                />GITHUB
+              </b-button>
             </div>
           </b-col>
         </b-row>
@@ -143,6 +129,12 @@
 import imgPlantosa from "../assets/pagina/Plantosas-cropt.png";
 import imgPlastering from "../assets/pagina/Plastering-cropt.png";
 import imgRivera from "../assets/pagina/Rivera-cropt.png";
+import imgOrizon from "../assets/pagina/OrizonMobile.png";
+import imgHtml5 from "../assets/ico/html5-brands.svg";
+import imgCss3 from "../assets/ico/css3-brands.svg";
+import imgJs from "../assets/ico/js-square-brands.svg";
+import imgVue from "../assets/ico/vuejs-brands.svg";
+
 /* import imgPlantosa from "../assets/pagina/Plantosas.com.png"; */
 import portafolioTexto from "../components/portafolioTextoComponent";
 /* import FsLightbox from "fslightbox-vue"; */
@@ -167,16 +159,85 @@ export default {
           img: imgPlantosa,
           descripcion: "pagina1",
           url: "http://plantosas.com",
+          guihuburl: "http://plantosas.com",
+          icons: [
+            {
+              url: imgHtml5,
+              text: "HTML5",
+            },
+            {
+              url: imgCss3,
+              text: "CSS3",
+            },
+            {
+              url: imgJs,
+              text: "JS",
+            }
+          ],
+        },
+        {
+          img: imgOrizon,
+          descripcion: "pagina2",
+          url: "https://orizonmobile-56b43.web.app",
+          guihuburl: "https://github.com/cristianh/OrizonMobileVue.git",
+          icons: [
+            {
+              url: imgHtml5,
+              text: "HTML5",
+            },
+            {
+              url: imgCss3,
+              text: "CSS3",
+            },
+            {
+              url: imgJs,
+              text: "JS",
+            },
+            {
+              url:imgVue,
+              text: "VUE3",
+            },
+          ],
         },
         {
           img: imgPlastering,
-          descripcion: "pagina2",
+          descripcion: "pagina3",
           url: "https://plastering.firebaseapp.com",
+          guihuburl: "http://plantosas.com",
+          icons: [
+            {
+              url: imgHtml5,
+              text: "HTML5",
+            },
+            {
+              url: imgCss3,
+              text: "CSS3",
+            },
+            {
+              url: imgJs,
+              text: "JS",
+            }
+          ],
         },
         {
           img: imgRivera,
           descripcion: "pagina3",
           url: "https://proyectosseoimpacto.firebaseapp.com",
+          guihuburl: "http://plantosas.com",
+          icons: [
+            {
+              url: imgHtml5,
+              text: "HTML5",
+            },
+            {
+              url: imgCss3,
+              text: "CSS3",
+            },
+            {
+              url: imgJs,
+              text: "JS",
+            }
+          ]
         },
       ],
       stateShowFrame: false,
@@ -191,12 +252,12 @@ export default {
     onMounted(splide) {
       // do something
       this.posicionSlide = splide.index;
-    },
+    }
 
-    onArrowsMounted(splide, prev, next) {
+    /* onArrowsMounted(splide, prev, next) {
       // do something
-      console.log(splide, prev, next);
-    },
+
+    }, */
   },
 };
 </script>
@@ -204,6 +265,16 @@ export default {
 <style scope>
 .btn-portafolio {
   background-color: rgba(147, 245, 192, 0.93);
+}
+
+.btnIconS {
+  display: flex;
+  padding: 0px;
+  height: 1.3em;
+  width: 25px;
+  float: left;
+  align-items: center;
+  justify-content: center;
 }
 
 #slider {

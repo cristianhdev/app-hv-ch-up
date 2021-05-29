@@ -1,5 +1,6 @@
 <template >
   <div>
+      <h3 :class="{'fade-in-text':animate}">{{textosPortafolio[onCambiaTexto].titulo}}</h3>
       <p :class="{'fade-in-text':animate}" >{{ textosPortafolio[onCambiaTexto].descripcion }}</p>
   </div>
 </template>
@@ -28,6 +29,7 @@ export default {
       animate: false,
       textosPortafolio: [
         {
+          titulo:"PLANTO S.A.S",
           descripcion: `Lorem1 ipsum dolor sit amet consectetur adipisicing elit.
                     Omnis tempora harum dolor suscipit provident aut corrupti
                     eos veniam, deleniti neque nihil quibusdam consectetur
@@ -46,6 +48,7 @@ export default {
                     quo est.`,
         },
         {
+          titulo:"ORIZONMOBILE",
           descripcion: `Lorem2 ipsum dolor sit amet consectetur adipisicing elit.
                     Omnis tempora harum dolor suscipit provident aut corrupti
                     eos veniam, deleniti neque nihil quibusdam consectetur
@@ -64,7 +67,27 @@ export default {
                     quo est.`,
         },
         {
+          titulo:"PLASTERING",
           descripcion: `Lorem3 ipsum dolor sit amet consectetur adipisicing elit.
+                    Omnis tempora harum dolor suscipit provident aut corrupti
+                    eos veniam, deleniti neque nihil quibusdam consectetur
+                    veritatis, in inventore quis dolore quo est. Lorem ipsum
+                    dolor sit amet consectetur adipisicing elit. Omnis tempora
+                    harum dolor suscipit provident aut corrupti eos veniam,
+                    deleniti neque nihil quibusdam consectetur veritatis, in
+                    inventore quis dolore quo est. Lorem ipsum dolor sit amet
+                    consectetur adipisicing elit. Omnis tempora harum dolor
+                    suscipit provident aut corrupti eos veniam, deleniti neque
+                    nihil quibusdam consectetur veritatis, in inventore quis
+                    dolore quo est. Lorem ipsum dolor sit amet consectetur
+                    adipisicing elit. Omnis tempora harum dolor suscipit
+                    provident aut corrupti eos veniam, deleniti neque nihil
+                    quibusdam consectetur veritatis, in inventore quis dolore
+                    quo est.`,
+        },
+        {
+          titulo:"QUALITY-RUFING",
+          descripcion: `Lorem4 ipsum dolor sit amet consectetur adipisicing elit.
                     Omnis tempora harum dolor suscipit provident aut corrupti
                     eos veniam, deleniti neque nihil quibusdam consectetur
                     veritatis, in inventore quis dolore quo est. Lorem ipsum

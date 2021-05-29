@@ -1,7 +1,12 @@
 <template lang="html">
   <section class="menu-principal-component">
     <b-navbar toggleable="md" type="dark" fixed="top" :style="{'background-color':colorMenu}">
-    <b-navbar-brand to="/">CrisitianDev</b-navbar-brand>
+    <b-navbar-brand to="/">
+    <img src="@/assets/logo.png" id="logo" class=" align-center" alt="CHDEV" style="
+    width: 55px;
+">
+    <!-- <span id="texto-logo">CristianHDev</span> -->
+    </b-navbar-brand>
 
     <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
@@ -47,6 +52,13 @@
 </script>
 
 <style scoped >
-.menu-principal-component {
+
+
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+ 
+
+
 }
 </style>

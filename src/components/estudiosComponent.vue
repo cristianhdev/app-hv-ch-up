@@ -127,7 +127,7 @@
 import background from "../assets/background.png";
 import imagen1 from "../assets/TecnicoSena.png";
 import imagen2 from "../assets/TecnicoEAM.png";
-/* import imagen3 from '../assets/learnig.jpg' */
+import imagen3 from '../assets/DMR.jpg'
 import imagen4 from "../assets/less.png";
 import imagen5 from "../assets/Vue2.png";
 import imagen6 from "../assets/React.png";
@@ -181,6 +181,11 @@ export default {
           title: "Tecnico Profesional",
           descripcion: "Programación de Software SENA",
           imagenCertificado: imagen1,
+        },
+        {
+          title: "Tecnico En Mantenimiento y Reparacion",
+          descripcion: "Desarrollo de Software EAM",
+          imagenCertificado: imagen3,
         },
         {
           title: "Vue2.js",
