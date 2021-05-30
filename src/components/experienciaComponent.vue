@@ -14,7 +14,7 @@
             </b-col>
           </b-row>
           <b-row>
-            <b-col sm="12" md="12" lg="6" class="animate__animated animate__delay-slower animate__fadeInLeft animate__delay-1s ">
+            <b-col sm="12" md="12" lg="6" class="animate__animated animate__delay-slower animate__fadeInLeft animate__delay-2s ">
               <splide :options="options">
                 <splide-slide>
                   <Timeline
@@ -87,10 +87,8 @@
                 </template>
               </splide>
             </b-col>
-            <b-col sm="12" md="12" lg="6">
-              <div
-                class="animate__animated animate__delay-slower animate__fadeInRight animate__delay-1s"
-              >
+            <b-col sm="12" md="12" lg="6" class="animate__animated animate__delay-slower animate__fadeInRight animate__delay-1s">
+              <div>
                 <b-tabs
                   style="
                     padding: 12px;
