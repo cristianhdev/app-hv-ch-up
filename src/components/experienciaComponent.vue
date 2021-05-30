@@ -4,109 +4,106 @@
       <div class="about mx-auto">
         <b-container fluid="md">
           <b-row>
-          <b-col sm="12" md="6" lg="12">
-            <h2
-              class="text-left animate__animated animate__delay-slower animate__flipInX"
-            >
-              Experiencia
-            </h2>
-            <hr style="text-left;width:100%" />
-          </b-col>
-        </b-row>
-          <b-row>
-            <b-col sm="12" md="12" lg="12"> 
-             <splide  :options="options">
-               <splide-slide>
-                  <Timeline
-                class="marckclassTime animate__animated animate__delay-slower animate__fadeInLeft animate__delay-1s"
-                data-aos="fade-left"
-                :timeline-items="timelineItems1"
-                :message-when-no-items="messageWhenNoItems"
-              /> 
-                  </splide-slide>
-                  <splide-slide>
-                      <Timeline
-                class="marckclassTime animate__animated animate__delay-slower animate__fadeInLeft animate__delay-1s"
-                data-aos="fade-left"
-                :timeline-items="timelineItems2"
-                :message-when-no-items="messageWhenNoItems"
-              />
-                  </splide-slide>
-                   <splide-slide>
-                      <Timeline
-                class="marckclassTime animate__animated animate__delay-slower animate__fadeInLeft animate__delay-1s"
-                data-aos="fade-left"
-                :timeline-items="timelineItems3"
-                :message-when-no-items="messageWhenNoItems"
-              />
-                  </splide-slide>
-                  <splide-slide>
-                      <Timeline
-                class="marckclassTime animate__animated animate__delay-slower animate__fadeInLeft animate__delay-1s"
-                data-aos="fade-left"
-                :timeline-items="timelineItems4"
-                :message-when-no-items="messageWhenNoItems"
-              />
-                  </splide-slide>
-                  <splide-slide>
-                      <Timeline
-                class="marckclassTime animate__animated animate__delay-slower animate__fadeInLeft animate__delay-1s"
-                data-aos="fade-left"
-                :timeline-items="timelineItems5"
-                :message-when-no-items="messageWhenNoItems"
-              />
-                  </splide-slide>
-                  <splide-slide>
-                      <Timeline
-                class="marckclassTime animate__animated animate__delay-slower animate__fadeInLeft animate__delay-1s"
-                data-aos="fade-left"
-                :timeline-items="timelineItems6"
-                :message-when-no-items="messageWhenNoItems"
-              />
-                  </splide-slide>
-                   <splide-slide>
-                      <Timeline
-                class="marckclassTime animate__animated animate__delay-slower animate__fadeInLeft animate__delay-1s"
-                data-aos="fade-left"
-                :timeline-items="timelineItems7"
-                :message-when-no-items="messageWhenNoItems"
-              />
-                  </splide-slide>
-                   <splide-slide>
-                      <Timeline
-                class="marckclassTime animate__animated animate__delay-slower animate__fadeInLeft animate__delay-1s"
-                data-aos="fade-left"
-                :timeline-items="timelineItems8"
-                :message-when-no-items="messageWhenNoItems"
-              />
-                  </splide-slide>
-                  <template v-slot:controls>
-                    <div class="splide__progress">
-                      <div class="splide__progress__bar"></div>
-                    </div>
-                  </template>
-                </splide>
-
-              
-            
-             <!--  <Timeline
-                class="marckclassTime animate__animated animate__delay-slower animate__fadeInLeft animate__delay-1s"
-                data-aos="fade-left"
-                :timeline-items="timelineItems3"
-                :message-when-no-items="messageWhenNoItems"
-              />    -->  
+            <b-col sm="12" md="6" lg="12">
+              <h2
+                class="text-left animate__animated animate__delay-slower animate__flipInX"
+              >
+                Experiencia
+              </h2>
+              <hr style="text-left;width:100%" />
             </b-col>
-            <b-col sm="12" md="12" lg="12">
+          </b-row>
+          <b-row>
+            <b-col sm="12" md="12" lg="6">
+              <splide :options="options">
+                <splide-slide>
+                  <Timeline
+                    class="marckclassTime animate__animated animate__delay-slower animate__fadeInLeft animate__delay-1s"
+                    data-aos="fade-left"
+                    :timeline-items="timelineItems1"
+                    :message-when-no-items="messageWhenNoItems"
+                  />
+                </splide-slide>
+                <splide-slide>
+                  <Timeline
+                    class="marckclassTime animate__animated animate__delay-slower animate__fadeInLeft animate__delay-1s"
+                    data-aos="fade-left"
+                    :timeline-items="timelineItems2"
+                    :message-when-no-items="messageWhenNoItems"
+                  />
+                </splide-slide>
+                <splide-slide>
+                  <Timeline
+                    class="marckclassTime animate__animated animate__delay-slower animate__fadeInLeft animate__delay-1s"
+                    data-aos="fade-left"
+                    :timeline-items="timelineItems3"
+                    :message-when-no-items="messageWhenNoItems"
+                  />
+                </splide-slide>
+                <splide-slide>
+                  <Timeline
+                    class="marckclassTime animate__animated animate__delay-slower animate__fadeInLeft animate__delay-1s"
+                    data-aos="fade-left"
+                    :timeline-items="timelineItems4"
+                    :message-when-no-items="messageWhenNoItems"
+                  />
+                </splide-slide>
+                <splide-slide>
+                  <Timeline
+                    class="marckclassTime animate__animated animate__delay-slower animate__fadeInLeft animate__delay-1s"
+                    data-aos="fade-left"
+                    :timeline-items="timelineItems5"
+                    :message-when-no-items="messageWhenNoItems"
+                  />
+                </splide-slide>
+                <splide-slide>
+                  <Timeline
+                    class="marckclassTime animate__animated animate__delay-slower animate__fadeInLeft animate__delay-1s"
+                    data-aos="fade-left"
+                    :timeline-items="timelineItems6"
+                    :message-when-no-items="messageWhenNoItems"
+                  />
+                </splide-slide>
+                <splide-slide>
+                  <Timeline
+                    class="marckclassTime animate__animated animate__delay-slower animate__fadeInLeft animate__delay-1s"
+                    data-aos="fade-left"
+                    :timeline-items="timelineItems7"
+                    :message-when-no-items="messageWhenNoItems"
+                  />
+                </splide-slide>
+                <splide-slide>
+                  <Timeline
+                    class="marckclassTime animate__animated animate__delay-slower animate__fadeInLeft animate__delay-1s"
+                    data-aos="fade-left"
+                    :timeline-items="timelineItems8"
+                    :message-when-no-items="messageWhenNoItems"
+                  />
+                </splide-slide>
+                <template v-slot:controls>
+                  <div class="splide__progress">
+                    <div class="splide__progress__bar"></div>
+                  </div>
+                </template>
+              </splide>
+
+              <!--  <Timeline
+                class="marckclassTime animate__animated animate__delay-slower animate__fadeInLeft animate__delay-1s"
+                data-aos="fade-left"
+                :timeline-items="timelineItems3"
+                :message-when-no-items="messageWhenNoItems"
+              />    -->
+            </b-col>
+            <b-col sm="12" md="12" lg="6">
               <div
                 class="animate__animated animate__delay-slower animate__fadeInRight animate__delay-1s"
               >
                 <b-tabs
                   style="
-                    
                     padding: 12px;
                     box-shadow: 5px 5px 0px rgba(73, 87, 98, 0.8);
                   "
-                  content-class="mt-3"
+                  content-class="mt-2"
                 >
                   <b-tab title="Desafios" active
                     ><p class="animate__animated animate__fadeIn text-justify">
@@ -115,11 +112,11 @@
                   >
                   <b-tab title="¿Que realice?">
                     <b-row>
-                      <b-col sm="4" md="6" lg="6" pt-5>
+                      <b-col sm="4" md="6" lg="6"  pt-5>
                         <img
                           :src="gits[1]"
                           class="pt-5 ml-5 img-responsive"
-                          width="350px"
+                          width="220px"
                         />
                       </b-col>
                       <b-col sm="4" md="6" lg="6" pt-5>
@@ -127,7 +124,7 @@
                           :src="gits[0]"
                           data-aos="zoom-out-up"
                           class="pt-5 mr-5 img-responsive"
-                          width="350px"
+                          width="220px"
                         />
                       </b-col>
                       <b-col sm="4" md="6" lg="6" pt-5>
@@ -135,7 +132,7 @@
                           :src="gits[2]"
                           data-aos="zoom-out-up"
                           class="pt-5 ml-5 img-responsive"
-                          width="350px"
+                          width="220px"
                         />
                       </b-col>
                       <b-col sm="4" md="6" lg="6" pt-5>
@@ -143,7 +140,7 @@
                           :src="gits[3]"
                           data-aos="zoom-out-up"
                           class="pt-5 mr-5 img-responsive"
-                          width="350px"
+                          width="220px"
                         />
                         <!-- <div
                   data-aos="fade-right"
@@ -185,25 +182,22 @@
                   </b-tab>
                   <b-tab title="¿Que aprendi?">
                     <b-row>
-                      <b-col sm="4" md="6" lg="6" pt-5>
-                        <ul>
-                          <li>Item1</li>
-                          <li>Item1</li>
-                          <li>Item1</li>
-                          <li>Item1</li>
-                          <li>Item1</li>
-                          <li>Item1</li>
+                      <b-col sm="4" md="6" lg="12" >
+                        <ul class="text-justify">
+                          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe autem illum sequi fuga voluptates voluptas dolores nemo nostrum. Maiores recusandae distinctio molestiae dolorem ut non debitis quis amet aliquam facere?</li>
+                          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe autem illum sequi fuga voluptates voluptas dolores nemo nostrum. Maiores recusandae distinctio molestiae dolorem ut non debitis quis amet aliquam facere?</li>
+                          <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe autem illum sequi fuga voluptates voluptas dolores nemo nostrum. Maiores recusandae distinctio molestiae dolorem ut non debitis quis amet aliquam facere?</li>
                         </ul>
                       </b-col>
                     </b-row>
                   </b-tab>
                 </b-tabs>
               </div>
-              </b-col>
+            </b-col>
           </b-row>
         </b-container>
       </div>
-      
+
       <br />
     </transition>
   </div>
@@ -221,17 +215,19 @@ export default {
   components: {
     Timeline,
     Splide,
-    SplideSlide
+    SplideSlide,
   },
   data() {
     return {
-       options: {
-        rewind: true,
-        lazyLoad: 'nearby',
+      options: {
+        direction: "ttb",
+        heightRatio: 0.9,
+        perPage: 1,
         pagination:false,
-        width: "auto",
-        perPage: 2,
-        gap: "4rem",
+        height:'500px',
+        padding:{
+          top:'92px'
+        }
       },
       slide: 0,
       sliding: null,
@@ -244,7 +240,7 @@ export default {
           title: "<b>SENA AGROINDUSTRIAL QUINDIO</b>",
           description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius earum architecto dolor, vitae magnam voluptate accusantium assumenda numquam error mollitia, officia facere consequuntur reprehenderit cum voluptates, ea tempore beatae unde.",
-        }
+        },
       ],
       timelineItems2: [
         {
@@ -279,7 +275,6 @@ export default {
         },
       ],
       timelineItems6: [
-        
         {
           from: new Date(2016, 1),
           title: "<b>SENA AGROINDUSTRIAL QUINDIO</b>",
@@ -420,7 +415,7 @@ export default {
 .marckclassTime {
   /* background-color: RGBA(73, 87, 98, 0.7); */
   background-color: RGBA(73, 87, 98, 0.7);
-  color:white;
+  color: white;
   box-shadow: -5px 5px 0px white;
 }
 
@@ -430,7 +425,7 @@ export default {
   box-shadow: -5px 5px 0px white;
 } */
 
-.experience{
+.experience {
   background: linear-gradient(
       270deg,
       rgba(255, 255, 255, 0) 0%,
