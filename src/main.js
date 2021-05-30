@@ -9,7 +9,7 @@ import '../node_modules/timeline-vuejs/dist/timeline-vuejs.css'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faUserSecret} from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { faJs, faVuejs } from '@fortawesome/free-brands-svg-icons'
+import { faJs, faVuejs  } from '@fortawesome/free-brands-svg-icons'
 import VueSplide from '@splidejs/vue-splide';
 
 //veevalidate
@@ -20,7 +20,7 @@ Vue.use(Vuelidate)
 AOS.init();
 
 import './assets/css/styles.css'
-import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
+import { BootstrapVue, IconsPlugin, BUser } from 'bootstrap-vue'
 
 // Import Bootstrap an BootstrapVue CSS files (order is important)
 import 'bootstrap/dist/css/bootstrap.css'
@@ -29,9 +29,10 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 //splide
 import '@splidejs/splide/dist/css/themes/splide-skyblue.min.css';
 
-library.add(faUserSecret,faJs, faVuejs)
+library.add(faUserSecret,faJs, faVuejs )
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
+Vue.component('BUser', BUser)
 // Make BootstrapVue available throughout your project
 Vue.use(BootstrapVue)
 // Optionally install the BootstrapVue icon components plugin

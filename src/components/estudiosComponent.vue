@@ -19,7 +19,7 @@
         </b-row>
         <b-row>
         </b-row>
-        <b-row class="mt-5">
+        <b-row class="mt-3">
           <b-col sm="8" md="12" lg="6">
             <div class="mx-auto" >
               <div v-if="loading">
@@ -135,6 +135,8 @@ import imagen7 from "../assets/typescript.png";
 /* import imagen8 from "../assets/photoshop.png"; */
 import imagen9 from "../assets/htmlyjavascript.png";
 import imagen10 from "../assets/certificado-git.jpg";
+import imagen11 from "../assets/linux-basic.png";
+import imagen12 from "../assets/cetificacion-tenologias.png";
 import { Splide, SplideSlide } from "@splidejs/vue-splide";
 import estudioSkeleton from "@/components/estudioSkeletonComponent";
 /* import SkillService from "../services/skillsservice"; */
@@ -186,6 +188,16 @@ export default {
           title: "Tecnico En Mantenimiento y Reparacion",
           descripcion: "Desarrollo de Software EAM",
           imagenCertificado: imagen3,
+        },
+        {
+          title: "NDG Linux Essentials",
+          descripcion: "NDG Linux UNHATCHED",
+          imagenCertificado: imagen11,
+        },
+        {
+          title: "Competencias laborales",
+          descripcion: "Certificado competencias laborales",
+          imagenCertificado: imagen12,
         },
         {
           title: "Vue2.js",

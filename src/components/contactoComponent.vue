@@ -16,83 +16,92 @@
           <b-col sm="12" md="6" lg="6" class="mt-4">
             <b-form @submit.prevent="onSendEmail" novalidate>
               <b-form-group
-                class="tl"
+                class="text-left"
                 id="input-group-1"
                 label="Nombre:"
                 label-for="input-1"
               >
-                <b-form-input
-                  id="input-1"
-                  v-model.trim="$v.formContacto.to_name.$model"
-                  type="text"
-                  placeholder="Nombre"
-                  :class="{
-                    'form-group--error': $v.formContacto.to_name.$error,
-                  }"
-                ></b-form-input>
-                <div
-                  class="error"
-                  v-if="
-                    !$v.formContacto.to_name.required &&
-                    $v.formContacto.to_name.$dirty
-                  "
-                >
-                  Este campo es requerido.
-                </div>
-                <div
-                  class="error"
-                  v-if="
-                    !$v.formContacto.to_name.$invalid &&
-                    $v.formContacto.to_name.$alpha
-                  "
-                >
-                  Solo se permiten caracteres.
-                </div>
+                <b-input-group-prepend>
+                  <span class="input-group-text"
+                    ><b-icon icon="person-fill" ></b-icon></span>
+
+                  <b-form-input
+                    id="input-1"
+                    v-model.trim="$v.formContacto.to_name.$model"
+                    type="text"
+                    placeholder="Su nombre"
+                    :class="{
+                      'form-group--error': $v.formContacto.to_name.$error,
+                    }"
+                  ></b-form-input>
+
+                  <div
+                    class="error"
+                    v-if="
+                      !$v.formContacto.to_name.required &&
+                      $v.formContacto.to_name.$dirty
+                    "
+                  >
+                    Este campo es requerido.
+                  </div>
+                  <div
+                    class="error"
+                    v-if="
+                      !$v.formContacto.to_name.$invalid &&
+                      $v.formContacto.to_name.$alpha
+                    "
+                  >
+                    Solo se permiten caracteres.
+                  </div>
+                </b-input-group-prepend>
               </b-form-group>
               <b-form-group
                 id="input-group-2"
                 label="Correo:"
                 label-for="input-1"
-                class="tl"
+                class="text-left"
               >
-                <b-form-input
-                  id="input-1"
-                  v-model="$v.formContacto.from_name.$model"
-                  type="email"
-                  placeholder="Correo"
-                  :class="{
-                    'form-group--error': $v.formContacto.from_name.$error,
-                  }"
-                ></b-form-input>
-                <div
-                  class="error"
-                  v-if="
-                    !$v.formContacto.from_name.required &&
-                    $v.formContacto.from_name.$dirty
-                  "
-                >
-                  Este campo es requerido.
-                </div>
-                <div
-                  class="error"
-                  v-if="
-                    $v.formContacto.from_name.$invalid &&
-                    $v.formContacto.from_name.$dirty
-                  "
-                >
-                  No es un correo valido.
-                </div>
+                <b-input-group-prepend>
+                  <span class="input-group-text"><b-icon icon="envelope" ></b-icon></span>
+                  <b-form-input
+                    id="input-1"
+                    v-model="$v.formContacto.from_name.$model"
+                    type="email"
+                    placeholder="Su correo"
+                    :class="{
+                      'form-group--error': $v.formContacto.from_name.$error,
+                    }"
+                  ></b-form-input>
+                  <div
+                    class="error"
+                    v-if="
+                      !$v.formContacto.from_name.required &&
+                      $v.formContacto.from_name.$dirty
+                    "
+                  >
+                    Este campo es requerido.
+                  </div>
+                  <div
+                    class="error"
+                    v-if="
+                      $v.formContacto.from_name.$invalid &&
+                      $v.formContacto.from_name.$dirty
+                    "
+                  >
+                    No es un correo valido.
+                  </div>
+                </b-input-group-prepend>
               </b-form-group>
               <b-form-group
                 id="input-group-3"
-                label="Descripcion:"
+                label="Mensaje:"
                 label-for="input-1"
-                class="tl"
+                class="text-left"
               >
                 <b-form-textarea
                   id="textarea"
                   v-model="$v.formContacto.message.$model"
-                  placeholder="Descripcion"
+                  placeholder="Mensaje.."
                   rows="3"
                   max-rows="6"
                   :class="{
@@ -129,7 +138,7 @@
                   Se solo se permiten 100 caracteres.
                 </div>
               </b-form-group>
-              <div class="tl">
+              <div class="text-left">
                 <b-alert
                   style="background-color: #495762"
                   @dismissed="mensajeCorreo = false"
@@ -160,10 +169,27 @@
           </b-col>
           <b-col sm="8" md="8" lg="6">
             <div class="imag-center mx-auto">
-              <b-img :src="img" fluid alt="Responsive image"></b-img>
               <b-row>
-                <b-col sm="8" md="8" lg="6">
-                  
+                <b-col sm="8" md="8" lg="12">
+                  <!--   <b-row class="mb-3">
+                    <b-col sm="8" md="8" lg="4">
+                     <b-icon icon="telephone-fill" font-scale="2"></b-icon>
+                    </b-col>
+                    <b-col sm="8" md="8" lg="4">
+                     <b-icon icon="wallet-fill" font-scale="2"></b-icon>
+                    </b-col>
+                    <b-col sm="8" md="8" lg="4">
+                     <b-icon icon="linkedin" font-scale="2"></b-icon>
+                    </b-col>
+                  </b-row> -->
+                </b-col>
+                <b-col sm="8" md="8" lg="12">
+                  <b-img
+                    :src="img"
+                    class="img-source"
+                    fluid
+                    alt="Responsive image"
+                  ></b-img>
                 </b-col>
               </b-row>
             </div>
@@ -262,8 +288,8 @@ export default {
   margin: 9% 0px 0px 0px;
 }
 
-.tl {
-  text-align: left;
+.img-source {
+  width: 494px;
 }
 
 .imag-center {

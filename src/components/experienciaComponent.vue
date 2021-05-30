@@ -14,16 +14,89 @@
           </b-col>
         </b-row>
           <b-row>
-            <b-col sm="12" md="12" lg="6"> 
-             
-              <Timeline
+            <b-col sm="12" md="12" lg="12"> 
+             <splide  :options="options">
+               <splide-slide>
+                  <Timeline
                 class="marckclassTime animate__animated animate__delay-slower animate__fadeInLeft animate__delay-1s"
                 data-aos="fade-left"
                 :timeline-items="timelineItems1"
                 :message-when-no-items="messageWhenNoItems"
-              />  
+              /> 
+                  </splide-slide>
+                  <splide-slide>
+                      <Timeline
+                class="marckclassTime animate__animated animate__delay-slower animate__fadeInLeft animate__delay-1s"
+                data-aos="fade-left"
+                :timeline-items="timelineItems2"
+                :message-when-no-items="messageWhenNoItems"
+              />
+                  </splide-slide>
+                   <splide-slide>
+                      <Timeline
+                class="marckclassTime animate__animated animate__delay-slower animate__fadeInLeft animate__delay-1s"
+                data-aos="fade-left"
+                :timeline-items="timelineItems3"
+                :message-when-no-items="messageWhenNoItems"
+              />
+                  </splide-slide>
+                  <splide-slide>
+                      <Timeline
+                class="marckclassTime animate__animated animate__delay-slower animate__fadeInLeft animate__delay-1s"
+                data-aos="fade-left"
+                :timeline-items="timelineItems4"
+                :message-when-no-items="messageWhenNoItems"
+              />
+                  </splide-slide>
+                  <splide-slide>
+                      <Timeline
+                class="marckclassTime animate__animated animate__delay-slower animate__fadeInLeft animate__delay-1s"
+                data-aos="fade-left"
+                :timeline-items="timelineItems5"
+                :message-when-no-items="messageWhenNoItems"
+              />
+                  </splide-slide>
+                  <splide-slide>
+                      <Timeline
+                class="marckclassTime animate__animated animate__delay-slower animate__fadeInLeft animate__delay-1s"
+                data-aos="fade-left"
+                :timeline-items="timelineItems6"
+                :message-when-no-items="messageWhenNoItems"
+              />
+                  </splide-slide>
+                   <splide-slide>
+                      <Timeline
+                class="marckclassTime animate__animated animate__delay-slower animate__fadeInLeft animate__delay-1s"
+                data-aos="fade-left"
+                :timeline-items="timelineItems7"
+                :message-when-no-items="messageWhenNoItems"
+              />
+                  </splide-slide>
+                   <splide-slide>
+                      <Timeline
+                class="marckclassTime animate__animated animate__delay-slower animate__fadeInLeft animate__delay-1s"
+                data-aos="fade-left"
+                :timeline-items="timelineItems8"
+                :message-when-no-items="messageWhenNoItems"
+              />
+                  </splide-slide>
+                  <template v-slot:controls>
+                    <div class="splide__progress">
+                      <div class="splide__progress__bar"></div>
+                    </div>
+                  </template>
+                </splide>
+
+              
+            
+             <!--  <Timeline
+                class="marckclassTime animate__animated animate__delay-slower animate__fadeInLeft animate__delay-1s"
+                data-aos="fade-left"
+                :timeline-items="timelineItems3"
+                :message-when-no-items="messageWhenNoItems"
+              />    -->  
             </b-col>
-            <b-col sm="12" md="12" lg="6">
+            <b-col sm="12" md="12" lg="12">
               <div
                 class="animate__animated animate__delay-slower animate__fadeInRight animate__delay-1s"
               >
@@ -143,12 +216,23 @@ import Material3 from "../assets/gifs/Material3.gif";
 import Banner from "../assets/gifs/Banner1.gif";
 import Background from "../assets/background-exp.jpg";
 import Timeline from "timeline-vuejs";
+import { Splide, SplideSlide } from "@splidejs/vue-splide";
 export default {
   components: {
     Timeline,
+    Splide,
+    SplideSlide
   },
   data() {
     return {
+       options: {
+        rewind: true,
+        lazyLoad: 'nearby',
+        pagination:false,
+        width: "auto",
+        perPage: 2,
+        gap: "4rem",
+      },
       slide: 0,
       sliding: null,
       backgrounds: [Background],
@@ -160,49 +244,7 @@ export default {
           title: "<b>SENA AGROINDUSTRIAL QUINDIO</b>",
           description:
             "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius earum architecto dolor, vitae magnam voluptate accusantium assumenda numquam error mollitia, officia facere consequuntur reprehenderit cum voluptates, ea tempore beatae unde.",
-        },
-         {
-          from: new Date(2012, 3),
-          title: "<b>SENA AGROINDUSTRIAL QUINDIO</b>",
-          description:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius earum architecto dolor, vitae magnam voluptate accusantium assumenda numquam error mollitia, officia facere consequuntur reprehenderit cum voluptates, ea tempore beatae unde.",
-        },
-         {
-          from: new Date(2013, 2),
-          title: "<b>SENA AGROINDUSTRIAL QUINDIO</b>",
-          description:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius earum architecto dolor, vitae magnam voluptate accusantium assumenda numquam error mollitia, officia facere consequuntur reprehenderit cum voluptates, ea tempore beatae unde.",
-        },
-         {
-          from: new Date(2014, 1),
-          title: "<b>SENA AGROINDUSTRIAL QUINDIO</b>",
-          description:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius earum architecto dolor, vitae magnam voluptate accusantium assumenda numquam error mollitia, officia facere consequuntur reprehenderit cum voluptates, ea tempore beatae unde.",
-        },
-           {
-          from: new Date(2015, 0),
-          title: "<b>SENA AGROINDUSTRIAL QUINDIO</b>",
-          description:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius earum architecto dolor, vitae magnam voluptate accusantium assumenda numquam error mollitia, officia facere consequuntur reprehenderit cum voluptates, ea tempore beatae unde.",
-        },
-        {
-          from: new Date(2016, 1),
-          title: "<b>SENA AGROINDUSTRIAL QUINDIO</b>",
-          description:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius earum architecto dolor, vitae magnam voluptate accusantium assumenda numquam error mollitia, officia facere consequuntur reprehenderit cum voluptates, ea tempore beatae unde.",
-        },
-        {
-          from: new Date(2017, 5),
-          title: "<b>SENA AGROINDUSTRIAL QUINDIO</b>",
-          description:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius earum architecto dolor, vitae magnam voluptate accusantium assumenda numquam error mollitia, officia facere consequuntur reprehenderit cum voluptates, ea tempore beatae unde.",
-        },
-        {
-          from: new Date(2018, 7),
-          title: "<b>SEOIMPACTO</b>",
-          description:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius earum architecto dolor, vitae magnam voluptate accusantium assumenda numquam error mollitia, officia facere consequuntur reprehenderit cum voluptates, ea tempore beatae unde.",
-        },
+        }
       ],
       timelineItems2: [
         {

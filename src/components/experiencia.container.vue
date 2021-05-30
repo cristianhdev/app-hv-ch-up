@@ -206,9 +206,10 @@ import Material3 from "../assets/gifs/Material3.gif";
 import Banner from "../assets/gifs/Banner1.gif";
 import Background from "../assets/background-exp.jpg";
 import Timeline from "timeline-vuejs";
+
 export default {
   components: {
-    Timeline,
+    Timeline
   },
   data() {
     return {
