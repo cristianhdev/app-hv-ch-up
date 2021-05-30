@@ -14,7 +14,7 @@
             </b-col>
           </b-row>
           <b-row>
-            <b-col sm="12" md="12" lg="6">
+            <b-col sm="12" md="12" lg="6" class="animate__animated animate__delay-slower animate__fadeInLeft animate__delay-1s ">
               <splide :options="options">
                 <splide-slide>
                   <Timeline
@@ -86,13 +86,6 @@
                   </div>
                 </template>
               </splide>
-
-              <!--  <Timeline
-                class="marckclassTime animate__animated animate__delay-slower animate__fadeInLeft animate__delay-1s"
-                data-aos="fade-left"
-                :timeline-items="timelineItems3"
-                :message-when-no-items="messageWhenNoItems"
-              />    -->
             </b-col>
             <b-col sm="12" md="12" lg="6">
               <div
@@ -142,41 +135,6 @@
                           class="pt-5 mr-5 img-responsive"
                           width="220px"
                         />
-                        <!-- <div
-                  data-aos="fade-right"
-                  data-aos-offset="300"
-                  data-aos-easing="ease-in-sine"
-                  data-aos-delay="100"
-                >
-                  
-                </div>
-                <br />
-                <div
-                  data-aos="fade-left"
-                  data-aos-offset="300"
-                  data-aos-easing="ease-in-sine"
-                  data-aos-delay="200"
-                >
-                  
-                </div>
-                <br />
-                <div
-                  data-aos="fade-right"
-                  data-aos-offset="300"
-                  data-aos-easing="ease-in-sine"
-                  data-aos-delay="300"
-                >
-                 
-                </div>
-                <br />
-                <div
-                  data-aos="fade-left"
-                  data-aos-offset="300"
-                  data-aos-easing="ease-in-sine"
-                  data-aos-delay="400"
-                >
-                  
-                </div> -->
                       </b-col>
                     </b-row>
                   </b-tab>
