@@ -54,11 +54,4 @@
 <style scoped >
 
 
-
-@media (min-width: 320px) and (max-width: 480px) {
-
- 
-
-
-}
 </style>

@@ -43,7 +43,7 @@
                 SOBRE MI
               </p>
             </div>
-               <hr
+            <hr
               class="animate__animated animate__delay-2s animate__fadeIn"
               style="text-left;width:100%"
             />
@@ -73,29 +73,48 @@
               <p
                 class="text-justify animate__animated animate__delay-2s animate__flipInX"
               >
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla,
-                quasi maiores dicta ut, perferendis officia sapiente repudiandae
-                illo totam dignissimos tempora minima. Commodi porro architecto
-                quisquam provident sunt, voluptates at. Lorem ipsum dolor, sit
-                amet consectetur adipisicing elit. Nulla, quasi maiores dicta
-                ut, perferendis officia sapiente repudiandae illo totam
-                dignissimos tempora minima. Commodi porro architecto quisquam
-                provident sunt, voluptates at.
+                Mi nombre es <b>Cristian Alberto Hernandez</b>, vivo en la
+                ciudad de Armenia - Quindío, tengo 31 años de edad, apacionado
+                por la programación y la tecnología, soy una persona estusiasta
+                con deseos de aportar soluciones a los diferentes proyectos que
+                se presenten. actulmente me encuentro en los ultimos
+                semestres de la Tecnologia en Desarrollo de software.
               </p>
 
               <p
                 class="text-justify animate__animated animate__delay-2s animate__flipInX"
               >
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla,
-                quasi maiores dicta ut, perferendis officia sapiente repudiandae
-                illo totam dignissimos tempora minima. Commodi porro architecto
-                quisquam provident sunt, voluptates at. Lorem ipsum dolor, sit
-                amet consectetur adipisicing elit. Nulla, quasi maiores dicta
-                ut, perferendis officia sapiente repudiandae illo totam
-                dignissimos tempora minima. Commodi porro architecto quisquam
-                provident sunt, voluptates at.
+                Mi experiencia laboral inicia desde el <b>2011</b> hasta el <b>2018</b>, integrando
+                un equipo multidiciplinario de profesionales, para la entidad
+                <b>SENA</b>,  cuento con conocimientos e implementación de
+                <b>frontEnd</b> y <b>backEnd</b>.
               </p>
             </div>
+            <b-row>
+              <b-col sm="8" md="8" lg="12" class="mt-4">
+                <div
+                  class="container-icons-about animate__animated animate__delay-3s animate__fadeIn"
+                >
+                  <div class="colums-icons">
+                    <a href="tel:3015014539"
+                      ><b-icon icon="telephone-fill" font-scale="2"></b-icon
+                    ></a>
+                  </div>
+                  <div class="colums-icons">
+                    <router-link tag="a" to="contacto">
+                      <b-icon icon="wallet-fill" font-scale="2"></b-icon
+                    ></router-link>
+                  </div>
+                  <div class="colums-icons">
+                    <a
+                      target="_blank"
+                      href="https://www.linkedin.com/in/CristianHernandezDev"
+                      ><b-icon icon="linkedin" font-scale="2"></b-icon
+                    ></a>
+                  </div>
+                </div>
+              </b-col>
+            </b-row>
           </article>
         </b-col>
       </b-row>
@@ -121,10 +140,6 @@ export default {
 </script>
 
 <style scoped >
-
-
-
-
 .avatar-size {
   width: 244.047px !important;
   height: 227.062px !important;
@@ -145,6 +160,18 @@ export default {
   justify-content: flex-end;
 }
 
+.container-icons-about {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: space-between;
+  width: 100%;
+}
+
+.colums-icons {
+  width: 100%;
+}
 .mark-photo {
   position: relative;
   width: 365px;
@@ -164,6 +191,18 @@ export default {
 
 .mark-photo {
   border-radius: 0px 200px 0px 198px;
+}
+
+a:link {
+  color: #2c3e50;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #2c3e50;
+  background-color: transparent;
+  text-decoration: none;
 }
 
 @media (min-width: 1281px) {
@@ -227,10 +266,9 @@ export default {
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
-
   .sub-title {
-  width: 100px;
-  height: 17px;
+    width: 100px;
+    height: 17px;
   }
 
   .about {

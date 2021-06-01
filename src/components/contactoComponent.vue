@@ -168,21 +168,8 @@
             </b-form>
           </b-col>
           <b-col sm="8" md="8" lg="6">
-            <div class="imag-center mx-auto">
+            <div class="imag-center mx-auto mb-5">
               <b-row>
-                <b-col sm="8" md="8" lg="12">
-                  <!--   <b-row class="mb-3">
-                    <b-col sm="8" md="8" lg="4">
-                     <b-icon icon="telephone-fill" font-scale="2"></b-icon>
-                    </b-col>
-                    <b-col sm="8" md="8" lg="4">
-                     <b-icon icon="wallet-fill" font-scale="2"></b-icon>
-                    </b-col>
-                    <b-col sm="8" md="8" lg="4">
-                     <b-icon icon="linkedin" font-scale="2"></b-icon>
-                    </b-col>
-                  </b-row> -->
-                </b-col>
                 <b-col sm="8" md="8" lg="12">
                   <b-img
                     :src="img"

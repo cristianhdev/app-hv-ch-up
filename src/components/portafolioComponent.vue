@@ -16,18 +16,7 @@
         </b-row>
         <b-row>
           <b-col id="slider" sm="12" md="12" lg="6">
-            <div
-              class="mx-auto text-justify animate__animated animate__fadeInLeft"
-            >
-              <b-row>
-                <b-col lg="12">
-                  <portafolio-texto :posicion="onPosicionSlider" />
-                </b-col>
-              </b-row>
-            </div>
-          </b-col>
-          <b-col id="slider" sm="12" md="12" lg="6">
-            <div class="mx-auto mt-3 animate__animated animate__fadeInRight">
+            <div class="mx-auto mt-4 animate__animated animate__fadeInLeft">
               <!-- <FsLightbox
                       :toggler="toggler"
                       :sources="[
@@ -78,13 +67,14 @@
                   </div>
                 </b-col>
               </b-row>
-              <b-button
-                @click="(stateShowFrame = true), (position = 0)"
+              <div class="mx-auto">
+                <b-button
                 style="background-color: #495762"
                 class="mr-3 mt-3 mb-3"
                 :href="imagPortafolios[onPosicionSlider].url"
                 target="_blank"
                 size="sm"
+                v-if="imagPortafolios[onPosicionSlider].url"
               >
                 <img
                   class="btnIconS"
@@ -93,12 +83,12 @@
                 />IR A LA PAGINA</b-button
               >
               <b-button
-                @click="(stateShowFrame = true), (position = 0)"
                 style="background-color: #495762"
                 class="mr-3 mt-3 mb-3"
                 :href="imagPortafolios[onPosicionSlider].guihuburl"
                 target="_blank"
                 size="sm"
+                v-if="imagPortafolios[onPosicionSlider].guihuburl!=null"
               >
                 <img
                   class="btnIconS"
@@ -106,34 +96,40 @@
                   src="../assets/ico/github-brands.svg"
                 />GITHUB
               </b-button>
+              </div>
             </div>
           </b-col>
+          <b-col id="slider" sm="12" md="12" lg="6">
+            <div
+              class="mx-auto  mt-4  text-justify animate__animated animate__fadeInRight"
+            >
+              <b-row>
+                <b-col lg="12">
+                  <portafolio-texto :posicion="onPosicionSlider" />
+                </b-col>
+              </b-row>
+            </div>
+          </b-col>
+          
         </b-row>
       </b-container>
-    </div>
-    <div>
-      <div id="view">
-        <iframe
-          v-if="stateShowFrame"
-          :src="iframeUrls[position].url"
-          width="100%"
-          height="600px"
-          frameborder="0"
-        ></iframe>
-      </div>
     </div>
   </transition>
 </template>
 
 <script>
+//Paginas
 import imgPlantosa from "../assets/pagina/Plantosas-cropt.png";
 import imgPlastering from "../assets/pagina/Plastering-cropt.png";
 import imgRivera from "../assets/pagina/Rivera-cropt.png";
 import imgOrizon from "../assets/pagina/OrizonMobile.png";
+import imgNaturalWayu from "../assets/pagina/naturalwayu.png";
+//Icons
 import imgHtml5 from "../assets/ico/html5-brands.svg";
 import imgCss3 from "../assets/ico/css3-brands.svg";
 import imgJs from "../assets/ico/js-square-brands.svg";
 import imgVue from "../assets/ico/vuejs-brands.svg";
+import imgWordpress from "../assets/ico/wordpress-brands.svg";
 
 /* import imgPlantosa from "../assets/pagina/Plantosas.com.png"; */
 import portafolioTexto from "../components/portafolioTextoComponent";
@@ -159,7 +155,7 @@ export default {
           img: imgPlantosa,
           descripcion: "pagina1",
           url: "http://plantosas.com",
-          guihuburl: "http://plantosas.com",
+          guihuburl: null,
           icons: [
             {
               url: imgHtml5,
@@ -182,16 +178,8 @@ export default {
           guihuburl: "https://github.com/cristianh/OrizonMobileVue.git",
           icons: [
             {
-              url: imgHtml5,
-              text: "HTML5",
-            },
-            {
               url: imgCss3,
               text: "CSS3",
-            },
-            {
-              url: imgJs,
-              text: "JS",
             },
             {
               url:imgVue,
@@ -200,10 +188,30 @@ export default {
           ],
         },
         {
-          img: imgPlastering,
+          img: imgNaturalWayu,
           descripcion: "pagina3",
+          url: "https://naturalwayu.com",
+          guihuburl: null,
+          icons: [
+            {
+              url: imgWordpress,
+              text: "Wordpress",
+            },
+            {
+              url: imgCss3,
+              text: "CSS3",
+            },
+            {
+              url: imgJs,
+              text: "JS",
+            }
+          ],
+        },
+        {
+          img: imgPlastering,
+          descripcion: "pagina4",
           url: "https://plastering.firebaseapp.com",
-          guihuburl: "http://plantosas.com",
+          guihuburl: null,
           icons: [
             {
               url: imgHtml5,
@@ -221,9 +229,9 @@ export default {
         },
         {
           img: imgRivera,
-          descripcion: "pagina3",
+          descripcion: "pagina5",
           url: "https://proyectosseoimpacto.firebaseapp.com",
-          guihuburl: "http://plantosas.com",
+          guihuburl: null,
           icons: [
             {
               url: imgHtml5,
