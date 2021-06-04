@@ -27,9 +27,9 @@
               
             "
           > <!-- @splide:moved="onMounted" -->
-            <splide @splide:move="onMounted" :options="options" >
+            <!-- <splide @splide:move="onMounted" :options="options" >
               <splide-slide >
-                <experiencia-textos :slider="slide" />
+               
               </splide-slide>
               <splide-slide>
                  <experiencia-textos :slider="slide" />
@@ -40,7 +40,8 @@
                   <div class="splide__progress__bar"></div>
                 </div>
               </template>
-            </splide>
+            </splide> -->
+             <experiencia-textos :slider="slide" />
           </b-col>
         </b-row>
       </b-container>
@@ -51,12 +52,12 @@
 <script>
 import Background from "../assets/background-exp.jpg";
 /* import Timeline from "timeline-vuejs"; */
-import { Splide, SplideSlide } from "@splidejs/vue-splide";
+/* import { Splide, SplideSlide } from "@splidejs/vue-splide"; */
 import experienciaTextos from "@/components/experienciaTextoComponent";
 export default {
   components: {
-    Splide,
-    SplideSlide,
+  /*   Splide,
+    SplideSlide, */
     experienciaTextos,
   },
   data() {

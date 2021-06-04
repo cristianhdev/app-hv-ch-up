@@ -103,7 +103,7 @@
                 Mi experiencia laboral inicia desde el
                 <b>2011</b>, integrando un equipo multidisciplinario de
                 profesionales con diferentes perfiles. Que aportaron todo su
-                experiencia y me han permitido mejorar en mi labor, He realizado
+                experiencia y conocimiento y me han permitido mejorar en mi labor, He realizado
                 diferentes proyectos para empresas de la región y como
                 freelance, las cuales me han permitido mejorar mis habilidades
                 como <b>Desarrollador Web</b>, actualmente me encuentro en los
