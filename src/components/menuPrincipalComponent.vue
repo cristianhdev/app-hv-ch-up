@@ -1,6 +1,6 @@
 <template lang="html">
   <section class="menu-principal-component">
-    <b-navbar toggleable="md" type="dark" fixed="top" :style="{'background-color':colorMenu}">
+    <b-navbar toggleable="md"  id="nav-bar-top" type="dark" fixed="top" :style="{'background-color':colorMenu}">
     <b-navbar-brand to="/">
     <img src="@/assets/logo.png" id="logo" class=" align-center" alt="CHDEV" style="
     width: 55px;
@@ -52,6 +52,5 @@
 </script>
 
 <style scoped >
-
 
 </style>

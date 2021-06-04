@@ -6,7 +6,10 @@
           <b-col sm="12" md="12" lg="12">
             <div>
               <h2
-                class="text-left animate__animated animate__delay-slower animate__flipInX"
+                class="
+                  text-left
+                  animate__animated animate__delay-slower animate__flipInX
+                "
               >
                 Portafolio
                 <hr style="text-left;width:100%" />
@@ -17,20 +20,7 @@
         <b-row>
           <b-col id="slider" sm="12" md="12" lg="6">
             <div class="mx-auto mt-4 animate__animated animate__fadeInLeft">
-              <!-- <FsLightbox
-                      :toggler="toggler"
-                      :sources="[
-                        'images/random-image.jpg',
-                        'https://i.imgur.com/fsyrScY.jpg',
-                        'https://www.youtube.com/watch?v=xshEZzpS4CQ',
-                        'https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4',
-                      ]"
-                    /> -->
-              <splide
-                @splide:moved="onMounted"
-                @splide:arrows:mounted="onArrowsMounted"
-                :options="options"
-              >
+              <splide @splide:moved="onMounted" :options="options">
                 <splide-slide
                   v-for="(imagPortafolio, key) in imagPortafolios"
                   :key="key"
@@ -51,30 +41,50 @@
                 </template>
               </splide>
               <b-row>
-                <b-col lg="12" class="text-center">
+                <b-col lg="12" class="text-center mb-2">
                   <div class="icons">
-                    <div v-for="(icon,index,key) in imagPortafolios[onPosicionSlider].icons" :key="key">
+                    <div
+                      v-for="(icon, index, key) in imagPortafolios[
+                        onPosicionSlider
+                      ].icons"
+                      :key="key"
+                    >
                       <div :id="`tooltip-target-${index}`">
-                        <img
-                          placement="bottom"
-                          :src="icon.url"
-                        />
-                        <b-tooltip :target="`tooltip-target-${index}`" triggers="hover">
-                          {{icon.text}}
+                        <img placement="bottom" :src="icon.url" />
+                        <b-tooltip
+                          :target="`tooltip-target-${index}`"
+                          triggers="hover"
+                        >
+                          {{ icon.text }}
                         </b-tooltip>
                       </div>
                     </div>
                   </div>
                 </b-col>
               </b-row>
-              <div class="mx-auto">
+            </div>
+          </b-col>
+          <b-col id="slider" sm="12" md="12" lg="6">
+            <div
+              class="
+                mx-auto
+                mt-4
+                text-justify
+                animate__animated animate__fadeInRight
+              "
+            >
+              <b-row>
+                <b-col lg="12">
+                  <portafolio-texto :posicion="onPosicionSlider" />
+                </b-col>
+                <div class="mx-auto">
                 <b-button
                 style="background-color: #495762"
                 class="mr-3 mt-3 mb-3"
                 :href="imagPortafolios[onPosicionSlider].url"
                 target="_blank"
                 size="sm"
-                v-if="imagPortafolios[onPosicionSlider].url"
+                v-if="imagPortafolios[onPosicionSlider].url!=null"
               >
                 <img
                   class="btnIconS"
@@ -94,23 +104,13 @@
                   class="btnIconS"
                   placement="bottom"
                   src="../assets/ico/github-brands.svg"
+                  
                 />GITHUB
               </b-button>
               </div>
-            </div>
-          </b-col>
-          <b-col id="slider" sm="12" md="12" lg="6">
-            <div
-              class="mx-auto  mt-4  text-justify animate__animated animate__fadeInRight"
-            >
-              <b-row>
-                <b-col lg="12">
-                  <portafolio-texto :posicion="onPosicionSlider" />
-                </b-col>
               </b-row>
             </div>
           </b-col>
-          
         </b-row>
       </b-container>
     </div>
@@ -124,12 +124,15 @@ import imgPlastering from "../assets/pagina/Plastering-cropt.png";
 import imgRivera from "../assets/pagina/Rivera-cropt.png";
 import imgOrizon from "../assets/pagina/OrizonMobile.png";
 import imgNaturalWayu from "../assets/pagina/naturalwayu.png";
+import imgAppPrestamos from "../assets/APPPrestamos.png";
 //Icons
 import imgHtml5 from "../assets/ico/html5-brands.svg";
 import imgCss3 from "../assets/ico/css3-brands.svg";
 import imgJs from "../assets/ico/js-square-brands.svg";
 import imgVue from "../assets/ico/vuejs-brands.svg";
 import imgWordpress from "../assets/ico/wordpress-brands.svg";
+import imgFigma from "../assets/ico/figma-brands.svg";
+import imgFirabese from "../assets/ico/firebase_icon_132390.svg";
 
 /* import imgPlantosa from "../assets/pagina/Plantosas.com.png"; */
 import portafolioTexto from "../components/portafolioTextoComponent";
@@ -168,7 +171,7 @@ export default {
             {
               url: imgJs,
               text: "JS",
-            }
+            },
           ],
         },
         {
@@ -182,8 +185,12 @@ export default {
               text: "CSS3",
             },
             {
-              url:imgVue,
+              url: imgVue,
               text: "VUE3",
+            },
+            {
+              url: imgFigma,
+              text: "FIGMA",
             },
           ],
         },
@@ -204,7 +211,7 @@ export default {
             {
               url: imgJs,
               text: "JS",
-            }
+            },
           ],
         },
         {
@@ -224,7 +231,7 @@ export default {
             {
               url: imgJs,
               text: "JS",
-            }
+            },
           ],
         },
         {
@@ -244,8 +251,32 @@ export default {
             {
               url: imgJs,
               text: "JS",
-            }
-          ]
+            },
+          ],
+        },
+        {
+          img: imgAppPrestamos,
+          descripcion: "pagina5",
+          url: null,
+          guihuburl: "https://github.com/cristianh/app-prestamos.git",
+          icons: [
+            {
+              url: imgVue,
+              text: "VueJS",
+            },
+            {
+              url: imgCss3,
+              text: "CSS3",
+            },
+            {
+              url: imgJs,
+              text: "Framework7",
+            },
+            {
+              url: imgFirabese,
+              text: "Firebase",
+            },
+          ],
         },
       ],
       stateShowFrame: false,
@@ -260,7 +291,7 @@ export default {
     onMounted(splide) {
       // do something
       this.posicionSlide = splide.index;
-    }
+    },
 
     /* onArrowsMounted(splide, prev, next) {
       // do something

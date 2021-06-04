@@ -5,7 +5,11 @@
         <b-col sm="12" md="12" lg="6">
           <div
             id="about-my"
-            class="animate__animated animate__delay-slower mt-4 animate__backInLeft"
+            class="
+              animate__animated animate__delay-slower
+              mt-4
+              animate__backInLeft
+            "
           >
             <div id="imagen1" class="mark-photo">
               <img src="../assets/HV_cv.jpeg" class="img-fluid" />
@@ -38,7 +42,12 @@
             </div> -->
             <div>
               <p
-                class="title-dark text-center mx-auto animate__animated animate__delay-1s animate__fadeInDown"
+                class="
+                  title-dark
+                  text-center
+                  mx-auto
+                  animate__animated animate__delay-1s animate__fadeInDown
+                "
               >
                 SOBRE MI
               </p>
@@ -71,29 +80,43 @@
             </div> -->
             <div>
               <p
-                class="text-justify animate__animated animate__delay-2s animate__flipInX"
+                class="
+                  text-justify
+                  animate__animated animate__delay-2s animate__flipInX
+                "
               >
-                Mi nombre es <b>Cristian Alberto Hernandez</b>, vivo en la
-                ciudad de Armenia - Quindío, tengo 31 años de edad, apacionado
-                por la programación y la tecnología, soy una persona estusiasta
+                Mi nombre es <b>Cristian Alberto Hernández</b>, vivo en la
+                ciudad de Armenia - Quindío, tengo 31 años de edad, apasionado
+                por la programación y la tecnología, soy una persona entusiasta
                 con deseos de aportar soluciones a los diferentes proyectos que
-                se presenten. actulmente me encuentro en los ultimos
-                semestres de la Tecnologia en Desarrollo de software.
+                se presenten. Soy <b>Desarrollador Web</b> con conocimientos en
+                varias tecnologías enfocadas al <b>FrontEnd</b> y al
+                <b>BackEnd</b>.
               </p>
 
               <p
-                class="text-justify animate__animated animate__delay-2s animate__flipInX"
+                class="
+                  text-justify
+                  animate__animated animate__delay-2s animate__flipInX
+                "
               >
-                Mi experiencia laboral inicia desde el <b>2011</b> hasta el <b>2018</b>, integrando
-                un equipo multidiciplinario de profesionales, para la entidad
-                <b>SENA</b>,  cuento con conocimientos e implementación de
-                <b>frontEnd</b> y <b>backEnd</b>.
+                Mi experiencia laboral inicia desde el
+                <b>2011</b>, integrando un equipo multidisciplinario de
+                profesionales con diferentes perfiles. Que aportaron todo su
+                experiencia y me han permitido mejorar en mi labor, He realizado
+                diferentes proyectos para empresas de la región y como
+                freelance, las cuales me han permitido mejorar mis habilidades
+                como <b>Desarrollador Web</b>, actualmente me encuentro en los
+                últimos semestres de la Tecnología en Desarrollo de software.
               </p>
             </div>
             <b-row>
               <b-col sm="8" md="8" lg="12" class="mt-4">
                 <div
-                  class="container-icons-about animate__animated animate__delay-3s animate__fadeIn"
+                  class="
+                    container-icons-about
+                    animate__animated animate__delay-3s animate__fadeIn
+                  "
                 >
                   <div class="colums-icons">
                     <a href="tel:3015014539"
