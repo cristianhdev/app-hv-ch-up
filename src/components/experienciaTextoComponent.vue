@@ -371,9 +371,9 @@ export default {
         },
         {
           titulo: "FREELANCE",
-          fecha_inicial: "Feb 2019",
+          fecha_inicial: "Ene 2019",
           fecha_final: "May 2019",
-          years: "6 meses",
+          years: "5 meses",
           text: `Proyectos realizados para diferentes clientes utilizando nuevas tecnologias como: <b>firebase</b>, <b>Node.js</b>, <b>express</b>, <b>framework7</b>.`,
         },
       ],
