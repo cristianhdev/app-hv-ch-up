@@ -133,6 +133,7 @@ import imgVue from "../assets/ico/vuejs-brands.svg";
 import imgWordpress from "../assets/ico/wordpress-brands.svg";
 import imgFigma from "../assets/ico/figma-brands.svg";
 import imgFirabese from "../assets/ico/firebase_icon_132390.svg";
+import imgFramework7 from "../assets/ico/f7-icon.svg";
 
 /* import imgPlantosa from "../assets/pagina/Plantosas.com.png"; */
 import portafolioTexto from "../components/portafolioTextoComponent";
@@ -269,7 +270,7 @@ export default {
               text: "CSS3",
             },
             {
-              url: imgJs,
+              url: imgFramework7,
               text: "Framework7",
             },
             {

@@ -87,11 +87,11 @@
               >
                 Mi nombre es <b>Cristian Alberto Hernández</b>, vivo en la
                 ciudad de Armenia - Quindío, tengo 31 años de edad, apasionado
-                por la programación y la tecnología, soy una persona entusiasta
-                con deseos de aportar soluciones a los diferentes proyectos que
-                se presenten. Soy <b>Desarrollador Web</b> con conocimientos en
-                varias tecnologías enfocadas al <b>FrontEnd</b> y al
-                <b>BackEnd</b>.
+                por la programación y la tecnología, soy
+                <b>Desarrollador Web</b> con conocimientos en varias tecnologías
+                enfocadas al <b>FrontEnd</b> y al <b>BackEnd</b>. Entusiasta con
+                deseos de aportar soluciones a los diferentes proyectos que se
+                presenten.
               </p>
 
               <p
@@ -100,14 +100,14 @@
                   animate__animated animate__delay-2s animate__flipInX
                 "
               >
-                Mi experiencia laboral inicia desde el
+                He realizado diferentes proyectos para varias empresas, los
+                cuales me han permitido mejorar mis habilidades como
+                <b>Desarrollador Web</b>, Mi experiencia laboral inicia desde el
                 <b>2011</b>, integrando un equipo multidisciplinario de
-                profesionales con diferentes perfiles. Que aportaron todo su
-                experiencia y conocimiento y me han permitido mejorar en mi labor, He realizado
-                diferentes proyectos para empresas de la región y como
-                freelance, las cuales me han permitido mejorar mis habilidades
-                como <b>Desarrollador Web</b>, actualmente me encuentro en los
-                últimos semestres de la Tecnología en Desarrollo de software.
+                profesionales con diferentes perfiles, Que aportaron todo su
+                experiencia y conocimiento y me han permitido mejorar en mi
+                labor, actualmente me encuentro en los últimos semestres de la
+                Tecnología en Desarrollo de software.
               </p>
             </div>
             <b-row>
@@ -119,7 +119,7 @@
                   "
                 >
                   <div class="colums-icons">
-                    <a href="tel:3015014539"
+                    <a href="https://wa.me/573015014539/" target="_blank"
                       ><b-icon icon="telephone-fill" font-scale="2"></b-icon
                     ></a>
                   </div>
