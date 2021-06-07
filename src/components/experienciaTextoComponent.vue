@@ -160,75 +160,84 @@
         </b-card> -->
         <b-row>
           <b-col sm="12" md="12" lg="6">
-        <b-card
-          img-top
-          tag="article"
-          class="
-            mb-2
-            marckclassTime
-            extra-margin
-            animate__animated
-            animate__delay-slower
-            animate__fadeIn
-            animate__delay-1s
-          "
-        >
-          <b-card-text>
-            <div class="text-left">
-              <span style="font-weight: 700; font-size: 18px">{{
-                descriptions[1].fecha_inicial +
-                " - " +
-                descriptions[1].fecha_final
-              }}</span
-              ><br />
-              <span style="font-size: 14px"
-                >{{ descriptions[1].years }} - Armenia</span
-              ><br />
+            <b-card
+              img-top
+              tag="article"
+              class="
+                mb-2
+                marckclassTime
+                extra-margin
+                animate__animated
+                animate__delay-slower
+                animate__fadeIn
+                animate__delay-1s
+              "
+            >
+              <b-card-text>
+                <div class="text-left">
+                  <span style="font-weight: 700; font-size: 18px">{{
+                    descriptions[1].fecha_inicial +
+                    " - " +
+                    descriptions[1].fecha_final
+                  }}</span
+                  ><br />
+                  <span style="font-size: 14px"
+                    >{{ descriptions[1].years }} - Armenia</span
+                  ><br />
 
-              <hr
-                style="
-                  width: 100%;
-                  background-color: white;
-                  display: inline-block;
-                  margin: 0px !important;
-                "
-              />
-              <br />
-            </div>
+                  <hr
+                    style="
+                      width: 100%;
+                      background-color: white;
+                      display: inline-block;
+                      margin: 0px !important;
+                    "
+                  />
+                  <br />
+                </div>
 
-            <span v-html="descriptions[1].text" class="text-justify"></span>
-          </b-card-text>
-        </b-card>
+                <span v-html="descriptions[1].text" class="text-justify"></span>
+              </b-card-text>
+            </b-card>
           </b-col>
           <b-col sm="12" md="12" lg="6">
-        <b-card img-top tag="article" class="mb-2 marckclassTime extra-margin  animate__animated
-            animate__delay-slower
-            animate__fadeIn
-            animate__delay-1s">
-          <b-card-text>
-            <b-row>
-              <b-col sm="12" md="12" lg="12">
-                <h5>Paginas Web (Html5 y Wordpress)</h5>
-              </b-col>
-            </b-row>
-            <b-row>
-              <b-col sm="4" md="2" lg="6">
-                <b-img
-                  :src="gits[1].imgs[0]"
-                  fluid
-                  class="pt-4"
-                  width="340px"
-                />
-              </b-col>
-              <b-col sm="4" md="2" lg="6">
-                <b-img
-                  :src="gits[1].imgs[1]"
-                  fluid
-                  class="pt-4"
-                  width="340px"
-                />
-              </b-col>
-              <!-- <b-col sm="4 offset-md-3" md="2" lg="6">
+            <b-card
+              img-top
+              tag="article"
+              class="
+                mb-2
+                marckclassTime
+                extra-margin
+                animate__animated
+                animate__delay-slower
+                animate__fadeIn
+                animate__delay-1s
+              "
+            >
+              <b-card-text>
+                <b-row>
+                  <b-col sm="12" md="12" lg="12">
+                    <h5>Paginas Web (Html5 y Wordpress)</h5>
+                  </b-col>
+                </b-row>
+                <b-row>
+                  <b-col sm="4" md="2" lg="6">
+                    <b-img
+                      :src="gits[1].imgs[0]"
+                      fluid
+                      class="pt-4"
+                      width="340px"
+                    />
+                  </b-col>
+                  <b-col sm="4" md="2" lg="6">
+                    <b-img
+                      :src="gits[1].imgs[1]"
+                      fluid
+                      class="pt-4"
+                      width="340px"
+                    />
+                  </b-col>
+                  <!-- <b-col sm="4 offset-md-3" md="2" lg="6">
                 <b-img
                   :src="gits[1].imgs[2]"
                   fluid
@@ -236,9 +245,9 @@
                   width="340px"
                 />
               </b-col> -->
-            </b-row>
-          </b-card-text>
-        </b-card>
+                </b-row>
+              </b-card-text>
+            </b-card>
           </b-col>
         </b-row>
       </b-tab>
@@ -329,6 +338,8 @@ import BanneS from "../assets/gifs/Banner1.gif";
 import Material1SP from "../assets/pagina/PlantosasFullpage.png";
 import Material2SP from "../assets/pagina/PlateringFullPage.png";
 import Material3SP from "../assets/pagina/RiveraFullPage.png";
+//Axios
+import axios from 'axios'
 export default {
   props: {
     slider: {
@@ -354,7 +365,8 @@ export default {
           imgs: [Material1SP, Material2SP, Material3SP],
         },
       ],
-      descriptions: [
+      descriptions: [],
+      /* descriptions: [
         {
           titulo: "SENA AGROINDUSTRIAL",
           fecha_inicial: "Dic 2011",
@@ -376,7 +388,7 @@ export default {
           years: "5 meses",
           text: `Proyectos realizados para diferentes clientes utilizando nuevas tecnologias como: <b>firebase</b>, <b>Node.js</b>, <b>express</b>, <b>framework7</b>.`,
         },
-      ],
+      ], */
       apendido: [
         {
           items: [
@@ -396,6 +408,13 @@ export default {
         },
       ],
     };
+  },
+  mounted() {
+    axios.get("http://localhost:3000/descriptions").then((res) =>{
+      this.descriptions= res.data
+      console.log(this.descriptions);
+    });
+    
   },
 };
 </script>

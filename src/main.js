@@ -12,9 +12,11 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faJs, faVuejs  } from '@fortawesome/free-brands-svg-icons'
 import VueSplide from '@splidejs/vue-splide';
 
+
 //veevalidate
 import Vuelidate from 'vuelidate'
 Vue.use(Vuelidate)
+
 
 // ..Scroll Magic
 AOS.init();
