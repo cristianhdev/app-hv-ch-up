@@ -358,7 +358,7 @@ export default {
         {
           titulo: "SENA AGROINDUSTRIAL",
           fecha_inicial: "Dic 2011",
-          fecha_final: "Nov 2011",
+          fecha_final: "Nov 2017",
           years: "5 años",
           text: ` Prestación de servicios profesionales para apoyar el proceso de línea de producción mediante el diseño y equipo adecuación didáctica y gráfica de recursos educativos de cursos de formación titulada y complementaria con mediación virtual y a distancia pertenecientes a la oferta educativa SENA en lo que relacionado con la programación, pruebas y ajustes de aplicativos, paginas web y demás Objetos Virtuales de Aprendizaje (OVAs).`,
         },
