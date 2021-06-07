@@ -1,6 +1,10 @@
 <template>
   <div>
-    <b-tabs content-class="mt-2" fill card>
+    <div v-if="loading">
+       <b-spinner variant="primary" label="Spinning"></b-spinner>
+    </div>
+    <div v-else>
+        <b-tabs content-class="mt-2" fill card>
       <b-tab :title="descriptions[0].titulo" active>
         <hr />
         <b-row>
@@ -326,6 +330,8 @@
         </b-row>
       </b-tab> -->
     </b-tabs>
+    </div>
+  
   </div>
 </template>
 
@@ -357,6 +363,7 @@ export default {
   },
   data() {
     return {
+      loading:true,
       gits: [
         {
           imgs: [Material1S, Material2S, Material3S, BanneS],
@@ -410,9 +417,10 @@ export default {
     };
   },
   mounted() {
-    axios.get("http://localhost:3000/descriptions").then((res) =>{
+    axios.get("https://app-back-hv.herokuapp.com/descriptions").then((res) =>{
       this.descriptions= res.data
-      console.log(this.descriptions);
+    }).finally(()=>{
+      this.loading=false
     });
     
   },
