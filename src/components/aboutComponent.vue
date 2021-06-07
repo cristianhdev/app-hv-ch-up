@@ -104,7 +104,7 @@
                 cuales me han permitido mejorar mis habilidades como
                 <b>Desarrollador Web</b>, Mi experiencia laboral inicia desde el
                 <b>2011</b>, integrando un equipo multidisciplinario de
-                profesionales con diferentes perfiles, Que aportaron todo su
+                profesionales con diferentes perfiles, Que aportaron toda su
                 experiencia y conocimiento y me han permitido mejorar en mi
                 labor, actualmente me encuentro en los últimos semestres de la
                 Tecnología en Desarrollo de software.
