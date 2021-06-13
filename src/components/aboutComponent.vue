@@ -244,6 +244,26 @@ a:visited {
   /*  .about {
     border: 45px solid silver;
   } */
+  .mark-photo {
+    margin: 0px auto;
+    width: 87%;
+    height: 34%;
+    background: none;
+  }
+
+  #about-my img {
+    top: -2px;
+    width: 90%;
+    height: 100%;
+    border-radius: 100%;
+
+    background: linear-gradient(180deg, #2ecfa8 0%, rgba(255, 255, 255, 0) 100%),
+      rgba(147, 245, 192, 0.93);
+  }
+
+   #imagen1 {
+    display: none;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {

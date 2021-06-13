@@ -71,19 +71,21 @@
                   </b-col>
                 </b-row>
                 <b-row>
-                  <b-col sm="4" md="2" lg="6">
+                  <b-col sm="4" md="6" lg="6">
                     <b-img
                       :src="gits[0].imgs[1]"
                       fluid
                       class="pt-4"
+                      responsive
                       width="340px"
                     />
                   </b-col>
-                  <b-col sm="4" md="2" lg="6">
+                  <b-col sm="4" md="6" lg="6">
                     <b-img
                       :src="gits[0].imgs[2]"
                       fluid
                       class="pt-4"
+                      responsive
                       width="340px"
                     />
                   </b-col>
@@ -225,7 +227,7 @@
                   </b-col>
                 </b-row>
                 <b-row>
-                  <b-col sm="4" md="2" lg="6">
+                  <b-col sm="4" md="6" lg="6">
                     <b-img
                       :src="gits[1].imgs[0]"
                       fluid
@@ -233,7 +235,7 @@
                       width="340px"
                     />
                   </b-col>
-                  <b-col sm="4" md="2" lg="6">
+                  <b-col sm="4" md="6" lg="6">
                     <b-img
                       :src="gits[1].imgs[1]"
                       fluid

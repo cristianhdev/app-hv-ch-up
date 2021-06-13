@@ -3,7 +3,7 @@
     <div class="img-background mx-auto">
       <b-container fluid="md">
         <b-row>
-          <b-col sm="12" md="6" lg="12">
+          <b-col sm="12" md="12" lg="12">
             <h2
               class="text-left animate__animated animate__delay-slower animate__flipInX"
             >
@@ -13,7 +13,7 @@
           </b-col>
         </b-row>
         <b-row>
-          <b-col sm="12" md="6" lg="6" class="mt-4">
+          <b-col sm="12" md="12" lg="6" class="mt-4">
             <b-form @submit.prevent="onSendEmail" novalidate>
               <b-form-group
                 class="text-left"
@@ -167,14 +167,15 @@
               </div>
             </b-form>
           </b-col>
-          <b-col sm="8" md="8" lg="6">
+          <b-col sm="8" md="12" lg="6">
             <div class="imag-center mx-auto mb-5">
               <b-row>
-                <b-col sm="8" md="8" lg="12">
+                <b-col sm="8" md="12" lg="12">
                   <b-img
                     :src="img"
                     class="img-source"
                     fluid
+                    responsive
                     alt="Responsive image"
                   ></b-img>
                 </b-col>
