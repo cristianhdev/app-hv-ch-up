@@ -18,7 +18,7 @@
         <b-row>
           <b-col
             sm="8"
-            md="6"
+            md="12"
             lg="12"
             class="
               animate__animated
