@@ -417,7 +417,7 @@ export default {
     };
   },
   mounted() {
-    axios.get("https://app-back-hv.herokuapp.com/descriptions").then((res) =>{
+    axios.get(`${axios.defaults.baseURL}/descriptions`).then((res) =>{
       this.descriptions= res.data
     }).finally(()=>{
       this.loading=false
