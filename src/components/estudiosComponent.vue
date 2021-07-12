@@ -137,6 +137,7 @@ import imagen9 from "../assets/htmlyjavascript.png";
 import imagen10 from "../assets/certificado-git.jpg";
 import imagen11 from "../assets/linux-basic.png";
 import imagen12 from "../assets/cetificacion-tenologias.png";
+import imagen13 from "../assets/python-certifique.png";
 import { Splide, SplideSlide } from "@splidejs/vue-splide";
 import estudioSkeleton from "@/components/estudioSkeletonComponent";
 /* import SkillService from "../services/skillsservice"; */
@@ -154,11 +155,12 @@ export default {
         { nombre: "Javascript", porcentaje: 90, animated: false },
         { nombre: "Node.js", porcentaje: 70, animated: false },
         { nombre: "Express.js", porcentaje: 70, animated: false },
-        { nombre: "Vue(2-3).js", porcentaje: 90, animated: false },
+        { nombre: "Vue 2 .js", porcentaje: 90, animated: false },
         { nombre: "React", porcentaje: 60, animated: false },
         { nombre: "Typeorm", porcentaje: 70, animated: false },
         { nombre: "Bootstrap", porcentaje: 70, animated: false },
-        { nombre: "Laravel", porcentaje: 50, animated: false },
+        { nombre: "Python", porcentaje: 50, animated: false },
+        /* { nombre: "Laravel", porcentaje: 50, animated: false }, */
       ],
       loading: false,
       skillService: null,
@@ -193,6 +195,11 @@ export default {
           title: "NDG Linux Essentials",
           descripcion: "NDG Linux UNHATCHED",
           imagenCertificado: imagen11,
+        },
+        {
+          title: "Python",
+          descripcion: "Academia G-talent",
+          imagenCertificado: imagen13,
         },
         {
           title: "Competencias laborales",
