@@ -228,6 +228,8 @@ a:visited {
   text-decoration: none;
 }
 
+
+
 @media (min-width: 1281px) {
   /*  .about {
     border: 45px solid red;
@@ -238,12 +240,14 @@ a:visited {
   /* .about {
     border: 45px solid blue;
   } */
+  
+  #imagen2 {
+    display: none;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-  /*  .about {
-    border: 45px solid silver;
-  } */
+  
   .mark-photo {
     margin: 0px auto;
     width: 87%;
@@ -267,6 +271,7 @@ a:visited {
 }
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+   
   .about {
     box-sizing: content-box;
     padding: 5em 0px;
@@ -275,6 +280,7 @@ a:visited {
     display: flex;
     flex-direction: row-reverse;
     justify-content: flex-end;
+   
   }
   .mark-photo {
     margin: 0px auto;
@@ -303,8 +309,33 @@ a:visited {
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
-  /* .about {
-    border: 45px solid green;
+ /*  .about {
+    border: 45px solid red;
+  } */
+
+  .mark-photo {
+    margin: 0px auto;
+    width: 37%;
+    height: 34%;
+    background: none;
+  }
+
+  #about-my img {
+    top: -2px;
+    width: 90%;
+    height: 100%;
+    border-radius: 100%;
+
+    background: linear-gradient(180deg, #2ecfa8 0%, rgba(255, 255, 255, 0) 100%),
+      rgba(147, 245, 192, 0.93);
+  }
+   #imagen1 {
+    display: none;
+  }
+  /*
+
+  #imagen2 {
+    display: none;
   } */
 }
 
