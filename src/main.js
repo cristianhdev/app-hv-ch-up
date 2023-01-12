@@ -8,14 +8,14 @@ import axios from 'axios'
 import 'aos/dist/aos.css'; // You can also use <link> for styles
 import '../node_modules/timeline-vuejs/dist/timeline-vuejs.css'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faUserSecret} from '@fortawesome/free-solid-svg-icons'
+import { faUserSecret } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { faJs, faVuejs  } from '@fortawesome/free-brands-svg-icons'
+import { faJs, faVuejs } from '@fortawesome/free-brands-svg-icons'
 import VueSplide from '@splidejs/vue-splide';
 
 
 //axios.defaults.baseURL="http://localhost:3200"
-axios.defaults.baseURL="https://backendcchv.onrender.com"
+axios.defaults.baseURL = process.env.NODE_ENV==="development" ? "http://localhost:3200":process.env.VUE_APP_BASE_URL
 
 //veevalidate
 import Vuelidate from 'vuelidate'
@@ -35,7 +35,7 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 //splide
 import '@splidejs/splide/dist/css/themes/splide-skyblue.min.css';
 
-library.add(faUserSecret,faJs, faVuejs )
+library.add(faUserSecret, faJs, faVuejs)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 Vue.component('BUser', BUser)
