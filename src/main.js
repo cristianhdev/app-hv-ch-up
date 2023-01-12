@@ -15,7 +15,7 @@ import VueSplide from '@splidejs/vue-splide';
 
 
 //axios.defaults.baseURL="http://localhost:3200"
-axios.defaults.baseURL="https://app-back-hv.herokuapp.com"
+axios.defaults.baseURL="https://backendcchv.onrender.com"
 
 //veevalidate
 import Vuelidate from 'vuelidate'
