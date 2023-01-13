@@ -35,10 +35,7 @@
 </template>
 
 <script>
-/*import About from '../components/aboutComponent'
- import Estudios from '../components/estudiosComponent'
-import Experiencia from '../components/experienciaComponent' */
-/* import countDown from '../components/countDown' */
+
 export default {
   components: {
     //countDown
