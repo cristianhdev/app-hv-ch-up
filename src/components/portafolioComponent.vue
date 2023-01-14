@@ -262,26 +262,6 @@ export default {
               text: "Firebase",
             },
           ],
-        },
-        {
-          img: imgAppPrestamos,
-          descripcion: "pagina8",
-          url: null,
-          guihuburl: "https://modulodidacticocircuitos.onrender.com",
-          icons: [
-            {
-              url: imgCss3,
-              text: "CSS3",
-            },
-            {
-              url: imgFramework7,
-              text: "Framework7",
-            },
-            {
-              url: imgFirabese,
-              text: "Firebase",
-            },
-          ],
         }
       ],
       stateShowFrame: false,
