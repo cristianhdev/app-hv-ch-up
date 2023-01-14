@@ -120,6 +120,7 @@
 <script>
 //Paginas
 import imgPlantosa from "../assets/pagina/Plantosas-cropt.png";
+import imgSimbolosPatrios from "../assets/pagina/simbolos_patrios.png";
 import imgPlastering from "../assets/pagina/Plastering-cropt.png";
 import imgRivera from "../assets/pagina/Rivera-cropt.png";
 import imgOrizon from "../assets/pagina/OrizonMobile.png";
@@ -155,9 +156,29 @@ export default {
         gap: "4rem",
       },
       imagPortafolios: [
+      {
+          img: imgSimbolosPatrios,
+          descripcion: "pagina1",
+          url: "https://simbolospatrios.onrender.com",
+          guihuburl: null,
+          icons: [
+            {
+              url: imgHtml5,
+              text: "HTML5",
+            },
+            {
+              url: imgCss3,
+              text: "CSS3",
+            },
+            {
+              url: imgJs,
+              text: "JS",
+            },
+          ],
+        },
         {
           img: imgPlantosa,
-          descripcion: "pagina1",
+          descripcion: "pagina2",
           url: "http://plantosas.com",
           guihuburl: null,
           icons: [
@@ -177,7 +198,7 @@ export default {
         },
         {
           img: imgOrizon,
-          descripcion: "pagina2",
+          descripcion: "pagina3",
           url: "https://orizonmobile-56b43.web.app",
           guihuburl: "https://github.com/cristianh/OrizonMobileVue.git",
           icons: [
@@ -197,7 +218,7 @@ export default {
         },
         {
           img: imgNaturalWayu,
-          descripcion: "pagina3",
+          descripcion: "pagina4",
           url: "https://naturalwayu.com",
           guihuburl: null,
           icons: [
@@ -217,7 +238,7 @@ export default {
         },
         {
           img: imgPlastering,
-          descripcion: "pagina4",
+          descripcion: "pagina5",
           url: "https://plastering.firebaseapp.com",
           guihuburl: null,
           icons: [
@@ -237,7 +258,7 @@ export default {
         },
         {
           img: imgRivera,
-          descripcion: "pagina5",
+          descripcion: "pagina6",
           url: "https://proyectosseoimpacto.firebaseapp.com",
           guihuburl: null,
           icons: [
@@ -257,7 +278,7 @@ export default {
         },
         {
           img: imgAppPrestamos,
-          descripcion: "pagina5",
+          descripcion: "pagina7",
           url: null,
           guihuburl: "https://github.com/cristianh/app-prestamos.git",
           icons: [
