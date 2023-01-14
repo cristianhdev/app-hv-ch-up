@@ -84,6 +84,7 @@
 //Paginas
 import imgPlantosa from "../assets/pagina/Plantosas-cropt.png";
 import imgSimbolosPatrios from "../assets/pagina/simbolos_patrios.png";
+import imgConfiCafe from "../assets/pagina/confincafe-biometria.png";
 import imgPlastering from "../assets/pagina/Plastering-cropt.png";
 import imgRivera from "../assets/pagina/Rivera-cropt.png";
 import imgOrizon from "../assets/pagina/OrizonMobile.png";
@@ -98,6 +99,7 @@ import imgWordpress from "../assets/ico/wordpress-brands.svg";
 import imgFigma from "../assets/ico/figma-brands.svg";
 import imgFirabese from "../assets/ico/firebase_icon_132390.svg";
 import imgFramework7 from "../assets/ico/f7-icon.svg";
+import imgAngular from "../assets/ico/angular-brands.svg";
 
 /* import imgPlantosa from "../assets/pagina/Plantosas.com.png"; */
 import portafolioTexto from "../components/portafolioTextoComponent";
@@ -256,6 +258,26 @@ export default {
             {
               url: imgFramework7,
               text: "Framework7",
+            },
+            {
+              url: imgFirabese,
+              text: "Firebase",
+            },
+          ],
+        },
+        {
+          img: imgConfiCafe,
+          descripcion: "pagina8",
+          url: null,
+          guihuburl: "null",
+          icons: [
+            {
+              url: imgAngular,
+              text: "Angular",
+            },
+            {
+              url: imgCss3,
+              text: "CSS3",
             },
             {
               url: imgFirabese,
