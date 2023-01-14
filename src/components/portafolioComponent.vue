@@ -5,12 +5,10 @@
         <b-row>
           <b-col sm="12" md="12" lg="12">
             <div>
-              <h2
-                class="
+              <h2 class="
                   text-left
                   animate__animated animate__delay-slower animate__flipInX
-                "
-              >
+                ">
                 Portafolio
                 <hr style="text-left;width:100%" />
               </h2>
@@ -21,17 +19,9 @@
           <b-col id="slider" sm="12" md="12" lg="6">
             <div class="mx-auto mt-4 animate__animated animate__fadeInLeft">
               <splide @splide:moved="onMounted" :options="options">
-                <splide-slide
-                  v-for="(imagPortafolio, key) in imagPortafolios"
-                  :key="key"
-                >
+                <splide-slide v-for="(imagPortafolio, key) in imagPortafolios" :key="key">
                   <div>
-                    <b-img
-                      :src="imagPortafolio.img"
-                      thumbnail
-                      fluid
-                      :alt="imagPortafolio.descripcion"
-                    ></b-img>
+                    <b-img :src="imagPortafolio.img" thumbnail fluid :alt="imagPortafolio.descripcion"></b-img>
                   </div>
                 </splide-slide>
                 <template v-slot:controls>
@@ -43,18 +33,12 @@
               <b-row>
                 <b-col lg="12" class="text-center mb-2">
                   <div class="icons">
-                    <div
-                      v-for="(icon, index, key) in imagPortafolios[
-                        onPosicionSlider
-                      ].icons"
-                      :key="key"
-                    >
+                    <div v-for="(icon, index, key) in imagPortafolios[
+                      onPosicionSlider
+                    ].icons" :key="key">
                       <div :id="`tooltip-target-${index}`">
                         <img placement="bottom" :src="icon.url" />
-                        <b-tooltip
-                          :target="`tooltip-target-${index}`"
-                          triggers="hover"
-                        >
+                        <b-tooltip :target="`tooltip-target-${index}`" triggers="hover">
                           {{ icon.text }}
                         </b-tooltip>
                       </div>
@@ -65,49 +49,28 @@
             </div>
           </b-col>
           <b-col id="slider" sm="12" md="12" lg="6">
-            <div
-              class="
+            <div class="
                 mx-auto
                 mt-4
                 text-justify
                 animate__animated animate__fadeInRight
-              "
-            >
+              ">
               <b-row>
                 <b-col lg="12">
                   <portafolio-texto :posicion="onPosicionSlider" />
                 </b-col>
                 <div class="mx-auto">
-                <b-button
-                style="background-color: #495762"
-                class="mr-3 mt-3 mb-3"
-                :href="imagPortafolios[onPosicionSlider].url"
-                target="_blank"
-                size="sm"
-                v-if="imagPortafolios[onPosicionSlider].url!=null"
-              >
-                <img
-                  class="btnIconS"
-                  placement="bottom"
-                  src="../assets/ico/globe-solid.svg"
-                />IR A LA PAGINA</b-button
-              >
-              <b-button
-                style="background-color: #495762"
-                class="mr-3 mt-3 mb-3"
-                :href="imagPortafolios[onPosicionSlider].guihuburl"
-                target="_blank"
-                size="sm"
-                v-if="imagPortafolios[onPosicionSlider].guihuburl!=null"
-              >
-                <img
-                  class="btnIconS"
-                  placement="bottom"
-                  src="../assets/ico/github-brands.svg"
-                  
-                />GITHUB
-              </b-button>
-              </div>
+                  <b-button style="background-color: #495762" class="mr-3 mt-3 mb-3"
+                    :href="imagPortafolios[onPosicionSlider].url" target="_blank" size="sm"
+                    v-if="imagPortafolios[onPosicionSlider].url != null">
+                    <img class="btnIconS" placement="bottom" src="../assets/ico/globe-solid.svg" />IR A LA
+                    PAGINA</b-button>
+                  <b-button style="background-color: #495762" class="mr-3 mt-3 mb-3"
+                    :href="imagPortafolios[onPosicionSlider].guihuburl" target="_blank" size="sm"
+                    v-if="imagPortafolios[onPosicionSlider].guihuburl != null">
+                    <img class="btnIconS" placement="bottom" src="../assets/ico/github-brands.svg" />GITHUB
+                  </b-button>
+                </div>
               </b-row>
             </div>
           </b-col>
@@ -156,7 +119,7 @@ export default {
         gap: "4rem",
       },
       imagPortafolios: [
-      {
+        {
           img: imgSimbolosPatrios,
           descripcion: "pagina1",
           url: "https://simbolospatrios.onrender.com",
@@ -300,6 +263,26 @@ export default {
             },
           ],
         },
+        {
+          img: imgAppPrestamos,
+          descripcion: "pagina8",
+          url: null,
+          guihuburl: "https://modulodidacticocircuitos.onrender.com",
+          icons: [
+            {
+              url: imgCss3,
+              text: "CSS3",
+            },
+            {
+              url: imgFramework7,
+              text: "Framework7",
+            },
+            {
+              url: imgFirabese,
+              text: "Firebase",
+            },
+          ],
+        }
       ],
       stateShowFrame: false,
     };
