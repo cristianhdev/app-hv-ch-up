@@ -213,6 +213,66 @@
             </b-col>
           </b-row>
         </b-tab>
+        <b-tab :title="descriptions[3].titulo">
+          <b-row>
+            <b-col sm="12" md="12" lg="6">
+              <b-card img-top tag="article" class="
+            mb-2
+            marckclassTime
+            extra-margin
+            animate__animated
+            animate__delay-slower
+            animate__fadeIn
+            animate__delay-1s
+          ">
+                <b-card-text>
+                  <div class="text-left">
+                    <span style="font-weight: 700; font-size: 18px">{{
+                      descriptions[3].fecha_inicial +
+                        " - " +
+                        descriptions[3].fecha_final
+                    }}</span><br />
+                    <span style="font-size: 14px">{{ descriptions[3].years }} - Armenia</span><br />
+
+                    <hr style="
+                  width: 100%;
+                  background-color: white;
+                  display: inline-block;
+                  margin: 0px !important;
+                " />
+                    <br />
+                  </div>
+                  <div class="text-justify">
+                    <span v-html="descriptions[3].text" />
+                  </div>
+                 
+                </b-card-text>
+              </b-card>
+            </b-col>
+            <b-col sm="12" md="12" lg="6">
+              <b-card img-top tag="article" class="
+            mb-2
+            marckclassTime
+            extra-margin
+            animate__animated
+            animate__delay-slower
+            animate__fadeIn
+            animate__delay-1s
+          ">
+                <b-card-text>
+                  <b-row>
+
+                    <b-col sm="4" md="6" lg="12">
+                      <b-img :src="imagenBiometria" fluid class="pt-4" width="640px" height="500px" />
+                    </b-col>
+
+
+                  </b-row>
+                </b-card-text>
+              </b-card>
+            </b-col>
+          </b-row>
+        </b-tab>
       </b-tabs>
     </div>
 
@@ -233,6 +293,9 @@ import Material1CG from "../assets/pagina/arte_modelo_modernista.png";
 import Material2CG from "../assets/pagina/conversion_de_unidades.png";
 import Material3CG from "../assets/pagina/simbolos_patrios.png";
 import Material4CG from "../assets/pagina/compaaraciondefracciones.png";
+
+//IMAGEN
+import imagenDasboad from "../assets/pagina/confincafe-biometria.png";
 //Axios
 import axios from 'axios'
 export default {
@@ -264,7 +327,8 @@ export default {
           imgs: [Material1CG, Material2CG, Material3CG, Material4CG],
         },
       ],
-      descriptions: []
+      descriptions: [],
+      imagenBiometria: imagenDasboad
     };
   },
   mounted() {

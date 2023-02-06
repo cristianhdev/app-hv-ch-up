@@ -26,21 +26,7 @@
               animate__fadeInLeft
               
             "
-          > <!-- @splide:moved="onMounted" -->
-            <!-- <splide @splide:move="onMounted" :options="options" >
-              <splide-slide >
-               
-              </splide-slide>
-              <splide-slide>
-                 <experiencia-textos :slider="slide" />
-              </splide-slide>
-          
-              <template v-slot:controls>
-                <div class="splide__progress">
-                  <div class="splide__progress__bar"></div>
-                </div>
-              </template>
-            </splide> -->
+          > 
              <experiencia-textos :slider="slide" />
           </b-col>
         </b-row>

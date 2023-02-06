@@ -3,21 +3,15 @@
     <b-container fluid="md">
       <b-row>
         <b-col sm="12" md="12" lg="6">
-          <div
-            id="about-my"
-            class="
+          <div id="about-my" class="
               animate__animated animate__delay-slower
               mt-4
               animate__backInLeft
-            "
-          >
+            ">
             <div id="imagen1" class="mark-photo">
               <img src="../assets/HV_cv.jpeg" class="img-fluid" />
             </div>
             <div id="imagen2" class="mark-photo d-xl-none">
-              <!-- <div v-if="loadingImage">
-                <b-skeleton type="avatar" class="avatar-size"></b-skeleton>
-              </div> -->
               <div>
                 <img src="../assets/HV_cv-perfil-rep.png" class="img-fluid" />
               </div>
@@ -26,114 +20,67 @@
         </b-col>
 
         <b-col sm="12" md="12" lg="6">
-          <!--  <button @click="mostrar=!mostrar">Mostrar</button> -->
           <article id="about" class="pb-5 mt-4" v-if="!mostrar">
-            <!-- <div v-if="loadingImage">
-              <p
-                class="title-dark text-center mx-auto animate__animated animate__delay-slower animate__fadeInDown"
-              >
-                <b-skeleton
-                  animation="Fade"
-                  width="50%"
-                >
-                </b-skeleton>
-              </p>
-           
-            </div> -->
             <div>
-              <p
-                class="
+              <p class="
                   title-dark
                   text-center
                   mx-auto
                   animate__animated animate__delay-1s animate__fadeInDown
-                "
-              >
+                ">
                 SOBRE MI
               </p>
             </div>
-            <hr
-              class="animate__animated animate__delay-2s animate__fadeIn"
-              style="text-left;width:100%"
-            />
-            <!-- <div v-if="loadingImage">
-              <p>
-                <b-skeleton
-                  animation="Fade"
-                  v-for="(i, n, key) in 9"
-                  :key="key"
-                  width="100%"
-                   class="animate__animated animate__delay-1s animate__flipInX"
-                >
-                </b-skeleton>
-              </p>
-              <p>
-                <b-skeleton
-                  animation="Fade"
-                  v-for="(i, n, key) in 9"
-                  :key="key"
-                  width="100%"
-                  class="animate__animated animate__delay-1s animate__flipInX"
-                >
-                </b-skeleton>
-              </p>
-            </div> -->
+            <hr class="animate__animated animate__delay-2s animate__fadeIn" style="text-left;width:100%" />
             <div>
-              <p
-                class="
+              <p class="
                   text-justify
                   animate__animated animate__delay-2s animate__flipInX
-                "
-              >
+                ">
                 Mi nombre es <b>Cristian Alberto Hernández</b>, vivo en la
-                ciudad de Armenia - Quindío, tengo 31 años de edad, apasionado
-                por la programación y la tecnología, soy
+                ciudad de Armenia - Quindío, apasionado
+                por la programación y la tecnología, Tengo gran capacidad para adaptarme a todo
+                tipo de entornos y aportar siempre lo mejor de mí. Me caracterizo por mi facilidad
+                para el trabajo en equipo, entusiasta por aprender y desarrollar mis habilidades,
                 <b>Desarrollador Web</b> con conocimientos en varias tecnologías
-                enfocadas al <b>FrontEnd</b> y al <b>BackEnd</b>. Entusiasta con
-                deseos de aportar soluciones a los diferentes proyectos que se
-                presenten.
+                enfocadas al <b>FrontEnd</b> y al <b>BackEnd</b>.
+                Estudiante de tecnología en análisis y desarrollo en sistemas de información.
               </p>
 
-              <p
-                class="
+              <p class="
                   text-justify
                   animate__animated animate__delay-2s animate__flipInX
-                "
-              >
-                He realizado diferentes proyectos para varias empresas, los
-                cuales me han permitido mejorar mis habilidades como
-                <b>Desarrollador Web</b>, Mi experiencia laboral inicia desde el
+                ">
+                He realizado diferentes proyectos para varias empresas locales, las
+                cuáles me han permitido mejorar mis habilidades como
+                <b>Desarrollador Web</b>, Mi experiencia laboral inicia desde él
                 <b>2011</b>, integrando un equipo multidisciplinario de
                 profesionales con diferentes perfiles, Que aportaron toda su
-                experiencia y conocimiento y me han permitido mejorar en mi
-                labor, actualmente me encuentro en los últimos semestres de la
-                Tecnología en Desarrollo de software.
+                experiencia y conocimiento y me han permitido mejorar en mí
+                perfil profesional.
               </p>
             </div>
             <b-row>
               <b-col sm="8" md="8" lg="12" class="mt-4">
-                <div
-                  class="
+                <div class="
                     container-icons-about
                     animate__animated animate__delay-3s animate__fadeIn
-                  "
-                >
+                  ">
                   <div class="colums-icons">
-                    <a href="https://wa.me/573015014539/" target="_blank"
-                      ><b-icon icon="telephone-fill" font-scale="2"></b-icon
-                    ></a>
+                    <a href="https://wa.me/573015014539/" target="_blank"><b-icon icon="telephone-fill"
+                        font-scale="2"></b-icon></a>
                   </div>
                   <div class="colums-icons">
                     <router-link tag="a" to="contacto">
-                      <b-icon icon="wallet-fill" font-scale="2"></b-icon
-                    ></router-link>
+                      <b-icon icon="wallet-fill" font-scale="2"></b-icon></router-link>
                   </div>
                   <div class="colums-icons">
-                    <a
-                      target="_blank"
-                      href="https://www.linkedin.com/in/CristianHernandezDev"
-                      ><b-icon icon="linkedin" font-scale="2"></b-icon
-                    ></a>
+                    <a target="_blank" href="https://www.linkedin.com/in/CristianHernandezDev"><b-icon icon="linkedin"
+                        font-scale="2"></b-icon></a>
+                  </div>
+                  <div class="colums-icons">
+                    <a target="_blank" href="https://github.com/cristianhdev"><b-icon icon="github"
+                        font-scale="2"></b-icon></a>
                   </div>
                 </div>
               </b-col>
@@ -167,12 +114,11 @@ export default {
   width: 244.047px !important;
   height: 227.062px !important;
 }
+
 .about {
-  background: linear-gradient(
-      270deg,
+  background: linear-gradient(270deg,
       rgba(255, 255, 255, 0) 0%,
-      rgba(167, 179, 203, 0.63) 86.76%
-    ),
+      rgba(167, 179, 203, 0.63) 86.76%),
     #ffffff;
   width: 100%;
   height: 100vh;
@@ -195,6 +141,7 @@ export default {
 .colums-icons {
   width: 100%;
 }
+
 .mark-photo {
   position: relative;
   width: 365px;
@@ -240,14 +187,14 @@ a:visited {
   /* .about {
     border: 45px solid blue;
   } */
-  
+
   #imagen2 {
     display: none;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {
-  
+
   .mark-photo {
     margin: 0px auto;
     width: 87%;
@@ -265,13 +212,13 @@ a:visited {
       rgba(147, 245, 192, 0.93);
   }
 
-   #imagen1 {
+  #imagen1 {
     display: none;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-   
+
   .about {
     box-sizing: content-box;
     padding: 5em 0px;
@@ -280,8 +227,9 @@ a:visited {
     display: flex;
     flex-direction: row-reverse;
     justify-content: flex-end;
-   
+
   }
+
   .mark-photo {
     margin: 0px auto;
     width: 87%;
@@ -309,7 +257,7 @@ a:visited {
 }
 
 @media (min-width: 481px) and (max-width: 767px) {
- /*  .about {
+  /*  .about {
     border: 45px solid red;
   } */
 
@@ -329,9 +277,11 @@ a:visited {
     background: linear-gradient(180deg, #2ecfa8 0%, rgba(255, 255, 255, 0) 100%),
       rgba(147, 245, 192, 0.93);
   }
-   #imagen1 {
+
+  #imagen1 {
     display: none;
   }
+
   /*
 
   #imagen2 {
