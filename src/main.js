@@ -13,6 +13,8 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faJs, faVuejs } from '@fortawesome/free-brands-svg-icons'
 import VueSplide from '@splidejs/vue-splide';
 
+
+
 axios.defaults.baseURL = process.env.NODE_ENV==="development" ? "http://localhost:3200":process.env.VUE_APP_BASE_URL
 /* axios.defaults.baseURL = "http://localhost:3200" */
 //veevalidate
